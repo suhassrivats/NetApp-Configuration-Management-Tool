@@ -1,0 +1,439 @@
+/*
+ * Vdisk Management
+ */
+#ifndef _VDISKSVCIDL_
+#define _VDISKSVCIDL_
+
+[
+        endpoint("ncacn_np:[\\vdisksvc]"),
+        uuid( c81da959-188a-4987-a9a4-35f880dcd1e1 ),
+        version(1.0),
+#ifdef __midl
+        ms_union,
+#endif 
+        pointer_default(unique)
+]
+
+interface vdisksvc {
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef wchar_t WCHAR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+typedef uint8_t  UCHAR;
+typedef uint16_t USHORT;
+#else
+#include <smb/ntstatus.h>
+#include <smb/windef.h>
+#include <smb/winnt.h>
+#endif
+
+typedef long _EndIDLDef;
+
+typedef struct _VDISKSVC_HANDLE {    
+	WCHAR * ServerName;
+} VDISKSVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] VDISKSVC_HANDLE * VDISKSVC_HANDLE_TYPE;
+#else
+#define VDISKSVC_HANDLE_TYPE VDISKSVC_HANDLE*
+#endif
+
+#include <adminintf.h>
+#include <vdiskintf.h>
+
+/* 0. 
+ * Creates a vdisk at the appropriate path and given size
+ */
+
+int32_t
+NetVdiskCreate(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[in] OLD_LARGE_INTEGER *size
+	);
+
+/* 1. 
+ * Exports a vdisk to a particular initiator at a specified LUN. 
+ * The initiator name should be in the following formats:
+ * FCP  : 0x1234567887654321 or 12:34:56:78:87:65:43:21 
+ * iSCSI: eui.(any valid FCP name) or iqn.2001-01.com.disk-vendor.diskarray.2
+ * A vdisk can be exported to more than one initiator.
+ * The client application may keep track of the already used LUN's to 
+ * catch any conflicts before sending the RPC. A value of 0 may be used if 
+ * the LUN is to be allocated automatically
+ */
+
+int32_t
+NetVdiskExport(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[in, string, unique] WCHAR *initname,
+	[in] ULONG *lun
+	);
+
+/* 2. 
+ * Unexports a vdisk from the given initiator. Any mappings/maskings are 
+ * lost as a result of this operation. 
+ */
+
+int32_t
+NetVdiskUnexport(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath,
+	[in, string, unique] WCHAR *initname
+	);
+
+/* 3. 
+ * Returns 2 if the given vdisk is exported, 1 otherwise 
+ */ 
+  
+int32_t
+NetVdiskExportStatus(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath,
+	[out] ULONG *exportStatus
+	);
+
+/* 4. 
+ * Onlines a vdisk for block access 
+ */
+
+int32_t 
+NetVdiskOnline(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath     
+	);
+
+/* 5. 
+ * Offlines a vdisk to prevent any further block access 
+ */
+
+int32_t 
+NetVdiskOffline(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath     
+	);
+
+/* 6. 
+ * Returns 2 if the given vdisk is online, 1 otherwise 
+ */ 
+
+int32_t 
+NetVdiskOnlineStatus(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath,
+	[out] ULONG *onlineStatus   
+	);
+
+/* 7. 
+ * Returns the vdisk size 
+ */
+
+int32_t
+NetVdiskSize(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[out] OLD_LARGE_INTEGER *size
+	);
+
+/* 8. 
+ * Resizes an existing vdisk. The vdisk need not be unexported before a 
+ * resize operation but the client application has to be made aware of the
+ * change in size. fflag should be set to one if you are trying a shrink.
+ */
+
+int32_t 
+NetVdiskResize(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[in] OLD_LARGE_INTEGER *size,
+	[in] ULONG *fflag
+	);
+
+/* 9. 
+ * This operation would not succeed if the vdisk is currently exported 
+ * to any initiator.
+ */
+
+int32_t
+NetVdiskMove(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *oldpath,
+	[in, string, unique] WCHAR *newpath
+	);
+
+/* 10. 
+ * Look up a vdisk using the serialnumber
+ */
+
+int32_t
+NetVdiskFind(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *serialnumber,
+	[out] VDISK_LIST *vlist
+	);
+
+/* 11. 
+ * This destroys the vdisk. The vdisk should be unexported before this
+ * operation
+ */
+
+int32_t
+NetVdiskDestroy(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,	
+	[in, string, unique] WCHAR *vdiskpath
+	);
+
+/* 12. 
+ * Converts a VLD to a vdisk 
+ */
+
+int32_t
+NetVLDtoVdisk(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vldpath,
+	[in, string, unique] WCHAR *vdiskpath
+	);
+
+/* 13. 
+ * Converts a vdisk to a VLD. 
+ */
+
+int32_t
+NetVdisktoVLD(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[out] VDISK_LIST *vlist
+	);
+
+/* 14. 
+ * Creates a vdisk backed by a snapshot 
+ */
+
+int32_t
+NetPrepareSnapshotVdisk(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *snappath,
+	[in, string, unique] WCHAR *vdiskpath
+	); 
+
+/* 15. 
+ * Replaces the backing data for, the vdisk with given 'vdiskpath',
+ * by the data in file 'snappath', which is the complete path to the 
+ * snapshot
+ */
+
+int32_t
+NetSwitchSnapshotVdisk(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *vdiskpath,
+	[in, string, unique] WCHAR *snappath
+	);
+
+/* 16. 
+ * Raw write to a vdisk. This might be needed to overwrite any *hidden*
+ * information used by the client FS to identify disks, in addition to the
+ * GUID. In such case we would have to overwrite that information to 
+ * be able to mount a vdisk and its snapshot at the same time.
+ */
+
+int32_t
+NetVdiskRawWrite(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *path, 
+	[in] OLD_LARGE_INTEGER *offset,
+	[in] LONG *length,
+	[in, size_is(*length)] byte *data
+	);
+
+/* 17. 
+ * Returns a list of all the vdisks in the system 
+ */
+
+int32_t
+NetVdiskList(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[out] VDISK_LIST *vlist
+	);
+
+/* 18. 
+ * Returns Single File Snap Restore status for a given vdisk 
+ */
+
+int32_t
+NetVdiskSFSRStatus(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[out] LONG* status
+	);
+
+/* 19. 
+ * Allows access to the LUN via file protocols.
+ * Access can be either read or write. As a precondition, the 
+ * LUN has to be unmapped.
+ * If *accesstype == 1, all file protocol based access is denied
+ * If *accesstype == 2, read-only access is awarded.
+ * If *accesstype == 3, read-write access is awarded.
+ * If *accesstype == 4, all access is awarded.
+ */
+
+int32_t
+NetVdiskFileAccess(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[in] LONG *accesstype
+	);
+
+/*
+ * 20.
+ * Query whether some sort of reservation has been obtained on the
+ * vdisk
+ */
+
+int32_t
+NetVdiskHasReservations(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[out] LONG* status
+	);
+
+
+/* 21.
+ * Get vdisk attribute
+ */
+
+int32_t
+NetVdiskGetAttribute(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath,
+	[in, string, unique] WCHAR* attrKey,
+	[out] VDISK_LIST* vlist
+	);
+
+/* 22.
+ * Set vdisk attribute
+ */
+
+int32_t
+NetVdiskSetAttribute(
+	 [in] VDISKSVC_HANDLE_TYPE hBinding,
+	 [in, string, unique] WCHAR* vdiskpath,
+	 [in, string, unique] WCHAR* attrKey,
+	 [in, string, unique] WCHAR* attrVal
+	 );
+
+/* 23.
+ * Get the number of blocks that are available on a volume/qtree, with or
+ * without the guarantee of a snapshot.
+ */
+
+int32_t
+NetVdiskMaxSize(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* path,
+	[in] LONG* snapshotflag,
+	[out] OLD_LARGE_INTEGER* size
+	);
+
+
+/*
+ * 24.
+ * Query whether the given WWPN holds the SCSI reservation on the port
+ */
+
+int32_t
+NetVdiskPortHasReservation(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[in, string, unique] WCHAR* portname, 
+	[out] LONG* status
+	);
+/*
+ * 25.
+ * Query the WWPN that hold the vdisk's scsi reservation
+ */
+
+int32_t
+NetVdiskReservationHolder(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[out] WCHAR** portname
+	);
+
+
+/*
+ * 26.
+ * Return the file type for a file
+ */
+
+int32_t
+NetVdiskFileType(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* filepath, 
+	[out] LONG* filetype
+	);
+
+
+/*
+ * 27.
+ * Return the path to the backing snapshot file for a vdisk
+ */
+
+int32_t
+NetVdiskSnapshotPath(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR* vdiskpath, 
+	[out] VDISK_LIST *vlist
+	);
+
+/*
+ * 28.
+ * Check if the initiator is logged in with the filer
+ */
+
+int32_t
+NetVdiskInitiatorLoggedIn(
+       [in] VDISKSVC_HANDLE_TYPE hBinding,
+       [in, string, unique] WCHAR *initname,
+       [out] LONG *status
+);
+
+
+/* 29. 
+ * Raw read from a vdisk. 
+ */
+
+int32_t
+NetVdiskRawRead(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *path, 
+	[in] OLD_LARGE_INTEGER *offset,
+	[in] LONG *length,
+	[out] VDISK_DATA *data
+	);
+
+/* 30.
+ * Reverse map a LUN ie given a lun map find the lun path and
+ * serial number
+ */ 
+
+int32_t
+NetVdiskReverseMap(
+	[in] VDISKSVC_HANDLE_TYPE hBinding,
+	[in, string, unique] WCHAR *initname, 
+	[in] ULONG *lun,
+	[out] VDISK_LIST *vlist
+	);
+
+} /* interface vdisksvc */
+
+#endif /* #ifdef _VDISKSVCIDL_ */
+
+

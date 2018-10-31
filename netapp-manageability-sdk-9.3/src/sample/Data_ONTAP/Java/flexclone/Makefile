@@ -1,0 +1,19 @@
+# This makefile assumes that your PATH contains 
+# the bin directory which has java and javac.
+#
+# You may have to adjust the value of CL to
+# find the manageontap-9.3.jar file.
+
+JAVAC=javac
+JAVA=java
+
+CLASSPATH = ../../../../../lib/java/classes/manageontap-9.3.jar:../../../../java/classes
+
+all :
+	$(JAVAC) -deprecation -classpath $(CLASSPATH) flexclone.java
+
+clean :
+	rm -fr *.class
+
+test :
+	$(JAVA) -classpath .:$(CLASSPATH) flexclone sweetpea root tryme create vol2 vol1

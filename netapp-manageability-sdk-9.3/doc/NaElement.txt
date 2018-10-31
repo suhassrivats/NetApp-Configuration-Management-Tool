@@ -1,0 +1,119 @@
+NAME
+      NaElement - class encapsulating Netapp XML request elements
+
+DESCRIPTION
+      An NaElement encapsulates one level of an XML element.
+      Elements can be arbitrarily nested.  They have names,
+      corresponding to XML tags, attributes (only used for
+      results), values (always strings) and possibly children,
+      corresponding to nested tagged items.  See NaServer for
+      instructions on using NaElements to invoke ONTAPI API calls.
+
+      The following routines are available for constructing and
+      accessing the contents of NaElements.
+
+  new($name, $value)
+      Construct a new NaElement.  The $value parameter is
+      optional for top level elements.
+
+  results_status()
+      Indicates success or failure of API call.
+      Returns either "passed" or "failed".
+
+  results_reason()
+      Human-readable string describing a failure.
+      Only present if results_status does not return "passed'.
+
+  results_errno()
+      Returns an error number, 0 on success.
+
+  child_get($name)
+      Get a named child of an element, which is also an
+      element.	Elements can be nested arbitrarily, so
+      the element you get with this could also have other
+      children.	 The return is either an NaElement named
+      $name, or undef if none is found.
+
+  set_content($content)
+      Set the element's value to $content.  This is
+      not needed in normal development.
+
+  get_content()
+      Get the content of the element.
+
+  add_content($content)
+      Add the element's value to $content.  This is
+      not needed in normal development.
+
+  has_children()
+      Returns "1" if the element has any children,
+      "0" otherwise.
+
+  child_add($elt)
+      Add the element $elt to the children list of
+      the current object, which is also an element.
+
+  child_add_string($name, $value)
+      Construct an element with name $name and contents
+      $value, and add it to the current object, which
+      is also an element.
+
+  child_get_string($name)
+      Gets the child named $name from the current object
+      and returns its value.  If no child named $name is
+      found, returns undef.
+
+  child_get_int($name)
+      Gets the child named $name from the current object
+      and returns its value as an integer.  If no child
+      named $name is found, returns undef.
+
+  children_get()
+      Returns the list of children as an array.
+
+  sprintf()
+      Sprintf pretty-prints the element and its children,
+      recursively, in XML-ish format.  This is of use
+      mainly in exploratory and utility programs.  Use
+      child_get_string() to dig values out of a top-level
+      element's children.
+
+  to_hash()
+      Converts the element and its children into a Perl hash reference.
+      It considers only the name and content of each element.
+      This is primarily used in programs involving Perl Bindings.
+      NaServer::parse_hash() is the complementary method which converts
+      a hash into NaElement.
+
+  child_add_string_encrypted($name, $value, $key)
+      Same as child_add_string, but encrypts $value
+      with $key before adding the element to the current
+      object.  This is only used at present for certain
+      key exchange operations.	Both client and server
+      must know the value of $key and agree to use this
+      routine and its companion, child_get_string_encrypted().
+      The default key will be used if the given key is undef.
+
+  child_get_string_encrypted($name, $key)
+      Get the value of child $name, and decrypt
+      it with $key before returning it.
+      The default key will be used if the given key is undef.
+
+  toEncodedString()
+      Encodes string embedded with special chars like &,<,>.
+      This is mainly useful when passing string values embedded
+      with special chars like &,<,> to API.
+
+      Example :
+      $server->invoke("qtree-create","qtree","abc<qt0",volume,"vol0");
+
+COPYRIGHT
+      Copyright 2002-2003 Network Appliance, Inc. All rights
+      reserved. Specifications subject to change without notice.
+
+      This SDK sample code is provided AS IS, with no support or
+      warranties of any kind, including but not limited to
+      warranties of merchantability or fitness of any kind,
+      expressed or implied.  This code is subject to the license
+      agreement that accompanies the SDK.
+

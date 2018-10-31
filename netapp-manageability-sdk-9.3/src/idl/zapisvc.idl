@@ -1,0 +1,93 @@
+/*
+ * $Id: //depot/prod/DOT/fsb/ontap/prod/common/adminrpc/zapisvc.idl#1 $
+ *
+ * Network Appliance Zapi Service IDL File
+ *
+ * Copyright (c) 1997-2002 Network Appliance, Inc.
+ * All rights reserved.
+ */
+
+#ifndef _ZAPISVCIDL_
+#define _ZAPISVCIDL_
+
+/*
+// Interface Attributes
+*/
+
+[
+	endpoint("ncacn_np:[\\zapisvc]"),
+	uuid( 26ae9003-97c5-4bc8-9a28-7d67018ae40a ),
+	version(1.0),
+#ifdef __midl
+	ms_union,
+#endif // __midl
+	pointer_default(ptr)
+]
+
+
+interface zapisvc {
+
+#define CONST
+
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef unsigned char UCHAR;
+typedef wchar_t WCHAR;
+typedef wchar_t TSTR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+typedef uint16_t USHORT;
+
+#else
+
+#include <smb/ntstatus.h>
+#include <smb/windef.h>
+#include <smb/winnt.h>
+#endif
+typedef long _EndIDLDef;
+
+
+typedef struct _ZAPISVC_HANDLE {    
+	WCHAR * ServerName;
+} ZAPISVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] ZAPISVC_HANDLE * ZAPISVC_HANDLE_TYPE;
+#else
+#define ZAPISVC_HANDLE_TYPE ZAPISVC_HANDLE*
+#endif
+
+#include <adminintf.h>
+#include <zapiintf.h>
+
+
+/*0	ZapirGetFilerVersion
+ * Initial test
+ */
+
+int32_t
+ZapirGetFilerVersion(
+    [ in ]  ZAPISVC_HANDLE_TYPE hBinding,
+    [ out ] ZA_UNICODE_STRING** verStr
+	);
+
+/*1	ZapirInvoke
+ * Initial test
+ */
+
+int32_t
+ZapirInvoke(
+    [ in ]  ZAPISVC_HANDLE_TYPE hBinding,
+    [ in, string, unique ]  WCHAR* in,
+    [ out ] ZA_UNICODE_STRING** out
+	);
+
+}	/* interface zapisvc */
+
+#endif /* _ZAPISVCIDL_ */
+

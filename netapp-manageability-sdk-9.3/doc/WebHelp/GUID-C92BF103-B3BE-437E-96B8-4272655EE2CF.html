@@ -1,0 +1,1416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>ONTAP APIs sample codes</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-3FFA260C-8831-4791-BDC3-ABE827FAB23C.html">Sample Codes</a> : ONTAP APIs sample codes</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_10_7_1">ONTAP APIs sample codes</a></div>
+      <div class="Short_Description"><a name="3_10_7_2">You can use ONTAP APIs retrieve information about various NetApp storage system features, such as qtrees, quotas, volumes, LUNs, Snapshot, SnapMirror, and so on.</a></div>
+      <div class="Body"><a name="3_10_7_3_2_1">The following list describes the sample codes that demonstrate the use of a few ONTAP APIs. Extract the </a><span class="Teletype">.zip</span> files and check the <span class="filepath">src/sample/</span> file for the sample code.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: NaNNaNNaNNaNNaNNaNNaNNaNNaNNanpt" colspan="10">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_1_1">Sample code in languages...</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_1">Name</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_2">Description</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_3">C</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_4">Perl</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_5">Java</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_6">C#</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_7">VB.NET</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_8">PowerShell</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_9">Python</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_1_1_2_22_2_10">Ruby</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_2_2">FlexClone</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_2_4">This sample code demonstrates how to create a clone for a flexible volume. It estimates the size, splits the clone, and shows the status.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_6"> flexclone.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_8">flexclone.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_10"> flexclone.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_16"> -</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_18"> flexclone.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_2_20">flexclone.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_4_2">Quota listing</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_4_4">This sample code demonstrates how to list the quota available on a storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_6"> quotalist.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_8"> quotalist.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_10"> quotalist.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_4_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_4_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_18"> quotalist.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_4_20">quotalist.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_6_2">Snapshot</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_6_4">This sample code shows how to manage Snapshot copies. It demonstrates how to create a Snapshot copy, rename it, and delete it. The sample code also demonstrates how to get Snapshot copy lists and schedules.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_6"> snapman.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_8"> snapman.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_6_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_12">snapman.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_14"> snapman.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_16"> snapman.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_18">snapman.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_6_20">snapman.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_8_2">SNMP</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_8_4">This sample code describes how to use the SNMP API. The following actions are performed with this sample code:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_2">Adding new SNMP community</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_4">Deleting specific SNMP community</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_6">Deleting all SNMP communities</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_8">Disabling SNMP interface</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_10">Enabling SNMP interface</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_12">Obtaining SNMP get for specific OID</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_14">Obtaining SNMP getnext for specific OID</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_16">Getting SNMP Status</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_18">Disabling Traps</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_20">Enabling Trap</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_22">Adding Trap Host</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_8_4_2_24">Deleting Trap Host</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_6"> snmp.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_8"> snmp.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_10">snmp.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_8_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_8_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_18">snmp.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_8_20">snmp.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_10_2">Consistency Group</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_10_4">This sample code shows how to manage a consistency group, that is how to start and commit a consistency group.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_10_6"> cg_operation.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_10_8"> cg_operation.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_10_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_10_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_10_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_10_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_10_18">cg_operation.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_10_20">cg_operation.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_12_2">Volume List</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_12_4">This sample code lists the volumes that are available on a storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_6"> vollist.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_8"> print_volume.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_10"> vollist.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_12">vollist.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_14"> vollist.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_16"> vollist.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_18">print_volume.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_12_20">print_volume.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_2">MAC address List</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_4">This sample code shows a list of IP addresses and the corresponding MAC addresses.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_14_6"> getmac.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_14_8">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_14_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_14_20">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_16_2">Option List</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_16_4">This sample code shows a list of the options and demonstrates the use of the following functions:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_16_4_2_2">Listing all the options</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_16_4_2_4">Getting the value of a particular option</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_16_4_2_6">Setting the value of a particular option</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_6"> optmgmt.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_8"> optmgmt.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_10"> optmgmt.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_12">optmgmt.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_14"> optmgmt.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_16"> optmgmt.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_18">optmgmt.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_16_20">optmgmt.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_18_2">SnapMirror</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_18_4">This code demonstrates the management of SnapMirror operations.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_6">sm.cpp</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_8"> snapmirror.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_10"> snapmirror.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_16">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_18">snapmirror.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_18_20">snapmirror.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_20_2">Symlink</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_20_4">This is a sample code for symbolic links from Windows. It demonstrates the use of the following functions:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_20_4_2_2">Creating a symlink- file-create-symlink</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_20_4_2_4">Reading the content of a symlink- file-read-symlink</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_20_6"> symlink.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_20_8">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_20_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_20_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_20_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_20_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_20_20">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_22_2">Volume Monitor</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_22_4">This sample code shows how to monitor a volume on a storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_6">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_8"> monitor_volume.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_22_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_22_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_18">monitor_volume.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_22_20">monitor_volume.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_24_2">qtree</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_24_4">This sample code creates a qtree on a specified volume and adds a quota entry.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_6">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_8"> qtree_quota.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_24_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_24_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_18">qtree_quota.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_24_20">qtree_quota.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_26_2">vFiler</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_26_4">This sample code demonstrates how to create, destroy, and list vFiler units on the storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_6">vfiler.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_8">vfiler.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_10"> vfiler.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_26_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_18">vfiler.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_26_20">vfiler.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_28_2">vFiler Tunnelling</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_28_4">This sample code demonstrates how to invoke ONTAP APIs on a vFiler through the physical storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_6">vfiler_tunnel.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_8">vfiler_tunnel.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_10"> vfiler_tunnel.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_12">vfiler_tunnel.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_14"> vfiler_tunnel.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_16"> vfiler_tunnel.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_18">vfiler_tunnel.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_28_20">vfiler_tunnel.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_30_2">Unified Capacity Management</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_30_4">This sample code demonstrates the usage of ONTAP APIs for capacity management of NetApp storage systems. It demonstrates the following function:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_2">Calculating the total installed capacity of the system- raw-capacity</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_4">Calculating the total formatted capacity of the system- formatted-capacity</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_6">Calculating the total space reserved for the volume and the space used by nonreserved data - allocated-capacity</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_8">Calculating the total capacity available for user data- available-user-data-capacity</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_10">Calculating the usable space for provisioning- provisioning-capacity</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_30_4_2_12">Calculating the total capacity in RAID overhead and WAFL overhead- raid-overhead and wafl-overhead</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_6"> unified_capacity_mgmt.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_8"> unified_capacity_mgmt.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_10">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_16"> -</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_18">unified_capacity_mgmt.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_30_20">unified_capacity_mgmt.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_2">User administration</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_4">This sample code demonstrates how to add, modify. and list the user administration capabilities using ONTAP APIs It demonstrates the following functions:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_2">Adding a new user to a group with defined capabilities- user-add</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_4">Modifying the user with allowed-capability and group-info values- user-modify</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_6">Listing the administrative users with allowed-capabilities and group-information- user-list</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_8">Adding a new role with allowed capabilities- role-add</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_10">Modifying a user role- role-modify</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_12">Listing information about all roles on the system- role-list</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_14">Adding a new group with allowed capabilities- group-add</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_32_4_2_16">Listing information about all the groups in the system- group-list</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_32_6"> useradmin.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_32_8">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_10">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_32_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_18">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_32_20">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_34_2">Performance Operation</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_34_4">This sample code demonstrates the use of some of the perf family APIs. The sample code lists the system-wide performance objects, the counters for a given performance object, the object instances for a given object, and also provides values for counters of a given performance object.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_6">perf_operation.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_8">perf_operation.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_10"> perf_operation.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_12">perf_operation.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_14"> perf_operation.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_16"> perf_operation.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_18">perf_operation.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_34_20">perf_operation.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_36_2">NFS</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_36_4">This sample code demonstrates the use of some of the NFS family API. The sample code enables you to start, stop, and query the status of the NFS service. It also lists the current NFS export rules.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_6">nfs.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_8">nfs.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_10"> nfs.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_12">nfs.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_14"> nfs.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_16"> nfs.ps1</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_18">nfs.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_36_20">nfs.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_38_2">File SnapLock</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_38_4">This sample code demonstrates how to get the retention time and how to set the retention for SnapLock files.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_6">file_snaplock.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_8">file_snaplock.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_10"> file_snaplock.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_38_12">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_38_16">-</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_18">file_snaplock.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_38_20">file_snaplock.rb</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_40_2">SAN Management</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_1_1_2_23_40_4">This sample code demonstrates the following functions:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_40_4_2_2">Creating, deleting, and listing LUN clone</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_40_4_2_4">Mapping and unmapping LUNs</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_40_4_2_6">Creating, deleting, and listing igroups</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_1_1_2_23_40_4_2_8">Configuring FCP and iSCSI</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_6">san_mgmt.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_8">san_mgmt.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_10">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_16"> -</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_18">san_mgmt.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_1_1_2_23_40_20">san_mgmt.rb</a></span></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><a name="3_10_7_3_4_2">Sample codes for clustered Data ONTAP:</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_1">Name</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_2">Description</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_3">C</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_4">Perl</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_5">Java</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_6">C#</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_7">VB.NET</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_8">Python</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_7_3_4_3_1_2_20_1_9">Perl API bindings</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_2_2">ONTAP mode</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_2_4">This sample code finds out whether ONTAP is 7-Mode or ONTAP:</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_6">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_8">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_10">system_mode.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_2_16">system_mode.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_2_18">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_4_2">Volume list</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_4_4">This sample code lists the volumes that are available on a storage system.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_6">vollist.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_8">vollist.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_10">vollist.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_12">vollist.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_14">vollist.vb </a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_4_16">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_4_18">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_6_2">Vserver</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_6_4">This sample code demonstrates how to manage a Storage Virtual Machine (SVM) in ONTAP. It demonstrates the following functions:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_3_1_2_21_6_4_2_2">Listing SVMs</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_3_1_2_21_6_4_2_4">Adding aggregates</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_3_1_2_21_6_4_2_6">Creating new volumes</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_10_7_3_4_3_1_2_21_6_4_2_8">Configure LIFs, NFS service, NIS domain and export rules for a SVM</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_6">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_8"> vserver.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_10">vserver.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_16">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_6_18"> vserver.pl</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_8_2">Vserver list</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_8_4">This sample code demonstrates how to lists all or few SVMs on ONTAP.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_6"> vserverlist.c</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_8"> vserverlist.pl</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_10">vserverlist.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_12"> vserverlist.cs</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_14"> vserverlist.vb</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_8_16">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_8_18">-</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_10_2">Vserver tunneling</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_10_4">This sample code demonstrates how to use SVM tunneling</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_6">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_8">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_10"> vserver_tunnel.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_12">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_14">-</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_7_3_4_3_1_2_21_10_16"> vserver_tunnel.py</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_7_3_4_3_1_2_21_10_18">-</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-3FFA260C-8831-4791-BDC3-ABE827FAB23C.html', '');" title="Sample Codes" name="3_10_7_4_1_1">Sample Codes</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+/*
+ * $Id: //depot/prod/DOT/fsb/ontap/prod/common/adminrpc/quotasvc.idl#1 $
+ *
+ * Network Appliance Volume Management Service IDL File
+ *
+ * This module defines the currently supported interfaces.  For
+ * managing volumes on NetApp filers.
+ *
+ *
+ * (c)1999 Network Appliance, Inc. All Rights Reserved.
+ */
+
+#ifndef _QUOTASVCIDL_
+#define _QUOTASVCIDL_
+
+/*
+// Interface Attributes
+*/
+
+[
+	endpoint("ncacn_np:[\\quotasvc]"),
+	uuid( 13c4afb0-4ba7-11d4-a2a1-00c04f19b60b ),
+	version(2.0),
+#ifdef __midl
+	ms_union,
+#endif // __midl
+	pointer_default(ptr)
+]
+
+
+interface quotasvc {
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef wchar_t WCHAR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+typedef uint8_t  UCHAR;
+typedef uint16_t USHORT;
+#else
+#include <smb/ntstatus.h>
+#include <smb/windef.h>
+#include <smb/winnt.h>
+#endif
+typedef long _EndIDLDef;
+
+typedef struct _QUOTASVC_HANDLE {    
+	WCHAR * ServerName;
+} QUOTASVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] QUOTASVC_HANDLE * QUOTASVC_HANDLE_TYPE;
+#else
+#define QUOTASVC_HANDLE_TYPE QUOTASVC_HANDLE*
+#endif
+
+#include <adminintf.h>
+#include <quotaintf.h>
+
+
+/* 0 NetQuotaOn
+ *
+ * Turn quota on for a volume
+ */
+int32_t
+NetQuotaOn(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName
+
+);
+
+/* 1 NetQuotaOff
+ *
+ * Turn quota off for a volume
+ */
+int32_t
+NetQuotaOff(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName
+
+);
+
+/* 2 NetQuotaResize
+ *
+ * Resize quota for a volume
+ */
+int32_t
+NetQuotaResize(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName
+
+);
+
+/* 3 NetQuotaStatus
+ *
+ * Obtain state of quotas for a volume.
+ */
+int32_t
+NetQuotaStatus(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ out ] QUOTASVC_QUOTA_STATE* qstate,
+   [ out ] QUOTASVC_QUOTA_SUB_STATE* qsubstate,
+   [ out ] ULONG *completionPercent,
+   [ out ] Q_UNICODE_STRING** errmessage
+
+);
+
+/* 4 NetQuotaReport
+ *
+ * Obtain quota information for a user.
+ */
+int32_t
+NetQuotaReport(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in ] Q_SID * userSid,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_INFO* qinfo
+
+);
+
+/* 5 NetQuotaQtrees
+ *
+ * Obtain list of qtrees on a volume.
+ */
+int32_t
+NetQuotaQtrees(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ out ] QUOTALIST_BUFFER *buf
+
+);
+
+/* 6 NetQuotaDefaults
+ *
+ * Obtain quota information for a user.
+ */
+int32_t
+NetQuotaDefaults(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR * volumeName,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_DEFAULTS * qdinfo
+
+);
+
+/* 7 NetQuotaUnixReport
+ *
+ * Obtain quota information for a unix username or group name
+ * or for a qtree.
+ * If for a user or group, there may be an options qtreename.
+ * If for a qtree, the "name" parameter is the qtree name and
+ * the "qtreename" parameter should be omitted.
+ */
+int32_t
+NetQuotaUnixReport(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in, string, unique ] WCHAR  * name,
+   [ in ] QUOTASVC_QUOTA_TYPE qtype,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_INFO* qinfo
+
+);
+
+
+/* 8 NetQuotaReport2
+ *
+ * Obtain quota information for a user.
+ * Adds soft limits
+ */
+int32_t
+NetQuotaReport2(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in ] Q_SID * userSid,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_INFO2* qinfo
+
+);
+
+/* 9 NetQuotaDefaults2
+ *
+ * Obtain quota information for a user.
+ * adds soft limits
+ */
+int32_t
+NetQuotaDefaults2(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR * volumeName,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_DEFAULTS2 * qdinfo
+
+);
+
+/* 10 NetQuotaUnixReport2
+ *
+ * Obtain quota information for a unix username or group name
+ * or for a qtree.
+ * If for a user or group, there may be an options qtreename.
+ * If for a qtree, the "name" parameter is the qtree name and
+ * the "qtreename" parameter should be omitted.
+ * adds soft limits
+ */
+int32_t
+NetQuotaUnixReport2(
+   [ in ] QUOTASVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in, string, unique ] WCHAR  * name,
+   [ in ] QUOTASVC_QUOTA_TYPE qtype,
+   [ in, string, unique ] WCHAR * qtreeName,
+   [ out ] QUOTASVC_QUOTA_INFO2* qinfo
+
+);
+
+
+}	/* interface quotasvc */
+
+
+#endif /* _QUOTASVCIDL_ */
+

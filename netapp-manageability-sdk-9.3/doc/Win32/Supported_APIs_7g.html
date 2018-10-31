@@ -1,0 +1,1178 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head http-equiv="Content-Type" content="text/html; charset=iso-8859-1" rel="stylesheet" type="text/css" href="sdk.style.css">
+       <!-- $ID$ >
+<html>
+<head>
+      <!-- $ID$ -->                    
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>ManageONTAP Interfaces</title>
+                            <!-- $ID$ >-->                     
+  <link rel="stylesheet" type="text/css" href="../sdk.style.css">
+</head>
+  <body>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tbody>
+    <tr>
+      <td rowspan="3" height="124" width="180" valign="Top"><map name="logomap">
+      <area href="http://www.netapp.com/" shape="rect" coords="16, 56, 158, 123">
+      <area href="http://now.netapp.com/" shape="rect" coords="0, 0, 158, 50">
+      </map>
+      </td>
+      <td height="16" bgcolor="#3366cc" width="100%" nowrap="" colspan="2">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td class="headertext">&nbsp;</td>
+            <td align="Right">&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td height="74" valign="Top" colspan="2">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+                            <td nowrap="" width="100%" align="Center" valign="Bottom" bgcolor="white"> 
+                                <h1>Microsoft Win32 API calls<br>
+                                    supported by<br>
+                                    Network Appliance filers</h1>
+            </td>
+            <td bgcolor="white" align="Left" valign="Top" width="170" height="74">
+            	  		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr>
+<p>The following Win32 API calls are supported on Network Appliance filers running 
+    CIFS. This list is Network Appliance confidential. Third parties may not share 
+    it with other 3rd parties.</p>
+<p><strong>Caution:</strong> While we have attempted to be complete here, this 
+  is almost certainly a partial listing. There is no one-to-one relationship between 
+  Win32 APIs and the calls the filer sees on the wire from the client, so it is 
+  difficult to enumerate for sure all the APIs that work. The best way to tell 
+  if a routine not mentioned here is supported is to add a call to it into previously 
+  working code, and see if the call succeeds or not. Please send any needed corrections 
+  you may discover to <a href="mailto:sdk-feedback@netapp.com">sdk-feedback@netapp.com</a>.</p>
+<p>The authoritative source of information for every routine mentioned herein 
+    is the MSDN article(s) pertaining to that routine. Failure of the filer to 
+    obey the semantics given in Microsoft's documentation is nearly always a bug, 
+    and should be reported as such.</p>
+<p>Note: Win32 and Windows are trademarks of Microsoft Corporation.</p>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">File I/O calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp; </p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td colspan="2"><font face="Courier New, Courier, mono"><strong>Win32</strong></font><strong> 
+            routines</strong></td>
+        <td>Native Win32 calls</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CreateFile</td>
+        <td width="695">Open (or create) a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CreateFileForMapping</td>
+        <td>Open a file for memory mapping. This call looks to the server like 
+            CreateFile(); the client does the memory mapping. There are numerous 
+            other routines related to memory mapping not listed here.</td>
+    </tr>
+    <tr> 
+        <td width="28"><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+        <td width="59">CloseHandle</td>
+        <td>Close a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CopyFile</td>
+        <td>Copy a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CopyFileEx</td>
+        <td>Extended copy</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CreateDirectory</td>
+        <td>Create a directory</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>CreateDirectoryEx</td>
+        <td>Extended directory create</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>DeleteFile</td>
+        <td>Delete a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>FlushFileBuffers</td>
+        <td>Flush a file's memory buffers to disk</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetDiskFreeSpace</td>
+        <td>Get info about a logical drive, which might possibly be a network 
+            drive mounted on a remote server</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetDiskFreeSpaceEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetFileAttributes</td>
+        <td>Get file attributes</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetFileAttributesEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetFileInformationByHandle</td>
+        <td>Get info about a file from its HANDLE</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>GetFileSecurity</td>
+        <td>Get NT file permissions (ACEs on an ACL, i.e. Access Control Entries 
+            on an Access Control List)</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetFileSize</td>
+        <td>Size of file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>GetFileSizeEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>LockFile</td>
+        <td>Lock a range or all of a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>LockFileEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>MoveFile</td>
+        <td>Move a file from one place to another, swapping pointers if possible 
+            and copying if necessary</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>MoveFileEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>MoveFileWithProgress</td>
+        <td>The client actually does the progress indication based on the write 
+            size and what GetFileSize() says the amount to be written is</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>ReadDirectoryChangesW</td>
+        <td>Set change-notify status on a directory</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>ReadFile</td>
+        <td>Read part or all of a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>ReadFileEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>ReadFileScatter</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>RemoveDirectory</td>
+        <td>Remove an empty directory</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>ReplaceFile</td>
+        <td>Replace one file with another, possibly backing up the replaced file 
+            first </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>SetFileAttributes</td>
+        <td>File setattr</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>SetFileSecurity</td>
+        <td>Set NT file permissions (ACEs on an ACL, i.e. Access Control Entries 
+            on an Access Control List)</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>SetFileShortName</td>
+        <td>Set the DOS 8.3 name of a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>UnlockFile</td>
+        <td>Unlock a byte range or whole file lock</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>UnlockFileEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>WriteFile</td>
+        <td>Write to a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>WriteFileEx</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>WriteFileGather</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<p>&nbsp;</p><table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td colspan="3"><font face="Courier New, Courier, mono"><strong>FILE*</strong></font><strong> 
+            routines</strong></td>
+        <td colspan="2">ANSI calls <font face="Courier New, Courier, mono">FILE*</font>s 
+            &quot;streams&quot;. These are not the same thing as NTFS streams, 
+            though an NTFS stream may be opened as an ANSI stream by using <font face="Courier New, Courier, mono">&lt;filename&gt;:&lt;streamname&gt;</font> 
+            notation. </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fopen</td>
+        <td>_tfopen</td>
+        <td width="66">_wfopen</td>
+        <td width="695">Open (or create) a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>freopen</td>
+        <td>_tfreopen</td>
+        <td>_wfreopen</td>
+        <td>Reassign a file pointer</td>
+    </tr>
+    <tr> 
+        <td width="28"><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+        <td width="59">fclose</td>
+        <td width="61">_tfclose</td>
+        <td>_wfclose</td>
+        <td>Close a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fcloseall</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Close all open streams</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>_tfdopen</td>
+        <td>_wfdopen</td>
+        <td>Associate a stream with a file that was previously opened for low-level 
+            I/O</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fsetpos</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Set the stream-position indicator</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fread</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Read data from a stream (an ANSI stream, a FILE*, not an NTFS stream)</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fwrite</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Write data to a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fgetc</td>
+        <td>_fgettc</td>
+        <td>fgetwc</td>
+        <td>Get a character from a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fputc</td>
+        <td>_fputtc</td>
+        <td>fputwc</td>
+        <td>Put a character to a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fgets</td>
+        <td>_fgetts</td>
+        <td>fgetws</td>
+        <td>Get a string from a stream</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>rewind</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Reset the file pointer to the beginning of the file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fprintf</td>
+        <td>_ftprintf</td>
+        <td>fwprintf</td>
+        <td>Formatted print to file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>vfprintf</td>
+        <td>_vftprintf</td>
+        <td>vfwprintf</td>
+        <td>Formatted print to file using varargs list</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fflush</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Flush stream buffers to file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_flushall</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Flush all open streams</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>fseek</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Set file pointer to a specified position</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fdopen</td>
+        <td>_tfdopen</td>
+        <td>_wfdopen</td>
+        <td>Associate a stream with a file previously opened for low-level I/O</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_popen</td>
+        <td>_tpopen</td>
+        <td>_wpopen</td>
+        <td>Open a pipe</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_sopen</td>
+        <td>_tsopen</td>
+        <td>_wsopen</td>
+        <td>Open a file for sharing</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fsopen</td>
+        <td>_tfsopen</td>
+        <td>_wfsopen</td>
+        <td>Open a stream for sharing</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td width="28" colspan="3"> <strong>Filehandle routines</strong></td>
+        <td width="9">&nbsp;</td>
+        <td width="22">&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>_creat</td>
+        <td>_tcreat</td>
+        <td width="53">_wcreat</td>
+        <td width="676">Create a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_read</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Read from a file</td>
+    </tr>
+    <tr> 
+        <td width="28"><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+        <td width="37">_write</td>
+        <td width="48">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Write to a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_close</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Close a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_lseek</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Seek to a specified offset</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_lseeki64</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Seek to a 64-bit offset</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_tell</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get current file offset</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_telli64</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get offset as a 64-bit integer (__int64)</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_filelength</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get length of file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_filelengthi64</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get length of file as 64-bit integer</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fstat</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get stat info about file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fstat64</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td> &quot;&quot;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_fstati64</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&quot;&quot;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_chsize</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Truncate file, or extend and pad with zeroes</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td width="28" colspan="4"> <strong>File management routines</strong></td>
+        <td width="676">&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_mkdir</td>
+        <td>_tmkdir</td>
+        <td width="53">_wmkdir</td>
+        <td width="676">Create a directory</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_rmdir</td>
+        <td>_trmdir</td>
+        <td>_wrmdir</td>
+        <td>Remove a directory</td>
+    </tr>
+    <tr> 
+        <td width="28"><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+        <td width="37">rename</td>
+        <td width="48">_trename</td>
+        <td>_wrename</td>
+        <td>Rename a file or directory</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_unlink</td>
+        <td>_tunlink</td>
+        <td>_wunlink</td>
+        <td>Delete a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>remove</td>
+        <td>_tremove</td>
+        <td>_wremove</td>
+        <td>Delete a file</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_stat</td>
+        <td>_tstat</td>
+        <td>_wstat</td>
+        <td>Get file stats</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_stat64</td>
+        <td>_tstat64</td>
+        <td>_wstat64</td>
+        <td>&quot;&quot;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_stati64</td>
+        <td>_tstati64</td>
+        <td>_wstati64</td>
+        <td>&quot;&quot;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_access</td>
+        <td>_taccess</td>
+        <td>_waccess</td>
+        <td>Set POSIX file perms</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_chmod</td>
+        <td>_tchmod</td>
+        <td>_wchmod</td>
+        <td>Set POSIX file perms</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td width="53" colspan="4"> <strong>Search routines</strong></td>
+        <td width="676">&nbsp;</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>FindFirstFile</td>
+        <td>&nbsp;</td>
+        <td width="53">&nbsp;</td>
+        <td width="676">Find a file using a possibly wildcarded pattern</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>FindFirstFileEx</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Search on attributes as well as filename</td>
+    </tr>
+    <tr> 
+        <td width="53"><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt></td>
+        <td width="53">FindNextFile</td>
+        <td width="53">&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Continue a file search</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>FindClose</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Release buffers used by FindFirst and FindNext</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findfirst</td>
+        <td>_tfindfirst</td>
+        <td>_wfindfirst</td>
+        <td>Similar to FindFirstFile</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findfirst64</td>
+        <td>_tfindfirst64</td>
+        <td>_wfindfirst64</td>
+        <td>64-bit version</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findfirsti64</td>
+        <td>_tfindfirsti64</td>
+        <td>_wfindfirsti64</td>
+        <td>yet another 64-bit version</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findnext</td>
+        <td>_tfindnext</td>
+        <td>_wfindnext</td>
+        <td>Similar to FindNextFile</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findnext64</td>
+        <td>_tfindnext64</td>
+        <td>_wfindnext64</td>
+        <td>64-bit version</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>_findnexti64</td>
+        <td>_tfindnexti64</td>
+        <td>_wfindnexti64</td>
+        <td>yet another 64-bit version</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>_findclose</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Similar to FindClose</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td colspan="4"> <strong>Miscellaneous routines</strong></td>
+        <td width="712">&nbsp;</td>
+    </tr>
+    <tr> 
+        <td width="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td width="37">_pipe</td>
+        <td width="48">&nbsp;</td>
+        <td width="53">&nbsp;</td>
+        <td>Set up a pair of pipes for reading and writing (used prior to forking)</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>_getdiskfree</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>Get freespace info for a logical drive</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<table border="0" cellspacing="3" cellpadding="3">
+    <tr> 
+        <td width="28" colspan="2"> <strong>Obsolete routines</strong></td>
+        <td width="676">These routines are used for backward compatibility with 
+            Win16 clients</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td width="37" colspan="2">_hread, _hwrite, _lclose, _lcreat, _lfind, 
+            _llseek, _lopen, _lread, _lwrite, OpenFile</td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">LSA calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<table>
+  <tr> 
+    <td width=50>&nbsp;</td>
+    <td width="1">&nbsp;</td>
+    <td width="196">LsaClose</td>
+    <td width="87">&nbsp;</td>
+    <td width="141">see Microsoft documentation</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaOpenPolicy</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaQueryInformationPolicy</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaEnumerateTrustedDomains</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaLookupNames</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaLookupSids </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaEnumerateAccountRights</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaOpenPolicy</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaGetUserName</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>LsaLookupNames2</td>
+    <td>ONTAP 7g</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">Print Spooling calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+    <tr> 
+        <td width="142">OpenPrinter</td>
+        <td width="711">The filer simply returns NULL here, signifying that it 
+            doesn't have any printers</td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">Network management calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p><table>
+    <tr> 
+        <td width=50>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetConnectionEnum</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetFileEnum</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetFileGetInfo   </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetFileClose</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetSessionEnum </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetSessionDel</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetShareAdd </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetShareEnum </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetShareGetInfo </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetShareSetInfo </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetShareDel </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerGetInfo </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerSetInfo</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerDiskEnum </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerTransportAdd </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerTransportEnum </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetServerTransportDel </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetRemoteTOD</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>NetValidateName</td>
+    </tr>
+</table>
+<p>Local groups</p>
+<table>
+    <tr> 
+        <td width=50>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>NetLocalGroupEnum</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupGetInfo</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupGetMembers</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupAddMembers </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupDelMembers</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupSetMembers</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupAdd</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetLocalGroupDel</td>
+    </tr>
+</table>
+<p>Local users (a maximum of 99 local users are permitted). </p>
+<table>
+    <tr> 
+        <td width=50>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td width="176">NetQueryDisplayInformation&nbsp;&nbsp;&nbsp;</td>
+        <td width="524">Note: this call works only for users, not for machines 
+            or groups</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>NetUserGetInfo</td>
+        <td>Information level 0 only</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>NetUserGetGroups</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">Service Manager calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>The filer supports the Service Manager just enough to tell Windows systems 
+    that no services are running.</p>
+<table>
+    <tr> 
+        <td width=50></td>
+        <td>&nbsp;</td>
+        <td>CloseServiceHandle</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>OpenSCManager</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>OpenService</td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">Workstation calls</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<table>
+    <tr>
+        <td width=50></td>
+        <td width="1">&nbsp;</td>
+        <td width="827">NetWkstaGetInfo      levels 101, 102 in DOT 6.2, level 
+            100 only in prior releases</td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+    <tbody>
+        <tr> 
+            <td width="100%" class="dark1">Registry Manipulation routines</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p><table>
+    <tr> 
+        <td width=50>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegOpenKeyEx     </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegCloseKey      </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegCreateKey     </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegDeleteKey     </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegDeleteValue   </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegEnumKey    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegEnumValue     </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegFlushKey      </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegGetKeySecurity      </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegLoadKey    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegOpenKey</td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegQueryInfoKey  </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegQueryValue    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegReplaceKey    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegRestoreKey    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegSaveKey    </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegSetKeySecurity   </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegSetValue      </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegUnLoadKey     </td>
+    </tr>
+    <tr> 
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>RegGetVersion    </td>
+    </tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="3" width="100%">
+    <caption>
+    <br>
+    </caption>
+    <tbody>
+    </tbody>
+</body>
+</html>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Upgrading OpenSSL</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html">Getting started with SDK</a> : Upgrading OpenSSL</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_4_12_1">Upgrading OpenSSL</a></div>
+      <div class="Body"><a name="3_4_12_2_3">NetApp Manageability SDK provides core libraries and OpenSSL libraries. If you want to upgrade your OpenSSL version, you can download OpenSSL source code and build the libraries for your applications.</a></div>
+      <div class="Section_Title"><a name="3_4_12_2_5_1">Prerequisites</a></div>
+      <div class="Body"><a name="3_4_12_2_5_2">You must download the latest version of OpenSSL and extract it to a folder. Perform the following steps to download and extract the latest version of OpenSSL:</a></div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">1. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_5_3_1">Download the OpenSSL tarball by entering </a><span class="xref"><a href="http://www.openssl.org/source" target="external_window">http://www.openssl.org/source</a></span> in your web browser.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">2. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_5_3_2">Find the latest version of OpenSSL and save the </a><span class="filepath">.tar.gz</span> file.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">3. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_5_3_3">Untar the file: </a><span class="filepath">gunzip openssl-x.x.x.tar.gz</span> and t<span class="filepath">ar xvf openssl-x.x.x.tar</span>. A subdirectory named openssl - x.x.x is created.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_4_12_2_6_1">Building OpenSSL libraries in Linux, Solaris, HP-UX, and AIX platforms</a></div>
+      <div class="Body"><a name="3_4_12_2_6_2">To build OpenSSL libraries in Linux, Solaris, HP-UX, and AIX platforms, perform the following steps:</a></div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">1. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_6_3_1">Change directory: </a><span class="userinput">$ cd openssl-x.x.x</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">2. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_6_3_2">Configure OpenSSL: </a><span class="userinput">$ ./config shared no-krb5 no-rc5 no-idea no-asm -fno-strict-aliasing</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">3. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_6_3_3">Resolve dependencies: </a><span class="userinput">make depend</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">4. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_6_3_4">Generate OpenSSL libraries: </a><span class="filepath">make</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_6_3_4_4">Static libraries </a><span class="filepath">libcrypto.a </span>and <span class="filepath">libssl.a</span>, and dynamic libraries <span class="filepath">libcrypto.so </span>and <span class="filepath">libssl.so</span> are created in the openssl-x.x.x directory.</div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_6_3_4_5">If you are using the dynamic version of OpenSSL libraries, create a soft link to the new OpenSSL dynamic libraries to link them with your application: for example, </a><span class="filepath">ln -s libcrypto.so libcrypto.so.x.x.x</span> and <span class="filepath">ln -s libssl.so libssl.so.x.x.x</span>.</div>
+      <div class="Section_Title"><a name="3_4_12_2_7_1">Building OpenSSL libraries in a Windows platform</a></div>
+      <div class="Body"><a name="3_4_12_2_7_2">To build OpenSSL libraries in a Windows 32-bit platform, perform the following steps:</a></div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">1. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_3_1">Navigate to the OpenSSL extract folder from the Visual Studio command prompt.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">2. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_3_2">Configure OpenSSL: </a><span class="userinput">perl Configure VC-WIN32 no-asm no-idea no-rc5 &gt; win-config.out</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_7_3_2_4">The configuration information is saved in the </a><span class="filepath">win-config.out</span> file.</div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">3. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_3_3">Execute: </a><span class="userinput">ms\do_ms.bat</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><span class="filepath"><a name="3_4_12_2_7_3_3_5">ms\ssleay32.def</a></span>, <span class="filepath">ms\libeay32.def</span>, <span class="filepath">ms\ntdll.mak</span>, <span class="filepath">ms\nt.mak</span> and <span class="filepath">ms\version32.rc</span> files are generated.</div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">4. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_3_4">Generate OpenSSL dynamic libraries: </a><span class="userinput">nmake -f ms\ntdll.mak</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_7_3_4_5">New libraries </a><span class="filepath">libeay32.dll </span>and <span class="filepath">ssleay32.dll </span>are created in the <span class="filepath">openssl-x.x.x/out32dll</span> directory.</div>
+      <div class="Body"><a name="3_4_12_2_7_4">To build OpenSSL libraries in a Windows 64-bit platform, perform the following steps:</a></div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">1. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_5_1">Navigate to the OpenSSL extract folder from the Visual Studio x64 cross tools command prompt.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">2. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_5_2">Configure OpenSSL: </a><span class="userinput">perl Configure VC-WIN64A no-asm no-idea no-rc5 &gt; win-config.out</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_7_5_2_4">The configuration information is saved in the </a><span class="filepath">win-config.out</span> file.</div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">3. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_5_3">Ensure that the path for </a><span class="filepath">ml64.exe</span> is added to environment variable path. <span class="filepath">ml64.exe</span> is located in <span class="filepath">C:\Program Files (x86)\Microsoft Visual Studio 8\VC\bin\x86_amd64\</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">4. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_5_4">Execute: </a><span class="userinput">ms\do_win64a.bat</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="Numbered_1_inner" style="width: 18pt; white-space: nowrap">5. </div>
+            </td>
+            <td width="100%">
+              <div class="Numbered_1_inner"><a name="3_4_12_2_7_5_5">Generate OpenSSL dynamic libraries: </a><span class="userinput">nmake -f ms\ntdll.mak</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Numbered_1_Continued"><a name="3_4_12_2_7_5_5_4">New libraries </a><span class="filepath">libeay32.dll</span> and <span class="filepath">ssleay32.dll</span> are created in the <span class="filepath">openssl-x.x.x/out32dll</span> directory.</div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html', '');" title="Getting started with SDK" name="3_4_12_3_1_1">Getting started with SDK</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

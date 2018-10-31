@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>NetApp Manageability SDK 1.0</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html">Getting started with SDK</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html">Release History</a> : NetApp Manageability SDK 1.0</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_2"><a name="3_4_8_48_1">NetApp Manageability SDK 1.0</a></div>
+      <div class="Body"><a name="3_4_8_48_2_2">This page contains information about what is new in this release.</a></div>
+      <div class="Section_Title"><a name="3_4_8_48_2_4_1">New in NetApp Manageability SDK 1.0</a></div>
+      <div class="Body"><a name="3_4_8_48_2_4_2">This release of the NetApp Manageability SDK includes the following new API set and APIs:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_48_2_4_3_1">Support for DataFabric Manager 3.6R2, 3.7.1, and 3.8 APIs</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Simple" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Simple_Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 100%">
+            <div class="Simple_Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_4_1_1">Newly added DataFabric Manager 3.8 API set</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Simple_Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Simple_Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_4_2_1">Migrate</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_1">migrate-cancel</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_2">migrate-change-state</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_3">migrate-cleanup</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_4">migrate-complete</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_5">migrate-fix</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_6">migrate-start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_48_2_4_4_2_1_2_7">migrate-update</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_6_1_3_1_1">Newly added DataFabric Manager 3.8 APIs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_6_1_3_2_1">Dataset</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_1_2">dataset-member-dedupe-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_1_3">dataset-member-dedupe-abort</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_1_4">dataset-member-undedupe-start</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_6_1_3_2_2">Event</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_2_2">event-status-change-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_2_3">event-status-change-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_2_2_4">event-status-change-list-n-start</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_6_1_3_3_1">Group</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_6_1_3_3_1_2">group-is-member-of</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_1_1">Newly added DataFabric Manager 3.7.1 API sets</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_2_1">Provisioning policy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_2">provisioning-policy-copy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_3">provisioning-policy-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_4">provisioning-policy-destroy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_5">provisioning-policy-edit-begin</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_6">provisioning-policy-edit-commit</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_7">provisioning-policy-edit-rollback</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_8">provisioning-policy-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_9">provisioning-policy-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_10">provisioning-policy-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_1_11">provisioning-policy-modify</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_2_2">Comment</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_2">comment-field-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_3">comment-field-destroy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_4">comment-field-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_5">comment-field-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_6">comment-field-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_7">comment-field-modify</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_8">comment-field-values-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_9">comment-field-values-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_10">comment-field-values-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_2_2_11">comment-set-object-value</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_3_1">Fibre Channel target</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_1_2">fcp-target-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_1_3">fcp-target-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_1_4">fcp-target-list-info-iter-start</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_3_2">Graph</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_2_2">graph-data-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_2_3">graph-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_2_4">graph-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_3_2_5">graph-list-info-iter-start</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_4_1">vFiler</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_2">vfiler-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_3">vfiler-destroy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_4">vfiler-setup</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_5">vfiler-template-copy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_6">vfiler-template-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_7">vfiler-template-delete</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_8">vfiler-template-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_9">vfiler-template-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_10">vfiler-template-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_1_11">vfiler-template-modify</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_4_2">Snapshot copy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_2_2">snapshot-get-reclaimable-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_2_3">snapshot-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_2_4">snapshot-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_4_2_5">snapshot-list-info-iter-start</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_5_1">CIFS</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_1_2">cifs-domain-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_1_3">cifs-domain-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_1_4">cifs-domain-list-info-iter-start</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_8_1_3_5_2">Interface configuration</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_2_2">ifc-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_2_3">ifc-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_8_1_3_5_2_4">ifc-list-info-iter-start</a></span></div>
+          </td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_1_1">Newly added DataFabric Manager 3.7.1 APIs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_2_1">Resourcepool</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_2_1_2">resourcepool-modify-member</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_2_2">DataFabric Manager</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_2_2_2">dfm-get-resource-property-values</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_3_1">Data protection ossv-directory:</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_2">dp-ossv-application-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_3">dp-ossv-application-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_4">dp-ossv-application-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_5">dp-ossv-application-restore-destination-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_6">dp-ossv-application-restore-destination-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_1_7">dp-ossv-application-restore-destination-list-info-iter-start</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_3_2">Data protection backup:</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_2_2">dp-backup-version-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_2_3">dp-backup-version-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_3_2_4">dp-backup-version-list-iter-start</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_4_1">Performance</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_2">perf-get-counter-data</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_3">perf-get-default-view</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_4">perf-set-default-view</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_5">perf-threshold-create2</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_6">perf-threshold-list-info2-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_7">perf-threshold-list-info2-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_8">perf-threshold-list-info2-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_9">perf-threshold-modify2</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_10">perf-threshold-refresh</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_11">perf-threshold-template-attach-objects</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_12">perf-threshold-template-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_13">perf-threshold-template-delete</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_14">perf-threshold-template-detach-objects</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_15">perf-threshold-template-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_16">perf-threshold-template-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_17">perf-threshold-template-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_1_18">perf-threshold-template-modify</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_4_2">Dataset</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_2">dataset-add-resourcepool</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_3">dataset-begin-failover</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_4">dataset-begin-failover-script-test</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_5">dataset-change-dr-state</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_6">dataset-member-delete-snapshots</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_7">dataset-missing-member-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_8">dataset-missing-member-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_9">dataset-missing-member-list-info-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_10">dataset-provision-member</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_11">dataset-remove-resourcepool</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_12">dataset-replace-primary-members</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_13">dataset-resize-member</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_14">dataset-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_4_2_15">dataset-update-dr-status</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_48_2_4_10_1_3_5_1">Data protection dashboard</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_48_2_4_10_1_3_5_1_2">dp-dashboard-get-dr-dataset-counts</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html', '');" title="Release History" name="3_4_8_48_3_1_1">Release History</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

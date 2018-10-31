@@ -1,0 +1,271 @@
+/*
+ * $Id: //depot/prod/ontap/main/prod/common/adminrpc/snapsvc.idl#2 $
+ *
+ * Network Appliance Snapshot Service IDL File
+ *
+ * This module defines the minimal Workstation Service APIs. It is 
+ * based on line traces and publicly available MSDN informaiton
+ *
+ *
+ * (c)1999-2008 Network Appliance, Inc. All Rights Reserved.
+ */
+
+#ifndef _CIFSADMINSVCIDL_
+#define _CIFSADMINSVCIDL_
+
+/*
+// Interface Attributes
+*/
+
+[
+	endpoint("ncacn_np:[\\cifsadminsvc]"),
+	uuid( 0a72a0e6-72bc-11d3-8f78-006008475a54 ),
+	version(1.0),
+#ifdef __midl
+	ms_union,
+#endif // __midl
+	pointer_default(ptr)
+]
+
+
+interface cifsadminsvc {
+
+#define CONST
+
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef unsigned char UCHAR;
+typedef wchar_t WCHAR;
+typedef wchar_t TSTR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+typedef uint16_t USHORT;
+
+#else
+
+#include <smb/ntstatus.h>
+#include <smbcommon/windef.h>
+#include <smbcommon/winnt.h>
+#endif
+typedef long _EndIDLDef;
+
+
+typedef struct _CIFSADMINSVC_HANDLE {    
+	WCHAR * ServerName;
+} CIFSADMINSVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] CIFSADMINSVC_HANDLE * CIFSADMINSVC_HANDLE_TYPE;
+#else
+#define CIFSADMINSVC_HANDLE_TYPE CIFSADMINSVC_HANDLE*
+#endif
+
+#include <adminintf.h>
+#include <cifsadminintf.h>
+
+typedef uint8_t IN6_ADDR[16];
+
+/*
+ * This is a UNION intended to convey the information on
+ * a user to map.  Note that both sides of the union currently
+ * resolve to the same structure.  
+ *
+ * For UNIX this is either a numeric uid or a unix user name.
+ * For NT this is either a text sid, user/group name, or domain\user
+ */
+
+typedef struct _CA_NAME_DESCRIPTION{
+    ULONG				ipAddr;
+	CA_UNICODE_STRING	userName; 
+}CA_NAME_DESCRIPTION;
+
+typedef struct _CA_V6_NAME_DESCRIPTION{
+    	IN6_ADDR		ipAddr;
+	CA_UNICODE_STRING	userName; 
+}CA_V6_NAME_DESCRIPTION;
+
+typedef union _CA_USER_DESCRIPTION switch(USHORT Level) U {
+	case 0 /*CA_USER_DESCRIPTION_UNIX*/:
+		CA_NAME_DESCRIPTION unixUser;
+	case 1 /*CA_USER_DESCRIPTION_NT*/:
+		CA_NAME_DESCRIPTION ntUser;
+}CA_USER_DESCRIPTION;
+
+typedef union _CA_V6_USER_DESCRIPTION switch(USHORT Level) U {
+	case 0 /*CA_USER_DESCRIPTION_UNIX*/:
+		CA_V6_NAME_DESCRIPTION unixUser;
+	case 1 /*CA_USER_DESCRIPTION_NT*/:
+		CA_V6_NAME_DESCRIPTION ntUser;
+}CA_V6_USER_DESCRIPTION;
+
+/*0	NetrGetFilerVersion*/
+
+int32_t
+NetrGetFilerVersion(
+    [ in ]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+    [ out ] CA_UNICODE_STRING** verStr,
+	[ out ] CA_ULONG_ARRAY *Capabilities /* Codes of additional capabilities*/
+	);
+/*1	NetrMapUser
+ *
+ *	This will return for an NT or UNIX user name, the current CA_USER_IDENTITY
+ *  basically the current cCred for the user.  This is what the cred would
+ * be if created at this instant in time.  It does not reflect the cred
+ * that may already be in existance
+ */
+
+int32_t
+NetrMapUser(
+   [ in ]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+   [ in ]  CA_USER_DESCRIPTION*	user,
+   [out ]  CA_USER_IDENTITY* identity);
+
+/*2	NetrGetUserMappings
+ *
+ *	This will return for an NT or UNIX user name and client name, the current 
+ *  CA_USER_IDENTITYs basically the current cCreds for the user.  
+ *  These are the actual creds in use on this connection.
+ *
+ *  Note that since the client may connect to the server with multiple sessions,
+ *	the identities may reflect multple sessions.
+ */
+int32_t
+NetrGetUserMappings(
+   [ in ]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+   [ in ]  CA_USER_DESCRIPTION*	user,
+   [ in, string, unique] WCHAR* WSName,
+   [out ]  CA_USER_IDENTITY_ARRAY* idList);
+ 
+/*3
+ * This is a temporary interface use to get well known registry keys.
+ * It will be replaced by a more general interface in a later version
+ * of ontap.  For the moment it will support gets of the keys required
+ * to make security decisions
+ */
+int32_t 
+NetrOnTapRegistryGet(
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[in, string, unique]   WCHAR*	registryKey,
+	[out] CA_UNICODE_STRING**	retValue
+	);
+
+/*4
+ * License check for various OnTap product release.
+ */
+int32_t
+NetrCheckProdLicense(
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+    [in]  ONTAP_PROD_LICENSE license
+	);
+
+
+/*
+ *	Routines to access NIS lookup
+ */
+
+/*5
+ *	Get the UID that corresponds to a user name.
+ *	Name is in UNICODE and will be translated to filer NFS
+ *	character set before the lookup
+ */
+int32_t
+NetrGetUserNamefromUnixUID (
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[in]	LONG uid,
+    [out]	CA_UNICODE_STRING** userName
+	);
+
+/*6
+ *	Get the name that corresponds to a UID.
+ *	Name is in UNICODE and will be translated to filer NFS
+ *	character set after the lookup
+ */
+int32_t
+NetrGetUnixUIDfromUserName (
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[in, string, unique]   WCHAR*	userName,
+	[out] LONG* uid
+	);
+/*7
+ *	Get the GID that corresponds to a group name.
+ *	Name is in UNICODE and will be translated to filer NFS
+ *	character set before the lookup
+ */
+int32_t
+NetrGetGroupNamefromUnixGID (
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[in]	LONG gid,
+    [out]	CA_UNICODE_STRING** groupName
+	);
+
+/*8
+ *	Get the name that corresponds to a UID.
+ *	Name is in UNICODE and will be translated to filer NFS
+ *	character set after the lookup
+ */
+int32_t
+NetrGetUnixGIDfromGroupName (
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[in, string, unique]   WCHAR*	groupName,
+	[out] LONG* gid
+	);
+
+/*9
+*  This interface will examine the search order used by the 
+ *	name service and return information on how the filer is
+ *	configured.
+ *
+ *	localFilesUsed	return non-zero if local filer files
+ *			are being search for BOTH passwd and group.
+ *			If either is not using local files, then 
+ *			the routine will return 0.
+ *
+ *	nisUsed		return non-zero if EITHER passwd or group
+ *			is searched via NIS.
+ */
+ int32_t
+ NetrNssUsingLocalFiles(
+    [in]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+	[out] ULONG* localFilesUsed,
+	[out] ULONG* nisUsed
+	);
+
+/*10	NetrMapUser_V6
+ *
+ * This will return for an NT or UNIX user name of an IPV6 client, the 
+ * current CA_USER_IDENTITY basically the current cCred for the user.
+ * This is what the cred would be if created at this instant in time.
+ * It does not reflect the cred that may already be in existance
+ */
+
+int32_t
+NetrMapUserV6(
+   [ in ]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+   [ in ]  CA_V6_USER_DESCRIPTION*	user,
+   [out ]  CA_USER_IDENTITY* identity);
+
+/*11	NetrGetUserMappings_V6
+ *
+ *  This will return for an NT or UNIX user name and client name of an IPV6
+ *  client, the current CA_USER_IDENTITYs basically the current cCreds for 
+ *  the user. These are the actual creds in use on this connection.
+ *
+ *  Note that since the client may connect to the server with multiple sessions,
+ *	the identities may reflect multple sessions.
+ */
+int32_t
+NetrGetUserMappingsV6(
+   [ in ]  CIFSADMINSVC_HANDLE_TYPE hBinding,
+   [ in ]  CA_V6_USER_DESCRIPTION*	user,
+   [ in, string, unique] WCHAR* WSName,
+   [out ]  CA_USER_IDENTITY_ARRAY* idList);
+ 
+}	/* interface cifsadminsvc */
+
+#endif /* _CIFSADMINSVCIDL_ */
+

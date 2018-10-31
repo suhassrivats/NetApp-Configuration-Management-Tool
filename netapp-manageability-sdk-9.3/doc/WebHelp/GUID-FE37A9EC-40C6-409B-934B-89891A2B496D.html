@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Input Output Management APIs for Ruby</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5C34429-E1F8-447D-8ACB-6112AE506BF6.html">SDK Core APIs</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-73AA03D3-EBF7-4E19-A3F6-063281F7C7E1.html">Ruby Core APIs</a> : Input Output Management APIs for Ruby</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_3"><a name="3_6_6_16_12_1">Input Output Management APIs for Ruby</a></div>
+      <div class="Short_Description"><a name="3_6_6_16_12_2">The Input Output (I/O) element in Python is represented by the NaElement class. The I/O elements are similar to XML containers; they have a name-value pair. You can nest them arbitrarily within other I/O elements. The I/O Management APIs are used to create I/O elements, and to set the value to or retrieve the value from the I/O elements. This page contains information about the Input Output Management APIs for Ruby, including the description and syntax, and the input, input types, input description, and input return values.</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_3_1">NaElement::new</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_3_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_3_2_1_2">new(name, value = "")</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_3_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_3_3_1_2">Constructs a new I/O element with the given name and value.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_3_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_3_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_3_3_1_2_2_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_3_3_1_2_2_1_4_1_2">The name of the element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_3_3_1_2_2_1_4_2_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_3_3_1_2_2_1_4_2_2">The value of the element to be created</a></div>
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_3_3_1_2_2_1_4_2_2_2">This parameter is optional for the typedefs and the API names.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_3_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_3_4_1_2">The NaElement object</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_5_1">NaElement::child_add</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_5_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_5_2_1_2">child_add(elt)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_5_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_5_3_1_2">Adds the element elt to the children list of the current object of the type NaElement.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_5_3_1_2_2">This can be used to add any input element, its typedef, and the elements of the typedef.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_5_3_1_2_3_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_5_3_1_2_3_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_5_3_1_2_3_1_4_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_5_3_1_2_3_1_4_1_2">The object of NaElement</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_5_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_5_4_1_2">void</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_6_1">NaElement::child_add_string</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_6_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_6_2_1_2">child_add_string(name, value)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_6_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_6_3_1_2_1_1">Creates a new object of NaElement for the given name and </a><span class="Italic">value</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_6_3_1_2_1_2">Adds the new object as a child element to the current object of the type NaElement.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_6_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_6_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_6_3_1_2_2_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_6_3_1_2_2_1_4_1_2">The name of the element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_6_3_1_2_2_1_4_2_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_6_3_1_2_2_1_4_2_2">The value to be assigned to the element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_6_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_6_4_1_2">void</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_7_1">NaElement::child_add_string_encrypted</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_7_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_7_2_1_2">child_add_string_encrypted(name, value, key = nil)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_7_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_7_3_1_2_1_1">Creates a new object of NaElement for the given </a><span class="Italic">name</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_7_3_1_2_1_2">Encrypts value with the key </a><span class="Italic">key</span> and adds it to the new object.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_7_3_1_2_1_3">Adds the new object as a child element to the current object of type NaElement.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_Continued"><a name="3_6_6_16_12_3_7_3_1_2_1_3_3">Both the client-side and the server-side should know the </a><span class="Italic">value</span> of <span class="Italic">key</span> to encrypt and decrypt value appropriately. You use the API <span class="codeph">child_get_string_encrypted</span> to decrypt the value.</div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_7_3_1_2_1_4">The default key is used if the given key is nil.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_7_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_7_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_1_2">The name of the element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_2_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_2_2">The value to be assigned to the element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_3_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_7_3_1_2_2_1_4_3_2">The encryption key</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_7_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_7_4_1_2">void</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_8_1">NaElement::set_content</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_8_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_8_2_1_2">set_content(content)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_8_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_8_3_1_2">Sets the value of an element to content.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_8_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_8_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_8_3_1_2_2_1_4_1_1">content</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_8_3_1_2_2_1_4_1_2">The value to be set to the current object</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_8_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_8_4_1_2">void</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_9_1">NaElement::child_get</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_9_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_9_2_1_2">child_get(name)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_9_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_9_3_1_2">Gets the child element named name from the current object.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_9_3_1_2_2">You can nest the elements arbitrarily and the returned element can have other child elements.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_9_3_1_2_3_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_9_3_1_2_3_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_9_3_1_2_3_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_9_3_1_2_3_1_4_1_2">The name of the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_9_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_9_4_1_2_1_1">The NaElement named </a><span class="Italic">name</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_9_4_1_2_1_2">nil if no child element is found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_10_1">NaElement::child_get_int</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_10_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_10_2_1_2">child_get_int(name)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_10_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_10_3_1_2">Gets the child name from the current object and returns its value as an integer.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_10_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_10_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_10_3_1_2_2_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_10_3_1_2_2_1_4_1_2">The name of the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_10_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_10_4_1_2_1_1">The integer value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_10_4_1_2_1_2">nil if no child element is found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_11_1">NaElement::child_get_string</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_11_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_11_2_1_2">child_get_string(name)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_11_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_11_3_1_2">Gets the child named name from the current object and returns its value.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_11_3_1_2_2">If there is no child named name, nil is returned.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_11_3_1_2_3_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_11_3_1_2_3_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_11_3_1_2_3_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_11_3_1_2_3_1_4_1_2">The name of the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_11_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_11_4_1_2_1_1">The value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_11_4_1_2_1_2">nil if no child element is found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_12_1">NaElement::child_get_string_encrypted</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_12_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_12_2_1_2">child_get_string_encrypted(name, key = nil)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_12_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_3_1_2_1_1">Gets the child named </a><span class="Italic">name</span> from the current object.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_3_1_2_1_2">Retrieves its value and decrypts it with the key </a><span class="Italic">key</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_3_1_2_1_3">The default key is used if the given key is nil.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_3_1_2_1_4">Returns the decrypted value.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_12_3_1_2_2_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_12_3_1_2_2_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_12_3_1_2_2_1_4_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_12_3_1_2_2_1_4_1_2">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_12_3_1_2_2_1_4_2_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_12_3_1_2_2_1_4_2_2">The decryption key</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_12_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_4_1_2_1_1">The decrypted value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_12_4_1_2_1_2">nil if no child element is found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_13_1">NaElement::children_get</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_13_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_13_2_1_2">children_get()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_13_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_13_3_1_2">Returns the list of children as an array.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_13_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_13_4_1_2">The array of objects of the type NaElement</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_14_1">NaElement::has_children</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_14_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_14_2_1_2">has_children()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_14_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_14_3_1_2">Checks whether the current element has any child element.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_14_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_14_4_1_2_1_1">1 if the element has a child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_14_4_1_2_1_2">0 if no child element is found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_15_1">NaElement::sprintf</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_15_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_15_2_1_2">sprintf()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_15_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_15_3_1_2">Prints the current element and its child elements recursively in XML format.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_15_3_1_2_2">You can use this API for debugging purposes.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_15_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_15_4_1_2">The XML string containing the element and its child elements</a></div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_16_1">NaElement::parse_raw_xml</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_16_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_16_2_1_2">parse_raw_xml(xml_str)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_16_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_16_3_1_2">Retrieves the API element from raw XML input.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_16_4_1_1">Return value</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_16_4_1_2_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_16_12_3_16_4_1_2_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_16_12_3_16_4_1_2_1_1_4_1_1">xml_str</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_16_12_3_16_4_1_2_1_1_4_1_2">The raw XML input string</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_16_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_16_5_1_2_1_1">The NaElement object containing the API input data on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_16_12_3_16_5_1_2_1_2">The NaElement object containing the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_16_12_3_17_1">NaElement::toEncodedString</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_17_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_16_12_3_17_2_1_2">toEncodedString()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_17_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_17_3_1_2">Encodes a string containing special characters such as ampersand (&amp;), less than (&lt;), greater than (&gt;), single quote ('), and double quote (").</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_17_3_1_2_2">This is mainly useful while passing string values containing special characters such as '&amp;' and '&lt;','&gt;' to any core API. The special characters can result in unexpected parsing of XML data; therefore, they need to be handled appropriately.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_16_12_3_17_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_16_12_3_17_4_1_2">The encoded string in XML format</a></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-73AA03D3-EBF7-4E19-A3F6-063281F7C7E1.html', '');" title="Ruby Core APIs" name="3_6_6_16_12_4_1_1">Ruby Core APIs</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

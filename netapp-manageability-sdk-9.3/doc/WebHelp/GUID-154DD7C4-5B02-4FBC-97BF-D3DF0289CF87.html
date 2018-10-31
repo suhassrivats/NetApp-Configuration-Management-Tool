@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>OnCommand Unified Manager web services sample codes</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-3FFA260C-8831-4791-BDC3-ABE827FAB23C.html">Sample Codes</a> : OnCommand Unified Manager web services sample codes</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_10_11_1">OnCommand Unified Manager web services sample codes</a></div>
+      <div class="Short_Description"><a name="3_10_11_2">You can use the Web services APIs for OnCommand Unified Manager Core Package to retrieve information about the DataFabric Manager server version, vFiler units management, chargeback metrics collections, and so on.</a></div>
+      <div class="Body"><a name="3_10_11_4_2_1">The following list describes sample codes that demonstrate the use of a few Web services APIs. Extract the </a><span class="Teletype">.zip</span> files and check the <span class="filepath">src/sample/</span> file for the sample code.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_11_4_2_2_1_5_1_1">Name</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_11_4_2_2_1_5_1_2">Description</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_11_4_2_2_1_5_1_3">Sample code in Java</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_10_11_4_2_2_1_5_1_4">Sample code in C#</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_1_1">Hello DataFabric Manager</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_1_2">Sample code to demonstrate how to get the version number of the DataFabric Manager server by using the HTTP or HTTPS protocol.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_1_3">HelloDfm.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_1_4">HelloDfm.cs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_2_1">MultiStore management</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_2_2">Sample code to manage vFiler units. You can create and delete vFiler units; and create, list, and delete vFiler templates.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_2_3">Vfiler.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_2_4">Vfiler.cs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_3_1">Usage Metrics</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_3_2">Sample code to demonstrate how to compute and retrieve space utilization and I/O measurement for a dataset node.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_3_3">UsageMetrics.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_3_4">UsageMetrics.cs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_4_1">Storage service management</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_4_2">Sample code to demonstrate how to manage storage services and provision storage. You can create a new storage service with backup or mirror protection policy, list or delete storage service, provision and de-provision storage, and resize storage.</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_10_11_4_2_2_1_6_4_3">StorageService.java</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_10_11_4_2_2_1_6_4_4_1">-</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-3FFA260C-8831-4791-BDC3-ABE827FAB23C.html', '');" title="Sample Codes" name="3_10_11_5_1_1">Sample Codes</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

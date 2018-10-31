@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>SDK 1.6</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html">Getting started with SDK</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html">Release History</a> : SDK 1.6</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_2"><a name="3_4_8_40_1">SDK 1.6</a></div>
+      <div class="Body"><a name="3_4_8_40_2_2">This page contains information about APIs or API-sets that are newly added in this release.</a></div>
+      <div class="Section_Title"><a name="3_4_8_40_2_4_1">New in this release</a></div>
+      <div class="Body"><a name="3_4_8_40_2_4_2">Following are new in Manage ONTAP SDK 1.6:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_40_2_4_3_1">SSL Support in Perl.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_40_2_4_4">Core SDK function </a><span class="codeph">set_transport_type()</span> is enhanced to configure ONTAPI server to use either plain HTTP or HTTPS.</div>
+      <div class="Body"><a name="3_4_8_40_2_4_5">HTTPS support uses Net::SSLeay.pm. Net::SSLeay is not part of standard Perl installation. Net::SSLeay.pm needs to be compiled from source Net_SSLeay.pm-1.xx.tar.gz available at </a><span class="xref"><a href="HTTP://WWW.CPAN.ORG/" target="external_window">http://www.cpan.org</a></span>. For instructions to compile Net::SSLeay.pm from source, see the readme file in Net_SSLeay.pm-1.xx.tar.gz.</div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_40_2_4_6_1">ONTAPI libraries supported on the IBM AIX platform.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_40_2_4_7">libadt.lib, libnetapp.lib, and libxml.lib are available on IBM AIX. These libraries are available in the lib/aix directory.</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_40_2_4_8_1">ONTAPI libraries supported on 64-bit Windows.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_40_2_4_9">libadt.lib, libnetapp.lib, and libxml.lib are available on Windows x64, ia64. The Windows x64 version of these libraries is available in the lib/nt/x64 directory. The Windows ia64 version of these libraries is available in the lib/nt/ia64 directory.</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_40_2_4_10_1">The Manage ONTAP SDK 1.5 documents the API of Data ONTAP 7.1.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_4_8_40_2_5_1">New APIs in Data ONTAP 7.2</a></div>
+      <div class="Body"><a name="3_4_8_40_2_5_2">Following are the newly added APIs and API-sets:</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_3_1_3_1_1">Newly added API-sets</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_3_1_3_2_1">SnapVault management APIs</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_2">snapvault-primary-abort-snapshot-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_3">snapvault-primary-abort-transfer</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_4">snapvault-primary-delete-snapshot-schedule</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_5">snapvault-primary-destinations-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_6">snapvault-primary-get-relationship-status</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_7">snapvault-primary-initiate-restore-transfer</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_8">snapvault-primary-initiate-snapshot-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_9">snapvault-primary-relationship-status-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_10">snapvault-primary-relationship-status-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_11">snapvault-primary-relationship-status-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_12">snapvault-primary-release-relationship</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_13">snapvault-primary-set-snapshot-schedule</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_14">snapvault-primary-snapshot-schedule-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_15">snapvault-primary-snapshot-schedule-status-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_16">snapvault-secondary-abort-snapshot-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_17">snapvault-secondary-abort-transfer</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_18">snapvault-secondary-configuration-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_19">snapvault-secondary-create-relationship</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_20">snapvault-secondary-delete-relationship</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_21">snapvault-secondary-delete-snapshot-schedule</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_22">snapvault-secondary-destinations-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_23">snapvault-secondary-get-configuration</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_24">snapvault-secondary-get-relationship-status</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_25">snapvault-secondary-initiate-incremental-transfer</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_26">snapvault-secondary-initiate-snapshot-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_27">snapvault-secondary-modify-configuration</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_28">snapvault-secondary-relationship-status-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_29">snapvault-secondary-relationship-status-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_30">snapvault-secondary-relationship-status-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_31">snapvault-secondary-release-relationship</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_32">snapvault-secondary-resync-relationship</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_33">snapvault-secondary-set-snapshot-schedule</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_34">snapvault-secondary-snapshot-schedule-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_1_35">snapvault-secondary-snapshot-schedule-status-list-info</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_3_1_3_2_2">A-SIS management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_2_2">sis-disable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_2_3">sis-enable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_2_4">sis-set-config</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_2_5">sis-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_2_2_6">sis-stop</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_3_1_3_3_1">SnapLock information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_3_1_2">file-get-snaplock-retention-time</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_3_1_3">file-get-snaplock-retention-time-list-info-max</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_3_1_4">file-set-snaplock-retention-time</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_3_1_5">file-snaplock-retention-time-list-info</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_3_1_3_3_2">WAFL utility functions for agents</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_3_1_3_3_2_2">wafl-sync</a></span></div>
+          </td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_1_1">Newly added APIs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_2_1">Aggregate information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_2_1_2">aggr-check-spare-low</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_2_2">Initiator group operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_2_2_2">igroup-rename</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_3_1">Storage failover interconnect APIs</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_3_1_2">ic-get-error-stats</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_3_2">Software package information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_3_2_2">software-extract-package</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_4_1">Common Internet File System (CIFS) setup, sessions, and shares</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_2">cifs-homedir-paths-get</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_3">cifs-homedir-paths-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_4">cifs-nbalias-names-get</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_5">cifs-nbalias-names-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_6">cifs-setup</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_7">cifs-setup-create-group-file</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_8">cifs-setup-create-passwd-file</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_9">cifs-setup-ou-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_10">cifs-setup-ou-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_11">cifs-setup-ou-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_12">cifs-setup-site-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_13">cifs-setup-site-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_14">cifs-setup-site-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_15">cifs-setup-verify-name</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_16">cifs-setup-verify-passwd-and-group</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_17">cifs-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_18">cifs-status</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_1_19">cifs-stop</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_4_2">A-SIS management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_2_2">sis-disable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_2_3">sis-enable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_2_4">sis-set-config</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_2_5">sis-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_4_2_6">sis-stop</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_5_1">NFS configuration and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_1_2">nfs-stats-get-client-stats</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_1_3">nfs-stats-top-clients-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_1_4">nfs-stats-top-clients-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_1_5">nfs-stats-top-clients-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_1_6">nfs-stats-zero-stats</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_5_2">SnapLock information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_2_2">file-get-snaplock-retention-time</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_2_3">file-get-snaplock-retention-time-list-info-max</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_2_4">file-set-snaplock-retention-time</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_5_2_5">file-snaplock-retention-time-list-info</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_6_1">LUN management and monitoring</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_6_1_2">lun-get-inquiry-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_6_1_3">lun-get-occupied-size</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_6_2">iSCSI management and monitoring</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_6_2_2">iscsi-initiator-modify-chap-params</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_6_2_3">iscsi-tpgroup-alua-set</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_7_1">File system operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_7_1_2">fle-rename-directory</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_7_1_3">file-create-director</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_7_2">SCSI enclosure services-related operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_7_2_2">storage-shelf-set-led-state</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_7_2_3">storage-shelf-update-fw</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_8_1">Snapshot management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_8_1_2">snapshot-partial-restore-file</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_8_1_3">snapshot-partial-restore-file-list-info</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_8_2">Disk-related operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_8_2_2">disk-sanown-remove-ownership</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_8_2_3">disk-update-disk-fw</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_8_2_4">disk-zero-spares</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_9_1">vFiler configuration and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_1_2">vfiler-dr-activate</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_1_3">vfiler-dr-configure</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_1_4">vfiler-dr-delete</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_1_5">vfiler-dr-get-status</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_1_6">vfiler-dr-resync</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_9_2">Volume information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_2_2">volume-list-info-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_2_3">volume-list-info-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_9_2_4">volume-list-info-iter-start</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_40_2_5_5_1_3_10_1">System information</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_10_1_2">system-api-get-elements</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_10_1_3">system-api-list-types</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_40_2_5_5_1_3_10_1_4">system-api-list</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html', '');" title="Release History" name="3_4_8_40_3_1_1">Release History</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

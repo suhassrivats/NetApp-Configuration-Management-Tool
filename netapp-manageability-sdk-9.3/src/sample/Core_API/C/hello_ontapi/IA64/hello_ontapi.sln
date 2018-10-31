@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hello_ontapi", "hello_ontapi.vcproj", "{1E047367-941F-492E-A862-CCEA443226EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug IA64|Win32 = Debug IA64|Win32
+		Debug|Win32 = Debug|Win32
+		Release IA64|Win32 = Release IA64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E047367-941F-492E-A862-CCEA443226EF}.Debug IA64|Win32.ActiveCfg = Debug IA64|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Debug IA64|Win32.Build.0 = Debug IA64|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Debug|Win32.Build.0 = Debug|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Release IA64|Win32.ActiveCfg = Release IA64|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Release IA64|Win32.Build.0 = Release IA64|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Release|Win32.ActiveCfg = Release|Win32
+		{1E047367-941F-492E-A862-CCEA443226EF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>SDK Core APIs</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : SDK Core APIs</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_6_6_1">SDK Core APIs</a></div>
+      <div class="Section_Title"><a name="3_6_6_2_2_1">Introduction</a></div>
+      <div class="Body"><a name="3_6_6_2_2_2">The SDK core APIs provide infrastructure to invoke any API on a server. The SDK Core APIs provide the client side interfaces to set up connection with the server, pack (marshal) or unpack (unmarshal) messages in XML format, query any API on the server, determine the queried result, and so on.</a></div>
+      <div class="Body"><a name="3_6_6_2_2_3">The data structures used for sending requests and for receiving responses are called Input Output (I/O) elements. XML encoding is used to package these I/O elements. Each element has a name and content, and might have one or more child elements within. The content type is a string, integer, array of elements, or a NetApp-defined data type.</a></div>
+      <div class="Body"><a name="3_6_6_2_2_4">The SDK Core APIs internally convert any API to be invoked and the I/O elements, to XML format. The mechanism is as follows:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_2_2_5_1_1_2">The client code uses a small set of primitive data types to create a request.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_Continued"><a name="3_6_6_2_2_5_1_1_3">The only primitive data types available in the SDK Core APIs are integer, string, and boolean. Nested structures and arrays are also available, which contain integer, string, and boolean, in turn.</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_2_2_5_1_2">An API name is associated with it.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_2_2_5_1_3">Named parameters are added to the request.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_6_6_2_2_6">On the server side, a similar set of primitives extracts the parameters from the request for processing, and packages the reply. At the client side, the response data is extracted using the SDK Core APIs.</a></div>
+      <div class="Body"><a name="3_6_6_2_2_7">The transport mechanism used for the API communication is either HTTP, HTTPS, or DCE/RPC for Windows. HTTP and HTTPS are important while managing devices residing outside the corporate firewall. HTTPS provides secure communication by encrypting the API requests and responses.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_2_2_8">Content of this section</a></span></div>
+      <div class="Body"><a name="3_6_6_2_2_9">This section provides information about the Core APIs in four different languages:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html', '');" title="C and C++ Core APIs" name="3_6_6_2_2_10_1_1">C and C++ Core APIs</a></span>—This section lists the functions in C and C++.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-1A5E05FE-3086-4544-9DA2-528356F46D23.html', '');" title="Java Core APIs" name="3_6_6_2_2_10_2_1">Java Core APIs</a></span>—This section lists the Java classes, interfaces, exceptions, and errors.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-7EECB0FC-EED2-455E-897E-ACDBFC33C60A.html', '');" title="Perl Core APIs" name="3_6_6_2_2_10_3_1">Perl Core APIs</a></span>—This section lists the functions in Perl.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-1CBA8530-A34D-4A5A-8EC3-A7E8D61C1BE0.html', '');" title="Microsoft .NET Core APIs" name="3_6_6_2_2_10_4_1_2">Microsoft .NET Core APIs</a></span> —This sections lists the Microsoft .NET classes, exceptions, and enumerations.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E35DD8FE-662C-4A39-B3BB-5B9A3E717532.html', '');" title="Python Core APIs" name="3_6_6_2_2_10_5_1">Python Core APIs</a></span>—This section lists the functions in Python.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-73AA03D3-EBF7-4E19-A3F6-063281F7C7E1.html', '');" title="Ruby Core APIs" name="3_6_6_2_2_10_6_1">Ruby Core APIs</a></span>—This section lists the functions in Ruby.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_6_6_2_2_11">_________________________________________________________________________________________</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_2_2_12">Related Topic</a></span></div>
+      <div class="Section"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-B163A21B-3044-4AEA-918E-9DCC517422C4.html', '');" title="Library Information" name="3_6_6_2_2-12">Library Information</a></span></div>
+      <div class="Child_Topic_Open">
+        <span style="font-size: 13.5px; font-weight: bold;">Next Topics:</span>
+        <span style="font-weight: bold"></span><a name="3_6_6_3_1_1o">&nbsp;</a></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html', '');" title="C and C++ Core APIs" name="3_6_6_3_1_1">C and C++ Core APIs</a></span></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-1A5E05FE-3086-4544-9DA2-528356F46D23.html', '');" title="Java Core APIs" name="3_6_6_3_1_2">Java Core APIs</a></span></div>
+      <div class="Child_Link_Description"><a name="3_6_6_3_1_2_4">The Java Core APIs provide the client-side Java interfaces to set up connection with the server, pack (marshal) or unpack (unmarshal) requests and responses in XML format, query any API on the server, determine the queried result, and so on.</a></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-7EECB0FC-EED2-455E-897E-ACDBFC33C60A.html', '');" title="Perl Core APIs" name="3_6_6_3_1_3">Perl Core APIs</a></span></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-1CBA8530-A34D-4A5A-8EC3-A7E8D61C1BE0.html', '');" title="Microsoft .NET Core APIs" name="3_6_6_3_1_4">Microsoft .NET Core APIs</a></span></div>
+      <div class="Child_Link_Description"><a name="3_6_6_3_1_4_4">The Microsoft .NET Core APIs provide the client-side .NET interfaces to set up connection with the server, package or unpackage requests and responses in XML format, query any API on the server, determine the queried result, and so on.</a></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E35DD8FE-662C-4A39-B3BB-5B9A3E717532.html', '');" title="Python Core APIs" name="3_6_6_3_1_5">Python Core APIs</a></span></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-73AA03D3-EBF7-4E19-A3F6-063281F7C7E1.html', '');" title="Ruby Core APIs" name="3_6_6_3_1_6">Ruby Core APIs</a></span></div>
+      <div class="Child_Link_Description"><a name="3_6_6_3_1_6_4">The Ruby library provides the following two classes:</a></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-AAF6EE7A-49A4-43C7-986E-AB492662C4AE.html', '');" title="Sample Codes" name="3_6_6_3_1_7">Sample Codes</a></span></div>
+      <div class="Child_Link_Description"><a name="3_6_6_3_1_7_4">Core APIs are used to make API calls to a NetApp storage system, a DataFabric Manager server, or an IBM N series system.</a></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html', '');" title="Programming Guide" name="3_6_6_3_2_1">Programming Guide</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

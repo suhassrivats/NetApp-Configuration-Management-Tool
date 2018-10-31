@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flexclone", "flexclone.vcproj", "{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug x64|Win32 = Debug x64|Win32
+		Debug|Win32 = Debug|Win32
+		Release x64|Win32 = Release x64|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Debug x64|Win32.ActiveCfg = Debug x64|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Debug x64|Win32.Build.0 = Debug x64|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Debug|Win32.Build.0 = Debug|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Release x64|Win32.ActiveCfg = Release x64|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Release x64|Win32.Build.0 = Release x64|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Release|Win32.ActiveCfg = Release|Win32
+		{9BD1EA9C-84E9-4E76-BE4E-369E5C33D208}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

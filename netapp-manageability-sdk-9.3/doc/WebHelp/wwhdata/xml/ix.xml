@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebWorksHelpIX version="5.0" xmlns="urn:WebWorks-Help-Index-Schema">
+  <g t="B" o="002">
+    <i t="browse APIs">
+      <i t="C#">
+        <j l="48" />
+      </i>
+      <i t="PowerShell Core">
+        <j l="48" />
+      </i>
+      <i t="VB.NET">
+        <j l="48" />
+      </i>
+    </i>
+  </g>
+  <g t="C" o="002">
+    <i t="comments">
+      <i t="how to send feedback about documentation">
+        <j l="77" />
+      </i>
+    </i>
+  </g>
+  <g t="D" o="002">
+    <i t="documentation">
+      <i t="how to receive automatic notification of changes to">
+        <j l="77" />
+      </i>
+      <i t="how to send feedback about">
+        <j l="77" />
+      </i>
+    </i>
+    <i t="documentation in MSDN format">
+      <i t="C#">
+        <j l="48" />
+      </i>
+      <i t="PowerShell Core">
+        <j l="48" />
+      </i>
+      <i t="VB.NET">
+        <j l="48" />
+      </i>
+    </i>
+  </g>
+  <g t="F" o="002">
+    <i t="feedback">
+      <i t="how to send comments about documentation">
+        <j l="77" />
+      </i>
+    </i>
+  </g>
+  <g t="I" o="002">
+    <i t="information">
+      <i t="how to send feedback about improving documentation">
+        <j l="77" />
+      </i>
+    </i>
+  </g>
+  <g t="O" o="002">
+    <i t="OpenSSL with FIPS">
+      <i t="upgrading">
+        <j l="28" />
+      </i>
+    </i>
+  </g>
+  <g t="S" o="002">
+    <i t="suggestions">
+      <i t="how to send feedback about documentation">
+        <j l="77" />
+      </i>
+    </i>
+  </g>
+  <g t="T" o="002">
+    <i t="Twitter">
+      <i t="how to receive automatic notification of documentation changes">
+        <j l="77" />
+      </i>
+    </i>
+  </g>
+  <g t="U" o="002">
+    <i t="upgrading">
+      <i t="OpenSSL with FIPS">
+        <j l="28" />
+      </i>
+    </i>
+  </g>
+</WebWorksHelpIX>

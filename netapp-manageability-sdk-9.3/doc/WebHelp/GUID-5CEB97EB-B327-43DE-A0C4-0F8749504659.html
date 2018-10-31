@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Perl API bindings</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : Perl API bindings</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_6_8_1">Perl API bindings</a></div>
+      <div class="Section_Title"><a name="3_6_8_2_2_1">Overview</a></div>
+      <div class="Body"><a name="3_6_8_2_2_2">NetApp Manageability SDK provides support for Perl API bindings for both ONTAP APIs and OnCommand Unified Manager APIs. The Perl API bindings libraries contain interfaces to establish a connection with either the ONTAP server or the OnCommand Unified Manager server. By using these libraries, you can create Perl applications to access and manage the ONTAP server or OnCommand Unified Manager server.</a></div>
+      <div class="Section_Title"><a name="3_6_8_2_4_1">Runtime library</a></div>
+      <div class="Body"><a name="3_6_8_2_4_2">NetApp Manageability SDK Perl API bindings provide a runtime library NaServer.pm, which is available at &lt;installation_folder &gt;/lib/perl/NetApp. This library file enables you to establish a server connection, send requests and receive responses, and interpret error messages. Each binding can be called as a subroutine of NaServer module which in turn invokes the corresponding ONTAP or OnCommand Unified Manager API.</a></div>
+      <div class="Section_Title"><a name="3_6_8_2_5_1">API Definitions</a></div>
+      <div class="Body"><a name="3_6_8_2_5_2">The Perl API bindings contain API definitions for ONTAP and OnCommand Unified Manager. The Perl modules specify textual description of APIs, input, output, and typedef parameters corresponding to these APIs. These modules in turn are used for validating bindings and their input. The definitions are specified as hashes of hashes.</a></div>
+      <div class="Section_Title"><a name="3_6_8_2_6_1">Library Information for APIs</a></div>
+      <div class="Body"><a name="3_6_8_2_6_2">Check the </a><span class="filepath">doc/perldoc/</span> file for the <span class="filepath">.html</span> files.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_8_2_6_3_1_4_1_1">.pm files</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_8_2_6_3_1_4_1_2">.html files</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 1.5pt">
+            <div class="Table_Cell_Head"><a name="3_6_8_2_6_3_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_1_1">OntapClusterAPI.pm</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_1_2" href="doc/perldoc/OntapClusterAPI.html" target="_blank">OntapClusterAPI.html</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_1_3">Contains the definitions and description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_2_1">Ontap7ModeAPI.pm</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_2_2" href="doc/perldoc/Ontap7ModeAPI.html" target="_blank">Ontap7ModeAPI.html</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_2_3">Contains the definitions and description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_3_1">OCUMAPI.pm</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_3_2" href="doc/perldoc/OCUMAPI.html" target="_blank">OCUMAPI.html</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_3_3">Contains the definitions and description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_4_1">OCUMClassicAPI.pm</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_4_2" href="doc/perldoc/OCUMClassicAPI.html" target="_blank">OCUMClassicAPI.html</a></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_8_2_6_3_1_5_4_3">Contains the definitions and description</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Child_Topic_Open">
+        <span style="font-size: 13.5px; font-weight: bold;">Next Topics:</span>
+        <span style="font-weight: bold"></span><a name="3_6_8_3_1_1o">&nbsp;</a></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-17612E73-D4EA-4C75-B37A-DD61BB46DD96.html', '');" title="Startup APIs for Perl bindings" name="3_6_8_3_1_1">Startup APIs for Perl bindings</a></span></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-C8DE2E60-1536-4C68-A4EB-1BED2C78AC9F.html', '');" title="Session Management APIs for Perl bindings" name="3_6_8_3_1_2">Session Management APIs for Perl bindings</a></span></div>
+      <div class="Child_Topic"><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-BAADC874-0A69-4784-8960-C8428668B3DD.html', '');" title="How to use Perl API bindings" name="3_6_8_3_1_3">How to use Perl API bindings</a></span></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html', '');" title="Programming Guide" name="3_6_8_3_2_1">Programming Guide</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

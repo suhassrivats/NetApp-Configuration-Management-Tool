@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Input Output Element Management APIs for C and C++</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5C34429-E1F8-447D-8ACB-6112AE506BF6.html">SDK Core APIs</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html">C and C++ Core APIs</a> : Input Output Element Management APIs for C and C++</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_3"><a name="3_6_6_6_10_1">Input Output Element Management APIs for C and C++</a></div>
+      <div class="Short_Description"><a name="3_6_6_6_10_2">The Input Output Element Management APIs are used to set the value to, or retrieve the value from, the input output (I/O) element. I/O elements are similar to XML containers; they have a name-value pair. You can nest them arbitrarily within other elements.</a></div>
+      <div class="Body"><a name="3_6_6_6_10_3_1">This page contains information about the Input Output Element Management APIs for C and C++, including the description and syntax, and the input, input types, input description, and input return values.</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_3_1">na_child_add</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_3_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_3_3">na_elem_t* na_child_add(na_elem_t* elt, na_elem_t* childelt);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_3_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_10_3_3_5">Adds the nested child element childelt to the parent element </a><span class="Italic">elt</span>.</div>
+      <div class="Body"><a name="3_6_6_6_10_3_3_6">All nested elements are unordered and are accessed by their name. However, this API adds the child element to the end of the nested element list.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_3_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.191094619666046%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_3_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.25602968460111%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_3_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_3_7_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_3_7_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_3_7_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_3_7_1_1_5_2_1">childelt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_3_7_1_1_5_2_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_3_7_1_1_5_2_3_1">The pointer to the child element that is to be added to the parent element </a><span class="Italic">elt</span></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_3_8">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_3_9_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_3_9_2_1">NULL in case of failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_4_1">na_child_add_int</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_4_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_4_3">na_elem_t* na_child_add_int(na_elem_t * elt, const char * name, int value);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_4_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_4_5_1_1">Creates a new child element with the given name and value of type integer.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_4_5_2_1">Adds this child element to the nested element list of the parent element.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_4_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_4_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_4_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_4_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_4_6_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_4_6_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_4_6_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_4_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_4_6_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_4_6_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_4_6_1_1_5_3_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_4_6_1_1_5_3_3_1">The value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_4_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_4_8_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_4_8_2_1">NULL in case of failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_5_1">na_child_add_int64</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_5_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_5_3">na_elem_t * na_child_add_int64(na_elem_t * e, const char * name, int64_t value);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_5_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_5_5_1_1">Creates a new child element with the given name and value of type 64-bit integer.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_5_5_2_1">Adds this child element to the nested element list of the parent element.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_5_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_5_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_5_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_5_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_5_6_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_5_6_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_5_6_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_5_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_5_6_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_5_6_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_5_6_1_1_5_3_2">int64_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_5_6_1_1_5_3_3_1">The 64-bit integer value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_5_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_5_8_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_5_8_2_1">NULL in case of failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_6_1">na_child_add_uint32</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_6_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_6_3">na_elem_t* na_child_add_uint32(na_elem_t * e, const char * name, uint32_t value);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_6_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_6_5_1_1_2">Creates a new child element with the given name and value of type 32-bit unsigned integer.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_6_5_2_1">Adds this child element to the nested element list of the parent element.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_6_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_6_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_6_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_6_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_6_6_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_6_6_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_6_6_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_6_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_6_6_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_6_6_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_6_6_1_1_5_3_2">uint32_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_6_6_1_1_5_3_3_1">The 32-bit unsigned integer value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_6_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_6_8_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_6_8_2_1">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_7_1">na_child_add_uint64</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_7_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_7_3">na_elem_t * na_child_add_uint64(na_elem_t * e, const char * name, uint64_t value);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_7_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_7_5_1_1_2">Creates a new child element with the given name and value of type 64-bit unsigned integer.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_7_5_2_1">Adds this child element to the nested element list of the parent element.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_7_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_7_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_7_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_7_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_7_6_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_7_6_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_7_6_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_7_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_7_6_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_7_6_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_7_6_1_1_5_3_2">uint64_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_7_6_1_1_5_3_3_1">The 64-bit unsigned integer value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_7_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_7_8_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_7_8_2_1">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_8_1">na_child_add_string</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_8_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_10_3_8_3">na_elem_t* na_child_add_string(na_elem_t* elt, const char* name, const char* value);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_8_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_8_5_1_1_2">Creates a new child element with the given </a><span class="Italic">name</span> and <span class="Italic">value</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_8_5_2_1">Adds this child element to the nested element list of </a><span class="Italic">elt</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_8_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_8_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_8_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_8_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_8_6_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_8_6_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_8_6_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_8_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_8_6_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_8_6_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_8_6_1_1_5_3_2">char</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_8_6_1_1_5_3_3_1">The value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_10_3_8_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_8_8_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_10_3_8_8_2_1">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_9_1">na_child_add_string_encrypted</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_9_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_9_2_1_2">na_elem_t* na_child_add_string_encrypted(na_elem_t* elt, const char* name, const char* value, const char* key);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_9_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_9_3_1_2_1_1_2">Creates a new element with the given </a><span class="Italic">name</span> and <span class="Italic">value </span>pair.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_9_3_1_2_2_1">Encrypts the data contained in the </a><span class="Italic">value</span> with the encryption key.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_9_3_1_2_2_2">Adds this child element to the nested element list of the parent element.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.552875695732837%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_9_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.09647495361781%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_9_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 49.35064935064935%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_9_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_9_4_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_9_4_1_1_5_1_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_9_4_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_9_4_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_9_4_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_9_4_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_9_4_1_1_5_3_1">value</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_9_4_1_1_5_3_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_9_4_1_1_5_3_3_1">The value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_9_4_1_1_5_4_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_9_4_1_1_5_4_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_9_4_1_1_5_4_3_1">The value to be assigned to the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_9_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_9_5_1_2_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_9_5_1_2_2_1">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_10_1">na_elem_set_content</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_10_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_10_2_1_2">int na_elem_set_content(na_elem_t* elt, const char* value);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_10_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_10_3_1_2_1">Sets or modifies the value of the given element.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_10_3_1_2_2">The value to be set can only be of string type. If a non-string value is required to be set, then it should be converted to string first and then passed to this API.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.33986928104575%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_10_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.77777777777778%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_10_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.88235294117647%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_10_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_10_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_10_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_10_4_1_5_1_3_1">The pointer to the element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_10_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_10_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_10_4_1_5_2_3_1">The value of the element that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_10_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_6_10_3_10_5_1_2_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_6_10_3_10_5_1_2_1_2">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_11_1">na_child_get_bool</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_11_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_11_2_1_2">bool_t na_child_get_bool(na_elem_t * elt, const char * name, bool_t deflt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_11_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_11_3_1_2">Gets the boolean value of the given child element, which is nested under the element elt.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.5016501650165%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_11_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.907590759075905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_11_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.59075907590759%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_11_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_11_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_11_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_11_4_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_11_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_11_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_11_4_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_11_4_1_5_3_1">deflt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_11_4_1_5_3_2">bool_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_11_4_1_5_3_3_1">The default boolean value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_11_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_1">The boolean value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_2">The default value </a><span class="Italic">deflt</span>, under the following conditions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_2_5_1">The child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_2_5_2">The child element does not contain any value</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_3">False if the child element value is 0, "no", "off", or "false"</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_11_5_1_2_1_4">True in all other cases</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_12_1">na_child_get_int</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_12_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_12_2_1_2">int na_child_get_int(na_elem_t * elt, const char * name, int deflt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_12_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_12_3_1_2">Gets the integer value of the given child element, which is nested under the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.5016501650165%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_12_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.907590759075905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_12_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.59075907590759%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_12_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_12_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_12_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_12_4_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_12_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_12_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_12_4_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_12_4_1_5_3_1">deflt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_12_4_1_5_3_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_12_4_1_5_3_3_1">The default integer value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_12_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_12_5_1_2_1_1">An integer value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_12_5_1_2_1_2">The default value </a><span class="Italic">deflt</span>, under the following conditions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_12_5_1_2_1_2_5_1">The child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_12_5_1_2_1_2_5_2">The child element does not contain any value</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_13_1">na_child_get_int64</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_13_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_13_2_1_2">int64_t na_child_get_int64(na_elem_t * e, const char * name, int64_t deflt)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_13_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_13_3_1_2_1">Gets the 64-bit integer value of the given child element, which is nested under the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.5016501650165%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_13_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.907590759075905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_13_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.59075907590759%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_13_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_13_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_13_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_13_4_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_13_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_13_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_13_4_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_13_4_1_5_3_1">deflt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_13_4_1_5_3_2">int64_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_13_4_1_5_3_3_1">The default 64-bit integer value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_13_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_13_5_1_2_1_1">A 64-bit integer value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_13_5_1_2_1_2">The default value </a><span class="Italic">deflt</span>, under the following conditions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_13_5_1_2_1_2_5_1">The child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_13_5_1_2_1_2_5_2">The child element does not contain any value</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_14_1">na_child_get_uint32</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_14_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_14_2_1_2">uint32_t na_child_get_uint32(na_elem_t * e, const char * name, uint32_t deflt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_14_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_14_3_1_2_1">Gets the 32-bit unsigned integer value of the given child element, which is nested under element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.5016501650165%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_14_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.907590759075905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_14_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.59075907590759%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_14_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_14_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_14_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_14_4_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_14_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_14_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_14_4_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_14_4_1_5_3_1">deflt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_14_4_1_5_3_2">int64_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_14_4_1_5_3_3_1">The default 32-bit integer value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_14_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_14_5_1_2_1_1">A 32-bit integer value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_14_5_1_2_1_2">The default value </a><span class="Italic">deflt</span>, under the following conditions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_14_5_1_2_1_2_5_1">The child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_14_5_1_2_1_2_5_2">The child element does not contain any value</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_15_1">na_child_get_uint64</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_15_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_15_2_1_2_1">uint64_t na_child_get_uint64(na_elem_t * e, const char * name, uint64_t deflt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_15_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_15_3_1_2_1">Gets the 64-bit unsigned integer value of the given child element, which is nested under the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.5016501650165%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_15_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.907590759075905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_15_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.59075907590759%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_15_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_15_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_15_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_15_4_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_15_4_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_15_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_15_4_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_15_4_1_5_3_1">deflt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_15_4_1_5_3_2">int64_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_15_4_1_5_3_3_1">The default 64-bit unsigned integer value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_15_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_15_5_1_2_1_1">A 64-bit unsigned integer value of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_15_5_1_2_1_2">The default value </a><span class="Italic">deflt</span>, under the following conditions:</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_15_5_1_2_1_2_5_1">The child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_3_outer" style="margin-left: 36pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_3_inner" style="width: 18pt; white-space: nowrap">▪ </div>
+            </td>
+            <td width="100%">
+              <div class="List_3_inner"><a name="3_6_6_6_10_3_15_5_1_2_1_2_5_2">The child element does not contain any value</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_16_1">na_child_get_string</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_16_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_16_2_1_2">const char* na_child_get_string(na_elem_t* elt, const char* name);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_16_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_16_3_1_2">Gets the string value of the given child element, which is nested under the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_16_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_16_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_16_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_16_4_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_16_4_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_16_4_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_16_4_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_16_4_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_16_4_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_16_5_1_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_16_5_1_1_2_1_1">The string value of the given child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_16_5_1_1_2_1_2">NULL if the given child element does not exist</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_17_1">na_child_get_string_encrypted</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_17_2_1_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_17_2_1_1_2_1">char* na_child_get_string_encrypted(na_elem_t* elt, const char* name, const char* key);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_17_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_17_3_1_2_1">Gets the decrypted string value of the given child element, which is nested under element </a><span class="Italic">elt</span>.</div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_17_3_1_2_2">The string is decrypted using the given key. The default key is used if the given key is NULL. The system allocates memory for the decrypted data. You must explicitly free it with </a><span class="codeph">na_free()</span> after the API call is over.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_17_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_17_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_17_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_17_4_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_17_4_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_17_4_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_17_4_1_1_5_2_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_17_4_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_17_4_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_17_4_1_1_5_3_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_17_4_1_1_5_3_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_17_4_1_1_5_3_3_1">The decrypt key</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_17_5_1_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_17_5_1_1_2_1_1">The pointer to the decrypted data</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_17_5_1_1_2_1_2">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_18_1">na_elem_child</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_18_2_1_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_18_2_1_1_2">na_elem_t* na_elem_child(na_elem_t* elt, const char* eltname);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_18_2_2_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_18_2_2_1_2">Gets the child element address, which is nested under the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.53125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_18_3_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.390625%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_18_3_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.078125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_18_3_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_18_3_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_18_3_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_18_3_1_1_5_1_3_1">The pointer to the parent element</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_18_3_1_1_5_2_1">eltname</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_18_3_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_18_3_1_1_5_2_3_1">The name of the child element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_18_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_18_4_1_2_1_1">The address of the child element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_18_4_1_2_1_2">NULL if the child element is not found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_19_1">na_elem_get_content</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_19_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_19_2_1_2">const char* na_elem_get_content(na_elem_t * elt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_19_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_19_3_1_2">Gets the content of the element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.53125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_19_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.390625%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_19_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.078125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_19_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_19_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_19_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_19_4_1_5_1_3_1">The pointer to the element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_19_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_19_5_1_2_1_1">The content of the element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_19_5_1_2_1_2">NULL if the content of the element is not found</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_20_1">na_elem_get_name</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_20_3_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_20_3_1_2">const char* na_elem_get_name(na_elem_t * e);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_20_4_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_20_4_1_2">Gets the name of the element.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.53125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_20_5_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.390625%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_20_5_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.078125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_20_5_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_20_5_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_20_5_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_20_5_1_5_1_3_1">The pointer to the element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_20_6_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_20_6_1_2_1_1">The name of the given element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_20_6_1_2_1_2">An empty string if the name of the element is NULL</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_20_6_1_2_1_3">NULL if the element is NULL</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_21_1">na_elem_has_children</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_21_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_21_2_1_2">int na_elem_has_children(na_elem_t* elt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_21_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_21_3_1_2">Checks whether the element has any nested elements within it.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.53125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_21_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.390625%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_21_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.078125%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_21_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_21_4_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_21_4_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_21_4_1_5_1_3_1">The pointer to the element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_21_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_6_10_3_21_5_1_2_1_1">1</a></span> (TRUE) if the element has any children</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_6_10_3_21_5_1_2_1_2">0</a></span> (FALSE) if the element has no children</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_22_1">na_encrypt_basic</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_22_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_22_2_1_2_1">void na_encrypt_basic(const char *key, const char* input, char * output, int nbytes);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_22_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_22_3_1_2_1_1">Takes an input value (as a series of bytes).</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_22_3_1_2_1_2">Encrypts the data.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_22_3_1_2_2">Assumptions:</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_22_3_1_3_1_1">The encryption key must be 16 characters.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_22_3_1_3_1_2">The output space provided is at least as long as the input space.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.6219739292365%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_22_4_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.277467411545625%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_22_4_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.10055865921788%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_22_4_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_22_4_1_5_1_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_22_4_1_5_1_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_22_4_1_5_1_3_1">The encryption key</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_22_4_1_5_2_1">input</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_22_4_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_22_4_1_5_2_3_1">The string to be encrypted</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_22_4_1_5_3_1">output</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_22_4_1_5_3_2">char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_22_4_1_5_3_3_1">The string that is encrypted</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_22_4_1_5_4_1">nBytes</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_22_4_1_5_4_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_22_4_1_5_4_3_1">The number of bytes of the input string</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_22_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_22_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_24_1">na_child_iterator</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_24_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_24_2_1_2">na_elem_iter_t na_child_iterator(na_elem_t* elt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_24_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_24_3_1_3_1">Sets an iterator for traversing the child elements of </a><span class="Italic">elt</span>.</div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_24_3_1_3_2">You call </a><span class="codeph">na_iterator_next()</span> on this iterator to walk through the nested element list.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.89825119236884%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_24_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.662957074721777%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_24_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 56.43879173290938%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_24_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_24_4_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_24_4_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_24_4_1_1_5_1_3">The pointer to the element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_24_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_24_5_1_2">The element iterator for looping through the children of an element</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_25_1">na_iterator_next</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_25_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_25_2_1_2">na_elem_t* na_iterator_next(na_elem_iter_t* tag);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_25_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_25_3_1_3_1">Repeatedly iterates through all the children of elt for a given tag returned by the </a><span class="codeph">na_child_iterator(elt)</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.89825119236884%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_25_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.84737678855326%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_25_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 60.254372019077905%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_25_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_25_4_1_1_5_1_1">tag</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_25_4_1_1_5_1_2">na_elem_iter_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_25_4_1_1_5_1_3">The pointer to the iterator</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_25_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_25_5_1_2">The next item from an iterator</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_26_1">na_zapi_get_elem_from_raw_xmlinput</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_26_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_26_2_1_2">na_elem_t* na_zapi_get_elem_from_raw_xmlinput(char * val);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_26_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_26_3_1_3_1">Retrieves the API element from a raw XML input.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.873015873015871%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_26_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 29.841269841269842%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_26_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 54.285714285714285%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_26_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_26_4_1_1_5_1_1">val</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_26_4_1_1_5_1_2">char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_26_4_1_1_5_1_3">The pointer to the raw XML input</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_26_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_26_5_1_2">The pointer to the API element for a given raw XML</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_10_3_27_1">na_elem_sprintf</a></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_27_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_6_10_3_27_2_1_2">char* na_elem_sprintf(na_elem_t* elt);</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_27_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_27_3_1_3_1">Gets the content of the input output element in XML format and writes into a string buffer.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_6_10_3_27_3_1_3_2">You should free the returned buffer using </a><span class="codeph">na_free()</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.873015873015871%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_27_4_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 29.841269841269842%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_27_4_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 54.285714285714285%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_10_3_27_4_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_10_3_27_4_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_10_3_27_4_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_10_3_27_4_1_1_5_1_3">The pointer to the input output element</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_6_10_3_27_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_6_10_3_27_5_1_2_1_1_2">The string with the contents of the input output element in XML format, terminated with a new line</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_6_10_3_27_5_1_2_1_2">NULL</a></span> on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html', '');" title="C and C++ Core APIs" name="3_6_6_6_10_4_1_1">C and C++ Core APIs</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

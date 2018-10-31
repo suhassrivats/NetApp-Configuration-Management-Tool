@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Troubleshooting Guidelines</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-0FEEF51F-5878-47E6-A939-517C7656EB97.html">Troubleshooting</a> : Troubleshooting Guidelines</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_1"><a name="3_8_6_1">Troubleshooting Guidelines</a></div>
+      <div class="Body"><a name="3_8_6_2_2_1">This page documents the different troubleshooting resources you can use and provides examples of how to troubleshoot typical problem scenarios.</a></div>
+      <div class="Section_Title"><a name="3_8_6_2_4_1">Troubleshooting Resources</a></div>
+      <div class="Body"><a name="3_8_6_2_4_2">You can use the following resources to troubleshoot issues:</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_3_1">Tools bundled with the SDK:</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-107F7298-6DC4-4776-9484-2556132ED798.html', '');" title="apitest" name="3_8_6_2_4_3_2_1">apitest</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-9CE3079C-C76F-4CED-A0A7-6B29E9F3D64C.html', '');" title="Utilities of the SDK" name="3_8_6_2_4_3_2_2">ZExplore Development Interface (ZEDI)</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_4_1">External tools:</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="http://mysupport.netapp.com/portal/mysupport" target="external_window" name="3_8_6_2_4_4_2_1">Evt2Txt</a></span> —This tool converts the ONTAP generated event file to text format.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="xref"><a href="http://www.ethereal.com/" target="external_window" name="3_8_6_2_4_4_2_2">Ethereal</a></span> —This is a network analysis tool.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_5_1">SDK Help guide:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_5_2">See the following sections in this Help to collect information you need to troubleshoot:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_8_6_2_4_5_3_1">Version Matrix for ONTAP APIs and DataFabric Manager APIs for the OnCommand Unified Manager Core Package</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_8_6_2_4_5_3_2">Release History</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_8_6_2_4_5_3_3">Known Issues</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_8_6_2_4_5_3_4">API documentation for ONTAP and DataFabric Manager for the OnCommand Unified Manager Core Package</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_6_1">Log files:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_6_2">Audit Logs —Provides ONTAP API invocation history, which is at /etc/log/auditlog. For DataFabric Manager, you can find the invocation history at </a><span class="Italic">&lt;dfm-server-installdirectory&gt;</span>/ log/.</div>
+      <div class="Body"><a name="3_8_6_2_4_6_3">EMS Logs—Provides ONTAP API processing information and is at /etc/log/ems.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_6_4">Syslog—Provides ONTAP API error messages and is at /etc/messages.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_6_5">DFM server Logs—Provides error logging information about DataFabric Manager APIs for the OnCommand Unified Manager Core Package failure. The log is at </a><span class="Italic">&lt;dfm-server-installdirectory &gt;</span>/log/.</div>
+      <div class="Body"><a name="3_8_6_2_4_7">The following list provides some examples of how to troubleshoot typical problem scenarios:</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_8">1. While requesting large data, the client application does not receive complete data from the ONTAP API or the DataFabric Manager APIs for the OnCommand Unified Manager Core Package, and the application does not receive any error message.</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_9">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_10">i. The server takes a longer time to process the request because of the large amount of data. This might trigger the server to reset the connection.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_11">ii. The reset packets are received at the transport layer of the client host, which is not handled at the API layer of the client application. In this case, the client does not receive the relevant error code.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_12">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_13">Begin a TCP packet trace using tools such as Ethereal, and check for any error messages from the server.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_14">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_15">i. Increase the connection timeout at the server.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_16">ii. Use the iterative APIs when requesting a large amount of data (for example, thousands of qtrees).</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_17">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_18">Begin a TCP packet trace using tools such as Ethereal, and check for any error messages from the server.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_19">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_20">i. Increase the connection timeout at the server.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_21">ii. Use the iterative APIs when requesting a large amount of data (for example, thousands of qtrees).</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_23">2. The client application gets the error message 'Unable to find API'.</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_24">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_25">i. An older version of ONTAP is used with a newer version of the SDK that has new ONTAP API support. Or, the OnCommand Unified Manager Core Package version that you are using does not support the API you are trying to invoke. For more information, see the Release History and API documentation.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_26">ii. The SDK documentation erroneously includes an unsupported API.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_27">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_28">i. Check the ONTAP version used, and verify whether that API is compatible with the ONTAP version. Similarly, check the supported DataFabric Manager APIs for the OnCommand Unified Manager Core Package. To do this, see the section Guide to Product APIs in the Table of Contents.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_29">ii. Try using that API with the </a><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-107F7298-6DC4-4776-9484-2556132ED798.html', '');" title="apitest">apitest</a></span> tool to check whether there are any SDK documentation errors.</div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_31">3. The client application gets the error message 'No such file or directory' (error number: 13001).</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_32">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_33">i. There is a problem in the API handler code in ONTAP.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_34">ii. The application is sending the wrong input (for example, the wrong iteration tag input to the iterative APIs).</a></div>
+      <div class="Body"><a name="3_8_6_2_4_35">iii. Race condition in the iterative APIs.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_36">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_37">i. Check the Audit Log (/etc/log/auditlog) for API invocation history. It hints about possible concurrent calls of APIs leading to race conditions.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_38">ii. Check the EMS Log (/etc/log/ems) for any errors that occurred while processing the API requests (for example, the wrong iteration tag).</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_39">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_40">Upgrade to Data ONTAP 7.3. Race condition of the iterative APIs issue is fixed in Data ONTAP 7.3.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_42">4. The storage system crashes when the client application sends a request to it.</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_43">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_44">i. The API request takes too long to process.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_45">ii. An API bug is exposed because of improper input by the application.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_46">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_47">For further guidance on troubleshooting, see </a><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-530B6CCD-9A81-463F-9A46-D815CDF8C1E5.html', '');" title="Support">Support</a></span>.</div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_48">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_49">i. Use iterative APIs when requesting possibly a huge amount of data (for example, requesting data from thousands of qtrees).</a></div>
+      <div class="Body"><a name="3_8_6_2_4_50">ii. Use Data ONTAP 7.3 or Data ONTAP 7.2.3P1.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_51">5. The client application hangs.</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_52">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_53">i. The server reboots during API processing and the application is using blocking connection APIs.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_54">ii. Network failure between the client and the server.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_55">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_56">i. In case of a failed ONTAP API call, check uptime of the storage system (using the </a><span class="codeph">uptime</span> command). If the uptime indicates that the storage system booted recently, then check whether there was a recent crash in the core file at /etc/crash/core-*. For further guidance on troubleshooting, see <span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-530B6CCD-9A81-463F-9A46-D815CDF8C1E5.html', '');" title="Support">Support</a></span>.</div>
+      <div class="Body"><a name="3_8_6_2_4_57">ii. In case of a failed call for DataFabric Manager APIs for the OnCommand Unified Manager Core Package, check if there was a crash recently at the core file in </a><span class="Italic">&lt;dfm-server-installdirectory&gt;</span>/ log/core-*. For further guidance on troubleshooting, see <span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-530B6CCD-9A81-463F-9A46-D815CDF8C1E5.html', '');" title="Support">Support</a></span>.</div>
+      <div class="Body"><a name="3_8_6_2_4_58">iii. If there is no crash or no API-related message in the crash stack trace, then it might be a power failure or a network-related problem.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_59">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_60">i. Restart the client application.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_61">ii. Use non-blocking calls in C.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_62">For ONTAP API, use the </a><span class="codeph">set-time-out()</span> function to change blocking connection API to non-blocking connection API.</div>
+      <div class="Body"><a name="3_8_6_2_4_63">For DataFabric Manager APIs for the OnCommand Unified Manager Core Package, you can use the </a><span class="codeph">na_server_set_timeout ()</span> function to change blocking connection API to nonblocking connection API.</div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_65">6. If the ONTAP API input schema is not correct, the API execution fails with the following error messages: Missing input error (error number: 13006), or Extra input error (error number: 13115).</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_66">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_67">The API input schema validator sends this error message if the API input does not match the input parameters set for that API.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_68">The API input schema validator sends the Missing input error (error number: 13006) when there are missing input parameters. It sends the Extra input error (error number: 13115) when the input contains extra parameters.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_69">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_70">i. Verify that all the input parameters in your application or script match with the API prototype.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_71">ii. Update the application or script if there is a mismatch.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_72">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_73">ONTAP API failure, disable the API input schema validator. To disable, use the following commands:</a></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_74">$ priv set advanced</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_75">The </a><span class="codeph">priv set advanced</span> command is for advanced users. It is recommended that you use it only under NetApp personnel guidance. Such advanced commands might be potentially dangerous, leading to deletion or modification of configuration files.</div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_76">$ registry set state.api.schema_input_validate.enable off</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_77">$ priv set admin</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_78">You can use this workaround for Data ONTAP 7.3.1 and later.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_80">7. If the DataFabric Manager APIs for the OnCommand Unified Manager Core Package input schema is not correct, the API execution fails with the following error messages: Missing input error (error number: 13006), or Extra input error (error number: 22).</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_81">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_82">The API input schema validator sends this error message if the API input does not match the input parameters set for that API.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_83">The API input schema validator sends the Missing input error (error number:13006) when there are missing input parameters. It sends the Extra input error (error number: 22) when the input contains extra parameters.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_84">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_85">i. Verify that all the input parameters in your application or script match with the API prototype.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_86">ii. Update the application or script if there is a mismatch.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_87">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_88">In case of a DataFabric Manager APIs for the OnCommand Unified Manager Core Package, there is no workaround for this missing input or extra input error.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_90">8. If the API output schema is not correct, the API execution fails with the following error messages: Missing output error (error number: 14513), or Extra output error (error number: 14514).</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_91">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_92">The API output schema validator sends this error message if the API output does not match the input parameters set for that API.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_93">The API output schema sends the Missing output error (error number: 14513) when there are missing output parameters. It sends the Extra output error (error number: 14514) when the output contains extra parameters.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_94">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_95">This is a bug either in the API implementation or in the API documentation. Contact NetApp technical support and inform them about the bug.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_96">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_97">Disable the API output schema validator. You can use the following workaround for Data ONTAP 7.3.1 and Data ONTAP 7.3:</a></div>
+      <div class="Body"><a name="3_8_6_2_4_98">i. For Data ONTAP 7.3.1 and later, use the following commands to disable the API output schema validator:</a></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_99">$ priv set advanced</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_100">$ registry set state.api.schema_output_validate.enable off</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_101">$ priv set admin</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_102">ii. For Data ONTAP 7.3, use the following commands to disable the API output schema validator:</a></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_103">$ priv set advanced</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_104">$ registry set state.api.schema_validate.enable off</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_8_6_2_4_105">$ priv set admin</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_106">The </a><span class="codeph">priv set advanced</span> command is for advanced users. It is recommended that you use it only under NetApp personnel guidance. Such advanced commands might be potentially, leading to deletion or modification of configuration files.</div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_108">9. When you use -s option with the apitest utility, it fails with an error message.</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_109">Possible Cause:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_110">Net::SSLeay is not available to the apitest utility.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_111">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_112">Install Net::SSLeay, or update the PATH so that Net::SSLeay is accessible from apitest.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_114">10. If an application takes more than ten minutes to retrieve the complete iterator API output, the API query fails with an error message "Removing iterator file that is too old".</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_115">Possible Causes:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_116">The ONTAP API iterator files are deleted from ONTAP server after a specified time, which is 600 seconds by default. An application must access the API iterator files before the iterator files are deleted.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_117">Diagnosis:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_118">The following errors message are reported at the EMS Log (/etc/log/ems):</a></div>
+      <div class="Body"><span class="Italic"><a name="3_8_6_2_4_119">errorDescription</a></span> ="Removing iterator file that is too old".</div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_120">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_121">You can avoid this error by completing the iterative API queries before the iterator file is deleted at the server.</a></div>
+      <div class="Body"><a name="3_8_6_2_4_122">If the application cannot process these queries within the specified time, you must modify the application to divide the API query process into two steps. In the first step, the application should complete the queries and save the output locally. In the second step, the client should process the saved output.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_123">11. Compilation and execution of C codes in HP-UX PA RISC 11.11 fail with an error message "/usr/lib/dld.sl: Unresolved symbol: getaddrinfo (code) from ../../../lib/hpux/libnetapp.sl ABORT instruction (core dumped)"</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_124">Possible Cause:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_125">Incompatible library files in HP-UX PA-RISC 11.11 for C compilation and execution.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_8_6_2_4_126">Workaround:</a></span></div>
+      <div class="Body"><a name="3_8_6_2_4_127">Install patches PHSS_33033 and PHCO_31903.</a></div>
+      <div class="Section_Title"><a name="3_8_6_2_5_1">Related Topics</a></div>
+      <div class="Body"><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-107F7298-6DC4-4776-9484-2556132ED798.html', '');" title="apitest" name="3_8_6_2_5_2">apitest</a></span></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-0FEEF51F-5878-47E6-A939-517C7656EB97.html', '');" title="Troubleshooting" name="3_8_6_3_1_1">Troubleshooting</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

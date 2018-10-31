@@ -1,0 +1,1728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>SDK 1.3</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html">Getting started with SDK</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html">Release History</a> : SDK 1.3</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_2"><a name="3_4_8_46_1">SDK 1.3</a></div>
+      <div class="Body"><a name="3_4_8_46_2_2">This page contains information about what is new in this release and the changes that occurred in this release.</a></div>
+      <div class="Section_Title"><a name="3_4_8_46_2_4_1">New in this release</a></div>
+      <div class="Body"><a name="3_4_8_46_2_4_2">Following are new in Manage ONTAP SDK 1.3:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_46_2_4_3_1">SSL support</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_46_2_4_4">A new core SDK function, </a><span class="codeph">na_server_set_transport_type()</span>, configures the ONTAPI server to use either plain HTTP or HTTPS.</div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_46_2_4_5_1">New Java routines</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_46_2_4_6">Two new routines, </a><span class="codeph">close()</span> and <span class="codeph">setKeepAliveEnabled()</span>, have been added to the Java core routine package.</div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_46_2_4_7_1">FPolicy sample code enhancements</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Body"><a name="3_4_8_46_2_4_8">The sample code and documentation for FPolicy have been enhanced.</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_4_8_46_2_4_9_1">The Manage ONTAP SDK 1.5 documents the API of Data ONTAP 7.1.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_4_8_46_2_5_1">New APIs</a></div>
+      <div class="Body"><a name="3_4_8_46_2_5_2">Following are the newly added APIs and API-sets:</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_1_1">Newly added API-sets</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_2_1">Cluster failover management</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_1">cf_force_takeover</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_2">cf_get_partner</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_3">cf_giveback</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_4">cf_negotiated_failover_disable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_5">cf_negotiated_failover_enable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_6">cf_negotiated_failover_status</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_7">cf_service_disable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_8">cf_service_enable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_9">cf_status</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_1_2_10">cf_takeover</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_2_2">Common Internet File System (CIFS) shares and sessions</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_1">cifs_session_list_iter_end</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_2">cifs_session_list_iter_next</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_3">cifs_session_list_iter_start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_4">cifs_share_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_5">cifs_share_change</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_6">cifs_share_delete</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_7">cifs_share_list_iter_end</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_8">cifs_share_list_iter_next</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_2_2_2_9">cifs_share_list_iter_start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_3_1">Disk management</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_1">disk_fail</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_2">disk_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_3">disk_remove</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_4">disk_sanown_assign</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_5">disk_sanown_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_6">disk_sanown_reassign</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_7">disk_send_rescan_msg</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_8">disk_swap</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_9">disk_unfail</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_10">disk_unswap</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_1_2_11">disk_fw_commit</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_3_2">Event Management System</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_3_2_2_1">ems_autosupport_log</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_4_1">License management</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_4_1_2_1">license_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_4_1_2_2">license_delete</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_4_1_2_3">license_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_4_2">ONTAP software upgrades</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_4_2_2_1">download</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_5_1">iSCSI control</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_1_2_1">auth_ipcache</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_5_2">SNMP access via ONTAPI</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_1">snmp_community_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_2">snmp_community_delete</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_3">snmp_community_delete_all</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_4">snmp_disable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_5">snmp_enable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_6">snmp_get</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_7">snmp_get_next</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_8">snmp_status</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_9">snmp_trap_disable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_10">snmp_trap_enable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_11">snmp_traphost_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_5_2_2_12">snmp_traphost_delete</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_6_1">iSCSI initiator groups</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_1">igroup_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_2">igroup_create</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_3">igroup_create</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_4">igroup_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_5">igroup_remove</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_1_2_6">igroup_set_attribute</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_6_2">Options</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_2_2_1">options_get</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_2_2_2">options_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_6_2_2_3">options_set</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_7_1">Additional volume management routines</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_1">volume_add</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_2">volume_create</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_3">volume_destroy</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_4">volume_get_language</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_5">volume_mirror</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_6">volume_offline</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_7">volume_online</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_8">volume_options_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_9">volume_rename</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_10">volume_restrict</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_11">volume_scrub_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_12">volume_scrub_resume</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_13">volume_scrub_start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_14">volume_scrub_stop</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_15">volume_scrub_suspend</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_16">volume_set_language</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_17">volume_set_option</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_18">volume_split</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_1_2_19">volume_wafl_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_7_2">NFS configuration and management</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_1">nfs_disable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_2">nfs_enable</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_3">nfs_exportfs_append_rules</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_4">nfs_exportfs_check_permission</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_5">nfs_exportfs_delete_rules</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_6">nfs_exportfs_flush_cache</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_7">nfs_exportfs_list_rules</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_8">nfs_exportfs_load_exports</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_9">nfs_exportfs_modify_rule</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_10">nfs_exportfs_storage_path</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_11">nfs_get_supported_sec_flavors</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_7_2_2_12">nfs_status</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_3_1_3_8_1">Performance counters (new feature in ONTAP 6.5)</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_8_1_2_1">perf_object_counter_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_8_1_2_2">perf_object_get_instances</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_8_1_2_3">perf_object_instance_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_3_1_3_8_1_2_4">perf_object_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_1_1">Newly added APIs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_2_1">Support for large numbers of qtrees</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_2_1_2_1">qtree_list_iter_end</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_2_1_2_2">qtree_list_iter_next</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_2_1_2_3">qtree_list_iter_start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_2_2">Fibre Channel management APIs</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_2_2_2">fcp_get_cfmode</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_2_2_3">fcp_set_cfmode</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_3_1">File system operations</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_3_1_2_1">file_read</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_3_2">System info</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_3_2_2_1">system_get_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_4_1">iSNS support</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_1_2_1">iscsi_isns_config</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_1_2_2">iscsi_isns_get_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_1_2_3">iscsi_isns_start</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_1_2_4">iscsi_isns_stop</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_1_2_5">iscsi_isns_update</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_4_2">Additional LUN management utilities</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_1">lun_config_check_cfmode_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_2">lun_config_check_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_3">lun_get_attribute</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_4">lun_get_map_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_5">lun_read_raw</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_6">lun_restore_status</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_7">lun_set_attribute</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_8">lun_snap_usage_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_9">lun_unset_attribute</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_4_2_2_10">lun_write_raw</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_5_1">SnapMirror enhancements</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_1">snapmirror_delete_connection</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_2">snapmirror_delete_sync_schedule</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_3">snapmirror_list_connections</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_4">snapmirror_list_sync_schedule</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_5">snapmirror_set_connection</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_1_2_6">snapmirror_set_sync_schedule</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_46_2_5_5_1_3_5_2">Additional Snapshot routines</a></span></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_2_2_1">snapshot_reserve_list_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_2_2_2">snapshot_restore_file</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_2_2_3">snapshot_restore_volume</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_2_2_4">snapshot_set_reserve</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_4_8_46_2_5_5_1_3_5_2_2_5">snapshot_volume_info</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html', '');" title="Release History" name="3_4_8_46_3_1_1">Release History</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

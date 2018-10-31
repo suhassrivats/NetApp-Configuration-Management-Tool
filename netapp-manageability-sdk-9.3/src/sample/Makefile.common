@@ -1,0 +1,134 @@
+#
+# Common samples Makefile
+#
+# Copyright 2003 Network Appliance, Inc.
+#
+
+TOP = ../../../../..
+
+# Use something more direct rather than pull in the apache GuessOS script
+NATIVE_PLATFORM = $(shell uname -a \
+	| awk ' \
+		/SunOS.*5.9.*sun4u/ {printf("sun4u-sun-solaris2.290\n");exit(0);} \
+		/SunOS.*5.8.*sun4u/ {printf("sun4u-sun-solaris2.280\n");exit(0);} \
+		/SunOS.*5.7.*sun4u/ {printf("sun4u-sun-solaris2.270\n");exit(0);} \
+		/SunOS.*i386/ {printf("sun-solaris-i386\n");exit(0);} \
+		/SunOS/ {printf("sun-solaris2.260\n");exit(0);} \
+		/HP-UX.*ia64.*/ {printf("hpuxia64\n");exit(0);} \
+		/HP-UX.*/ {printf("hpux\n");exit(0);} \
+		/AIX.*/ {printf("aix\n");exit(0);} \
+		/Darwin.*/ {printf("darwin\n");exit(0);} \
+		/FreeBSD.*i386/ {printf("freebsdx86\n");exit(0);} \
+		/FreeBSD.*amd64/ {printf("freebsd-amd64\n");exit(0);} \
+		/FreeBSD.*mips/ {printf("freebsdmips\n");exit(0);} \
+		/BSD\/OS.*/ {printf("bsdos\n");exit(0);} \
+		/Linux.*2\.4.*i686/ {printf("i686-linux2.24\n");exit(0);} \
+		/Linux.*2\.2.*i686/ {printf("i686-linux2.22\n");exit(0);} \
+		/Linux.*2\.6.*x86_64/ {printf("x86_64-linux2.26\n");exit(0);} \
+		/Linux.*i686/ {printf("linux\n");exit(0);}')
+
+ifeq "$(NATIVE_PLATFORM)" ""
+$(error Couldn't determine native platform)
+endif
+
+ifeq "$(PLATFORM)" ""
+	# assume native/local build
+	PLATFORM=$(NATIVE_PLATFORM)
+endif
+
+FULL_PLATFORM := $(PLATFORM)
+PLATFORM := $(patsubst %-solaris2.260,solaris,$(PLATFORM))
+PLATFORM := $(patsubst %-solaris2.270,solaris,$(PLATFORM))
+PLATFORM := $(patsubst %-solaris2.280,solaris,$(PLATFORM))
+PLATFORM := $(patsubst %-solaris2.290,solaris,$(PLATFORM))
+PLATFORM := $(patsubst %-solaris-i386,solaris-i386,$(PLATFORM))
+PLATFORM := $(patsubst %-linux2.24,linux,$(PLATFORM))
+PLATFORM := $(patsubst %-linux2.22,linux,$(PLATFORM))
+PLATFORM := $(patsubst %-linux2.26,linux-64,$(PLATFORM))
+PLATFORM := $(patsubst %hpuxia64,hpux-ia64,$(PLATFORM))
+
+CC = gcc
+
+# Defining the link and include options
+
+CFLAGS = -g
+
+ifeq "$(PLATFORM)" "aix"
+BOOT_KERNEL = $(shell bootinfo -K 2>null)
+ifeq "$(BOOT_KERNEL)" "64" 
+PLATFORM = aix-64
+CFLAGS += -maix64
+endif
+else
+ifeq "$(PLATFORM)" "solaris"
+BOOT_KERNEL = $(shell isainfo -kv | cut -f 1,1 -d" " 2>null)
+ifeq "$(BOOT_KERNEL)" "64-bit" 
+PLATFORM = solaris-64
+CFLAGS += -m64
+endif
+else
+ifeq "$(PLATFORM)" "solaris-i386"
+BOOT_KERNEL = $(shell isainfo -kv | cut -f 1,1 -d" " 2>null)
+ifeq "$(BOOT_KERNEL)" "64-bit" 
+PLATFORM = solaris-x86_64
+CFLAGS += -m64
+endif
+endif
+endif
+endif
+
+INCLOPTS = -I$(TOP)/include -I ../../../../libnetapp -I ../../../../libadt
+INCLOPTS += -I$(TOP)/../include -I$(TOP)/../../include -I ../../../../../libnetapp -I ../../../../../libadt
+LINKOPTS = -L$(TOP)/lib/$(PLATFORM)
+LINKOPTS += -L$(TOP)/../lib/$(PLATFORM) -L$(TOP)/../../lib/$(PLATFORM)
+SDKSTAGING = -L$(TOP)/sdk-staging/lib/$(PLATFORM)
+SDKSTAGING += -L$(TOP)/../../sdk-staging/lib/$(PLATFORM)
+LINKOPTS += $(SDKSTAGING)
+
+ifeq "$(PLATFORM)" "hpux-ia64"
+CFLAGS += -mlp64
+LINKOPTS += -lnetapp -lxml -ladt -lpthread -lnsl -lm -lssl -lcrypto -lrt
+else
+ifeq "$(PLATFORM)" "freebsd-amd64"
+LINKOPTS += -lnetapp -lxml -ladt -lpthread -lm -lssl -lcrypto -liconv
+LINKOPTS += -L/usr/local/lib
+else
+LINKOPTS += -lnetapp -lxml -ladt -lpthread -lnsl -lz -lm -lssl -lcrypto
+endif
+endif
+
+ifeq "$(PLATFORM)" "linux"
+LINKOPTS += -ldl -lrt
+else
+ifeq "$(PLATFORM)" "linux-64"
+LINKOPTS += -ldl -lrt
+else
+ifeq "$(PLATFORM)" "solaris"
+LINKOPTS += -lsocket -ldl -lxnet -lrt
+else
+ifeq "$(PLATFORM)" "solaris-64"
+LINKOPTS += -lsocket -ldl -lxnet -lrt
+else
+ifeq "$(PLATFORM)" "solaris-i386"
+LINKOPTS += -lsocket -ldl -lxnet -lrt
+else
+ifeq "$(PLATFORM)" "solaris-x86_64"
+LINKOPTS += -lsocket -ldl -lxnet -lrt
+else
+ifeq "$(PLATFORM)" "aix"
+LINKOPTS += -ldl -lxnet -liconv
+else
+ifeq "$(PLATFORM)" "aix-64"
+LINKOPTS += -ldl -lxnet -liconv
+else
+ifeq "$(PLATFORM)" "hpux"
+LINKOPTS += -lrt
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif

@@ -1,0 +1,175 @@
+/*
+ * $Id: //depot/prod/DOT/fsb/ontap/prod/common/adminrpc/snapsvc.idl#1 $
+ *
+ * Network Appliance Snapshot Service IDL File
+ *
+ * This module defines the minimal Workstation Service APIs. It is 
+ * based on line traces and publicly available MSDN informaiton
+ *
+ *
+ * (c)1999 Network Appliance, Inc. All Rights Reserved.
+ */
+
+#ifndef _SNAPSVCIDL_
+#define _SNAPSVCIDL_
+
+/*
+// Interface Attributes
+*/
+
+[
+	endpoint("ncacn_np:[\\snapsvc]"),
+	uuid( 956ab170-cc14-11d2-8f56-006008475a54 ),
+	version(1.0),
+#ifdef __midl
+	ms_union,
+#endif // __midl
+	pointer_default(ptr)
+]
+
+
+interface snapsvc {
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef unsigned char UCHAR;
+typedef wchar_t WCHAR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+#else
+#include <smb/ntstatus.h>
+#include <smb/windef.h>
+#include <smb/winnt.h>
+#endif
+typedef long _EndIDLDef;
+
+
+typedef struct _SNAPSVC_HANDLE {    
+	WCHAR * ServerName;
+} SNAPSVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] SNAPSVC_HANDLE * SNAPSVC_HANDLE_TYPE;
+#else
+#define SNAPSVC_HANDLE_TYPE SNAPSVC_HANDLE*
+#endif
+
+
+#include <adminintf.h>
+#include <snapintf.h>
+	
+
+/* 0 GetSnapInfo */
+int32_t
+NetGetSnapInfo(
+    [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+    [ in, string, unique ] WCHAR *volumeName,
+    [ out ] SNAPLIST_BUFFER* buf,
+    [ out ] OLD_ULARGE_INTEGER* blks_used,
+    [ out ] OLD_ULARGE_INTEGER* blks_total,
+    [ out ] OLD_ULARGE_INTEGER* blks_reserved
+    );
+
+/* 1 CreateSnapshot */
+int32_t
+NetCreateSnapshot(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in, string, unique ] WCHAR *snapName
+   );
+
+/* 2 DeleteSnapshot */
+int32_t
+NetDeleteSnapshot(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in, string, unique ] WCHAR *snapName
+   );
+
+/* 3 RenameSnapshot */
+int32_t
+NetRenameSnapshot(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in, string, unique ] WCHAR *oldSnapName,
+   [ in, string, unique ] WCHAR *newSnapName
+  );
+
+/* 4 GetSnapSchedule */
+int32_t
+NetGetSnapSchedule(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [out] Snapsvc_schedule* snapSched
+   );	
+ 
+/* 5 SetSnapSchedule */
+int32_t
+NetSetSnapSchedule(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in ] Snapsvc_schedule* snapSched
+   );
+  
+/* 6 SetSnapReserve */
+int32_t
+NetSetSnapReserve(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ in ] ULONG	reservePercent
+   );
+	
+/* 7 GetSnapReserve */
+int32_t
+NetGetSnapReserve(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *volumeName,
+   [ out ] ULONG		*reservePercent,
+   [ out ] OLD_ULARGE_INTEGER	*reserveBytes
+   );
+
+/* 8 FileReallocate */
+int32_t
+NetFileReallocate(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *filePath
+   );
+
+/* 9 NetFileMeasureLayout */
+int32_t
+NetFileMeasureLayout(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *filePath
+   );
+
+/* 10 NetFileRestore */
+int32_t
+NetFileRestore(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *ucSnapName,
+   [ in, string, unique ] WCHAR *ucFilePath,
+   [ in, string, unique ] WCHAR *ucRestoreAsPath
+   );
+
+/* 11 NetSendEMSAsup */
+int32_t
+NetSendEMSAsup(
+   [ in ] SNAPSVC_HANDLE_TYPE hBinding,
+   [ in, string, unique ] WCHAR *computerName,
+   [ in ] ULONG eventID,
+   [ in, string, unique ] WCHAR *eventSource,
+   [ in, string, unique ] WCHAR *appVersion,
+   [ in, string, unique ] WCHAR *category,
+   [ in, string, unique ] WCHAR *eventDescription,
+   [ in ] APP_ASUP_LOG_LEVEL logLevel,
+   [ in ] UCHAR asup
+   );
+
+}	/* interface snapsvc */
+
+#endif /* _SNAPSVCIDL_ */
+

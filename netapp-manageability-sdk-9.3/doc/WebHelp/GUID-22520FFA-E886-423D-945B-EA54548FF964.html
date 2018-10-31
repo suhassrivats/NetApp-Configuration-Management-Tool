@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Startup and Memory Management APIs for C and C++</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5C34429-E1F8-447D-8ACB-6112AE506BF6.html">SDK Core APIs</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html">C and C++ Core APIs</a> : Startup and Memory Management APIs for C and C++</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_3"><a name="3_6_6_6_6_1">Startup and Memory Management APIs for C and C++</a></div>
+      <div class="Short_Description"><a name="3_6_6_6_6_2">The Startup and Memory Management APIs are used to initialize or free the global resources used by the program, and to create or free the memory used by the program elements. This page contains information about the Startup and Memory Management APIs for C and C++, including the description and prototype, and the input, input types, input description, and input return values.</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_6_3_1_1">na_startup</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_1_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_1_3">int na_startup(char* errbuff, int errbuffsize);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_1_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_1_5">Initializes the global resources.</a></div>
+      <div class="Body"><a name="3_6_6_6_6_3_1_6">You must call this function before invoking any API.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.665893271461716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.1322505800464%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_6_3_1_7_1_1_5_1_1">errbuffsize</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_6_3_1_7_1_1_5_1_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_6_3_1_7_1_1_5_1_3">The length of </a><span class="Italic">errbuff</span></div>
+          </td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_8_1_1_4_1_1">Output</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.665893271461716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_8_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.1322505800464%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_1_8_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_6_3_1_8_1_1_5_1_1">errbuff</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_6_3_1_8_1_1_5_1_2">char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_6_3_1_8_1_1_5_1_3_1">In case of an error, a message is written into the buffer</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_1_9">Return value</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_1_10">1</a></span> (TRUE) on success</div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_1_11">0</a></span> (FALSE) on failure</div>
+      <div class="Section_Title"><a name="3_6_6_6_6_3_2_1">na_shutdown</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_2_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_2_3">void na_shutdown(void);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_2_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_2_5">Frees the system resources</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_2_6">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_2_7">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_6_3_3_1">na_free</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_3_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_3_3">void na_free(const void* ptr);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_3_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_3_5">Frees memory that is pointed to by </a><span class="Italic">ptr</span>.</div>
+      <div class="Body"><a name="3_6_6_6_6_3_3_6">You should use this API to free any memory allocated by the </a><span class="codeph">na_*</span> APIs, such as <span class="codeph">na_child_get_string_encrypted()</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_3_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.665893271461716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_3_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.1322505800464%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_3_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_6_3_3_7_1_1_5_1_1">ptr</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_6_3_3_7_1_1_5_1_2">const void*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_6_3_3_7_1_1_5_1_3">The address of the memory to be freed</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_3_8">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_3_9">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_6_3_4_1">na_elem_new</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_4_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_4_3">na_elem_t* na_elem_new(const char* name);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_4_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_4_5">Allocates resource for a new element.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_4_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.665893271461716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_4_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.1322505800464%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_4_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_6_3_4_6_1_1_5_1_1">name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_6_3_4_6_1_1_5_1_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_6_3_4_6_1_1_5_1_3_1">The name of the element for which a resource is to be allocated</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_4_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_6_3_4_8_1">The pointer to the allocated element</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_6_3_4_8_2">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_6_3_5_1">na_elem_free</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_5_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_6_3_5_3">void na_elem_free(na_elem_t* elt);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_5_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_5_5">Frees all resources used by the input output element </a><span class="Italic">elt</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_5_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.665893271461716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_5_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.1322505800464%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_6_3_5_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_6_3_5_6_1_1_5_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_6_3_5_6_1_1_5_1_2">na_elem_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_6_3_5_6_1_1_5_1_3_1">The element memory to be freed</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_6_3_5_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_6_3_5_8">None</a></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html', '');" title="C and C++ Core APIs" name="3_6_6_6_6_4_1_1">C and C++ Core APIs</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

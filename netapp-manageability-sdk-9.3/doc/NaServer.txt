@@ -1,0 +1,252 @@
+NAME
+      NaServer - class for managing Network Appliance(r)
+		 filers using ONTAPI(tm) APIs.
+
+DESCRIPTION
+      An NaServer encapsulates an administrative connection to
+      a NetApp filer running ONTAP 6.4 or later.  You construct
+      NaElement objects that represent queries or commands, and
+      use invoke_elem() to send them to the filer (a convenience
+      routine called invoke() can be used to bypass the element
+      construction step.  The return from the call is another
+      NaElement which either has children containing the command
+      results, or an error indication.
+
+      The following routines are available for setting up
+      administrative connections to a filer.
+
+  new($filer, $majorversion, $minorversion)
+      Create a new connection to filer $filer.	Before
+      use, you either need to set the style to "hosts.equiv"
+      or set the username (always "root" at present) and
+      password with set_admin_user().
+
+  set_style($style)
+      Pass in "LOGIN" to cause the server to use HTTP
+      simple authentication with a username and
+      password.	 Pass in "HOSTS" to use the hosts.equiv
+      file on the filer to determine access rights (the
+      username must be root in that case). Pass in "CERTIFICATE"
+       to use certificate based authentication with the
+       DataFabric Manager server.
+
+       If $style = CERTIFICATE, you can use certificates to
+       authenticate clients who attempt to connect to a server
+       without the need of username and password. This style will
+       internally set the transport type to HTTPS. Verification of
+       the server's certificate is required in order to properly
+       authenticate the identity of the server. Server certificate
+       (with hostname) verification will be enabled by default using
+       this style. You can disable server certificate (with hostname)
+       verification using set_server_cert_verification() and you can
+       disable only hostname verification using set_hostname_verification().
+
+  get_style()
+      Get the authentication style
+
+  set_admin_user($user, $password)
+      Set the admin username and password.  At present
+      $user must always be "root".
+
+  set_server_type($type)
+      Pass in one of these keywords: "FILER" or "DFM" or "OCUM"
+      to indicate whether the server is a Data ONTAP storage system
+      or OnCommand Unified Manager server.
+
+      If you also use set_port(), call set_port() AFTER calling
+      this routine.
+
+      The default is "FILER".
+
+  get_server_type()
+      Get the type of server this server connection applies to.
+
+  set_transport_type($scheme)
+      Override the default transport type.  The valid transport
+      type are currently "HTTP", "HTTPS".
+
+  get_transport_type()
+      Retrieve the transport used for this connection.
+
+  set_debug_style($style)
+	    Set the style of debug.
+
+  set_port($port)
+      Override the default port for this server.  If you
+      also call set_server_type(), you must call it before
+      calling set_port().
+
+  get_port()
+      Retrieve the port used for the remote server.
+
+  is_debugging()
+	    Check the type of debug style and return the
+	    value for different needs.
+	    Return 1 if debug style is NA_PRINT_DONT_PARSE
+	    else return 0.
+
+  get_raw_xml_output()
+	    Return the raw XML output.
+
+  set_raw_xml_output($$)
+	    Save the raw XML output.
+
+  get_http_version()
+	    Get the HTTP version. Default is HTTP 1.1.
+
+  set_http_version($$)
+	    Set the HTTP version. Default is HTTP 1.1.
+
+  use_https()
+       Determines whether https is enabled.
+
+  invoke_elem($elt)
+      Submit an XML request already encapsulated as
+      an NaElement and return the result in another
+      NaElement.
+
+  invoke($api, [$argname, $argval] ...)
+       A convenience routine which wraps invoke_elem().
+       It constructs an NaElement with name $api, and
+       for each argument name/value pair, adds a child
+       element to it.  It's an error to have an even
+       number of arguments to this function.
+
+       Example: $myserver->invoke("snapshot-create",
+				  "snapshot", "mysnapshot",
+				  "volume", "vol0");
+
+COPYRIGHT
+      Copyright 2002-2003 Network Appliance, Inc. All rights
+      reserved. Specifications subject to change without notice.
+
+      This SDK sample code is provided AS IS, with no support or
+      warranties of any kind, including but not limited to
+      warranties of merchantability or fitness of any kind,
+      expressed or implied.  This code is subject to the license
+      agreement that accompanies the SDK.
+
+  set_bindings_validation($enable)
+      Enables or disables api bindings validation for ONTAP or
+      OCUM server.
+
+  set_bindings_family($family)
+      Set the api family of ONTAP or OCUM server for api bindings validation.
+      The bindings validation must already be enabled for setting the family.
+
+      Valid familie types are:
+	'7-MODE' and 'CLUSTER-MODE' (default) for 'FILER' server type and
+	'OCUM-CLASSIC' for 'DFM' server type and 'OCUM' (default) for 'DFM' or 'OCUM' server type.
+
+  is_bindings_validation_enabled()
+     Determines whether API bindings validation is enabled or not.
+     By default it is enabled.
+
+  get_bindings_family()
+     Returns the bindings family that is set for API validation.
+
+  get_api_bindings()
+      Returns api bindings for ONTAP or OCUM server based on the
+      family that is specified using set_binding_validation() API.
+
+  is_valid_scope()
+      Determines whether the given scope (family) of the  API or field
+      is a valid family or not.
+
+  set_vfiler($vfiler)
+      sets the vfiler name. This function is added for vfiler-tunneling.
+
+  set_vserver($vserver)
+  Sets the vserver name. This function is added for vserver-tunneling.
+  However, vserver tunneling actually uses vfiler-tunneling. Hence this
+  function internally sets the vfiler name.
+  get_vserver()
+  Gets the vserver name. This function is added for vserver-tunneling.
+  However, vserver tunneling actually uses vfiler-tunneling. Hence this
+  function actually returns the vfiler name.
+  set_originator_id($originator_id)
+  Function to set the originator_id before executing any ONTAP API.
+  get_originator_id()
+  Gets the originator_id for the given server context on which the
+  ONTAP API commands get invoked.
+  set_target_cluster_uuid($target_cluster_uuid)
+  Sets the UUID of a remote peered cluster to which the ONTAP APIs are to be
+  redirected from current cluster (identified by this NaServer instance).
+  get_target_cluster_uuid()
+  Gets the UUID of the remote peered cluster to which the ONTAP APIs are
+  redirected from current cluster (identified by this NaServer instance).
+  set_target_vserver_name($target_vserver_name)
+  Sets the name of a remote peered vserver to which the ONTAP APIs are to be
+  redirected from current cluster (identified by this NaServer instance).
+  Note: vserver tunneling must be enabled on the current NaServer instance
+  using set_vserver() to set the target vserver name for redirecting the APIs.
+  get_target_vserver_name()
+  Gets the name of the remote peered vserver to which the ONTAP APIs are
+  redirected from current cluster (identified by this NaServer instance).
+  get_complete_xml_output()
+  Gets the complete XML output in NaElement format that is being
+  # returned by the server.
+  set_server_cert_verification()
+   Enables or disables server certificate verification by the client.
+   Server certificate verification is enabled by default
+   when style is set to CERTIFICATE. Hostname verification is enabled
+   by default during server certificate verification.
+  is_server_cert_verification_enabled()
+   Determines whether server certificate verification is enabled or not.
+   Returns 1 if it is enabled, else returns 0.
+  set_client_cert_and_key()
+    Sets the client certificate and key files that are required for
+    client authentication by the server using certificates.
+    If key file is not defined, then the certificate file will be
+    used as the key file.
+  set_ca_certs()
+Specifies the certificates of the Certificate Authorities (CAs) that are
+trusted by this application and that will be used to verify the remote server
+certificate.
+  set_hostname_verification()
+   Enables or disables hostname verification by the client during server certificate the
+   server certificate.
+  is_hostname_verification_enabled()
+   Determines whether hostname verification is enabled or not.
+   Returns 1 if it is enabled, else returns 0
+  verify_server_certificate()
+Subroutine which verifies the common name in the server certificate against
+the given hostname. This subroutine returns "undef" on success.
+
+      set_trace_threshold($threshold_value)
+      Enables tracing for the API request. This subroutine is
+      currently used internally. 0 or any positive integer is a
+      valid threshold value.
+      Once you enable this, the trace output will be returned in
+      "trace_output" child element under the root (netapp) element
+      in the API response.
+      invoke_elem() will return the entire root element instead of
+      results element and the caller has to do a child_get() on root
+      element to get the "results" and "trace_output" values.
+
+
+  Returns the trace threshold value used for the API request.
+  This subroutine is currently used internally.
+
+  Creates and returns a new remote socket address for the
+  specified server and port.
+  This subroutine is used internally.
+
+  Creates and returns a new local socket address for the
+  specified family and port.
+  This subroutine is used internally.
+
+  Gets the platform specific information.
+  This subroutine is used internally.
+
+  Sets the name of the client application.
+
+  Gets the name of the client application.
+  set_sslv3($enable)
+      Enables or disables SSLv3 protocol for use over HTTPS transport.
+      By default, SSLv3 protocol is disabled.
+
+  is_sslv3()
+	Determines whether SSLv3 protocol is enabled for use over
+	HTTPS Transport.
+	Return 1 if SSLV3 is enabled, else return 0.

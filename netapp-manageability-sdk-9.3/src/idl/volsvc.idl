@@ -1,0 +1,249 @@
+/*
+ * $Id: //depot/prod/DOT/fsb/ontap/prod/common/adminrpc/volsvc.idl#1 $
+ *
+ * Network Appliance Volume Management Service IDL File
+ *
+ * This module defines the currently supported interfaces.  For
+ * managing volumes on NetApp filers.
+ *
+ *
+ * (c)1999 Network Appliance, Inc. All Rights Reserved.
+ */
+
+#ifndef _VOLSVCIDL_
+#define _VOLSVCIDL_
+
+/*
+// Interface Attributes
+*/
+
+[
+	endpoint("ncacn_np:[\\volsvc]"),
+	uuid( 70337d80-d589-11d2-8f56-006008475a54 ),
+	version(1.0),
+#ifdef __midl
+	ms_union,
+#endif // __midl
+	pointer_default(ptr)
+]
+
+
+interface volsvc {
+
+typedef long _BeginIDLSizes;
+#include <idlsizes.h>
+typedef long _EndIDLSizes;
+
+typedef long _BeginIDLDef;
+#ifdef WIN32
+typedef wchar_t WCHAR;
+typedef uint32_t ULONG;
+typedef int32_t LONG;
+typedef uint8_t  UCHAR;
+#else
+#include <smb/ntstatus.h>
+#include <smb/windef.h>
+#include <smb/winnt.h>
+#endif
+typedef long _EndIDLDef;
+
+
+typedef struct _VOLSVC_HANDLE {    
+	WCHAR * ServerName;
+} VOLSVC_HANDLE;
+
+#ifdef WIN32
+typedef [handle] VOLSVC_HANDLE * VOLSVC_HANDLE_TYPE;
+#else
+#define VOLSVC_HANDLE_TYPE VOLSVC_HANDLE*
+#endif
+
+#include <adminintf.h>
+#include <volintf.h>
+
+/* 0 NetGetVolList
+ *
+ * Return basic information on each volume including
+ * the number of disk, raid groups, and state
+ */
+int32_t
+NetGetVolList(
+   [ in ] VOLSVC_HANDLE_TYPE hBinding,
+   [ out ] VOLLIST_BUFFER* buf,
+   [ out ] ULONG* totalNumDisks /* total number of physical disks*/
+
+);
+
+/* 1 NetGetVolUsage 
+ *
+ * Return information required for a df command.  This
+ * includes
+*/
+int32_t
+NetGetVolUsage(
+  [ in ] VOLSVC_HANDLE_TYPE hBinding,
+  [ in, string, unique ] WCHAR *volumeName,
+  /*
+   * This is the information about the current snapshot
+   */ 
+  [ out ] OLD_LARGE_INTEGER	*totalBlocks,
+  [ out ] OLD_LARGE_INTEGER	*totalAvail,
+
+  [ out ] UCHAR			*hasSnapshot,  /* Does this vol have
+						* a snapshot?
+						*/
+  [ out ] OLD_LARGE_INTEGER	*totalSnapBlocks,
+  [ out ] OLD_LARGE_INTEGER	*totalSnapAvail
+
+);
+
+/*
+ * 2 NetFileCopy
+ *
+ * This will copy a portion of a file from the source to the destination.
+ * The user will have to have exclusive access and proper
+ * security rights to both files plus to the referenced
+ * shares. 
+ *
+ * Src and destination are UNC paths. They must be legal
+ * UNC paths on the filer.  Share Level ACLs are enforced. 
+ *
+ * Offset and Length are the portion of the file to copy.  If offset is
+ * 0 the file is truncated before the first write.  Max Length is 
+ * MAX_NETFILECOPY_LENGTH. 
+ *
+ * copyCookie is used as a integrety check between file copies. 
+ * It is returned when Offset == 0. Each following call needs to 
+ * return the original cookie.
+ * 
+ * Note that the caller of this interface must be root to 
+ * copy files without ACLs.  The user must be a member of the local
+ * Administrators or Backup Operators groups.
+ *
+ * This function returns status messages appropriate to file
+ * access.
+ */
+
+int32_t
+NetFileCopy(
+  [ in ] VOLSVC_HANDLE_TYPE hBinding,
+  [ in , string, unique] WCHAR* DestUNCPath,
+  [ in , string, unique] WCHAR* SrcUNCPath,
+  [ in ] OLD_LARGE_INTEGER Offset,
+  [ in ] ULONG Length,
+  [ in, out ] UCHAR copyCookie[NET_FILE_COPY_COOKIE_SIZE]
+);
+
+
+/*
+ * 3 NetGetDiskListByVol
+ *
+ * This RPC returns the information required to reconstruct the
+ * sysconfig -r and sysconfig -d commands.  A single RPC will
+ * return the disk configuration for a single volume (with volume
+ * == NULL being spare disks)
+ *
+ *	rdList will return the volumes controlled by this unit
+ *  partnerList will return the volumes controlled by partner
+ */
+
+
+int32_t
+NetGetDiskListByVol(
+	[ in ] VOLSVC_HANDLE_TYPE	hBinding,
+	[ in ] ULONG		    	level,
+	[ in, string, unique ] WCHAR	*volumeName, /* only used with level 
+						      *	DISK_LIST_INFO_VOL
+						      */
+	[ out] DISK_LIST_INFO		*info
+);
+
+
+/*
+ * 4 NetAddDisksToVol
+ *
+ * Add disks to the specified volume.  The CLI allows quite
+ * a bit of flexibility in selecting disks.  This API assumes that
+ * whatever GUI is driving this will have sorted out which disks
+ * to add and all that needs to be done is to physically add them
+ */
+int32_t
+NetAddDisksToVol(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *volumeName,
+	[ in ] VOLSVC_ADDED_DISKLIST* dskList
+);
+
+/*
+ * 5 NetVolInfoForShare
+ *
+ * This function will return the some share specific info.
+ *		a. language being used on the volume hosting the share.  
+ *		   The language code is returned as VOLSVC_FILER_LANG
+ *		b. Qtree type for the share
+ *		c. Whether oplocks are enabled.
+ */
+int32_t
+NetVolInfoForShare(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *shareName,
+	[ out ] VOLSVC_FILER_LANG* retLang,
+	[ out ] VOLSVC_QTREE_TYPE* qtree,
+	[ out ] ULONG* oplocksEnabled
+);
+
+/*
+ * 6 NetIsRootVolume
+ *
+ * This function will check whether the volume is root volume
+ * or non-root volume.
+ */
+int32_t
+NetIsRootVolume(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *volumeName
+);
+
+/*
+ * 7 NetVolSnapRestore
+ *
+ * This function does a volume snap restore.
+ */
+int32_t
+NetVolSnapRestore(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *volumeName,
+	[ in, string, unique ] WCHAR *snapName
+);
+
+/*
+ * 8 NetVolSpaceReservation
+ *
+ * This function Query & Enable/Disable Volume Space Reservation.
+ */
+int32_t
+NetVolSpaceReservation(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *volumeName,
+	[ in, out ] ULONG *value
+);
+
+/*
+ * 9 NetVolCreateDeleteVLDMetadir
+ *
+ * This function will either make an entry or delete 
+ * an entry in the metafile.
+ */
+int32_t
+NetVolCreateDeleteVLDMetadir(
+	[ in ] VOLSVC_HANDLE_TYPE hBinding,
+	[ in, string, unique ] WCHAR *vldFilePath,
+	[ in ] UCHAR create	/* Is this a create or 
+				 * a delete operation?
+				 */
+);
+
+}	/* interface volsvc */
+
+#endif /* _VOLSVCIDL_ */
+

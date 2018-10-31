@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>SDK 1.5</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7D4512E9-DB3E-4DD8-9E2E-0D213B2E379A.html">Getting started with SDK</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html">Release History</a> : SDK 1.5</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_2"><a name="3_4_8_42_1">SDK 1.5</a></div>
+      <div class="Body"><a name="3_4_8_42_2_2">This page contains information about what is new in this release and the changes that occurred in this release.</a></div>
+      <div class="Section_Title"><a name="3_4_8_42_2_4_1">New in this release</a></div>
+      <div class="Body"><a name="3_4_8_42_2_4_2">The Manage ONTAP SDK 1.5 documents the API of Data ONTAP 7.1.</a></div>
+      <div class="Section_Title"><a name="3_4_8_42_2_5_1">New APIs in Data ONTAP 7.1</a></div>
+      <div class="Body"><a name="3_4_8_42_2_5_2">Following are the newly added API and API-sets:</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_3_1_3_1_1">Newly added API-sets</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_3_1_3_2_1">Priority scheduling management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_2">priority-disable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_3">priority-enable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_4">priority-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_5">priority-list-info-default</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_6">priority-list-info-volume</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_7">priority-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_8">priority-set-default</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_1_9">priority-set-volume</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_3_1_3_2_2">Fibre Channel adapter configuration</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_2">fc-config-adapter-disable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_3">fc-config-adapter-enable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_4">fc-config-list-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_5">fc-config-list-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_6">fc-config-list-iter-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_2_2_7">fc-config-set-adapter-fc-type</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_3_1_3_3_1">Port set operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_3_1_2">portset-add</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_3_1_3">portset-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_3_1_4">portset-destroy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_3_1_5">portset-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_3_1_3_3_1_6">portset-remove</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_3_1_3_3_2">Lock manager configuration and management</a></span></div>
+            <div class="Table_Cell"><a name="3_4_8_42_2_5_3_1_3_3_2_2">lock-break</a></div>
+            <div class="Table_Cell"><a name="3_4_8_42_2_5_3_1_3_3_2_3">lock-status-iter-end</a></div>
+            <div class="Table_Cell"><a name="3_4_8_42_2_5_3_1_3_3_2_4">lock-status-iter-start</a></div>
+            <div class="Table_Cell"><a name="3_4_8_42_2_5_3_1_3_3_2_5">lock-status-iter-next</a></div>
+          </td>
+        </tr>
+      </table>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: NaNNanpt" colspan="2">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_1_1">Newly added APIs</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_2_1">Disk related operations</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_1_2">disk-maint-abort</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_1_3">disk-maint-list</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_1_4">disk-maint-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_1_5">disk-maint-status</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: Nanpt">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_2_2">LUN management and monitoring</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_2_2">lun-config-check-single-image-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_2_2_3">lun-initiator-list-map-info</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_3_1">Volume information and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_2">volume-autosize-get</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_3">volume-autosize-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_4">volume-charmap-get</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_5">volume-charmap-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_6">volume-set-total-files</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_7">volume-size</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_8">volume-verify-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_9">volume-verify-resume</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_10">volume-verify-start</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_11">volume-verify-stop</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_1_12">volume-verify-suspend</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_3_2">iSCSI management and monitoring</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_2">iscsi-connection-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_3">iscsi-initiator-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_4">iscsi-interface-disable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_5">iscsi-interface-enable</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_6">iscsi-interface-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_7">iscsi-portal-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_8">iscsi-reset-stat</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_9">iscsi-session-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_10">iscsi-stats-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_11">iscsi-target-alias-get-alias</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_12">iscsi-target-alias-set-alias</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_13">iscsi-tpgroup-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_14">iscsi-interface-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_15">iscsi-portal-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_16">iscsi-reset-stats</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_17">iscsi-session-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_18">iscsi-stats-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_19">iscsi-target-alias-clear-alias</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_20">iscsi-target-alias-get-alias</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_21">iscsi-target-alias-set-alias</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_22">iscsi-tpgroup-create</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_23">iscsi-tpgroup-destroy</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_24">iscsi-tpgroup-interface-add</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_25">iscsi-tpgroup-interface-delete</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_3_2_26">iscsi-tpgroup-list-info</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_4_1">CIFS sessions and shares</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_2">cifs-homedir-paths-get</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_3">cifs-homedir-paths-set</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_4">cifs-list-config</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_5">cifs-top-iter-end</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_6">cifs-top-iter-next</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_1_7">cifs-top-iter-start</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_4_2">NFS configuration and management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_2_2">nfs-monitor-add</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_2_3">nfs-monitor-remove</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_4_2_4">nfs-monitor-remove-locks</a></span></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Bold"><a name="3_4_8_42_2_5_5_1_3_5_1">Snapshot management</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_5_1_2">snapshot-autodelete-list-info</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_4_8_42_2_5_5_1_3_5_1_3">snapshot-autodelete-set-option</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin"></td>
+        </tr>
+      </table>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-489BE083-D5F6-4A0F-880E-BE8D843F1DB3.html', '');" title="Release History" name="3_4_8_42_3_1_1">Release History</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

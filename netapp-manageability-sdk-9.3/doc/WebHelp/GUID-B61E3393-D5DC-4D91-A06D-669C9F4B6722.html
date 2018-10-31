@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Session Management APIs for Perl</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5C34429-E1F8-447D-8ACB-6112AE506BF6.html">SDK Core APIs</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-7EECB0FC-EED2-455E-897E-ACDBFC33C60A.html">Perl Core APIs</a> : Session Management APIs for Perl</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_3"><a name="3_6_6_10_8_1">Session Management APIs for Perl</a></div>
+      <div class="Short_Description"><a name="3_6_6_10_8_2">The session management APIs are used to open the server connection, and to set and retrieve the server session parameters, such as transport type and authentication style.</a></div>
+      <div class="Body"><a name="3_6_6_10_8_3_3">This page contains information about the Session Management APIs for Perl, including the description and syntax, and the input, input types, input description, and input return values.</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_5_1">NaServer::set_style</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_5_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_5_2_1_2">set_style($style)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_5_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_5_3_1_2">Sets the authentication mechanism to be used for communicating with the given server.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.696682464454973%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_5_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 76.303317535545%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_5_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_5_4_1_1_4_1_1">$style</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_1">The authentication style</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_2">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_3_1_1">HOSTS</a></span>—to use the hosts.equiv file on the storage system to determine access rights.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_3_1_2_2">LOGIN</a></span>—to provide user name and password information. You can set the user name by using the API set_admin_user.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_3_1_3_2">CERTIFICATE</a></span> —to use certificates to authenticate clients who attempt to connect to a server, without using login credentials. This style automatically sets HTTPS as the transport mechanism. You can use this authentication mechanism for clustered Data ONTAP 8.2 and OnCommand Unified Manager 5.0.2, 5.1, and 5.2.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_4">To authenticate the server, server certificate verification and hostname verification is required.</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_5">For more information, see the APIs</a></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_6">NaServer::set_client_cert_and_key()</a></span>,</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_7">NaServer::set_ca_certs()</a></span>,</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_8">NaServer::set_server_cert_verification()</a></span>,</div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_5_4_1_1_4_1_2_9">and </a><span class="codeph">NaServer::set_hostname_verification()</span></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_5_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_5_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_5_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_6_1">NaServer::get_style</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_6_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_6_2_1_2">get_style()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_6_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_6_3_1_2">Retrieves the configured authentication style.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_6_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_6_4_1_2">The authentication style</a></div>
+      <div class="Body"><a name="3_6_6_10_8_3_6_5">Following are the supported values:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_6_6_1_1">HOSTS</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_6_6_1_2">LOGIN</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_6_6_1_3">CERTIFICATE</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_7_1">NaServer::set_port</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_7_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_7_2_1_2">set_port($port)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_7_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_1">Sets the port on which the API commands need to be invoked for the given server context.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_2">Following is the default port on the storage system for ONTAP API communication:</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_3">HTTP=80</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_4">HTTPS=443</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_5">Following is the default port on the server for OnCommand Unified Manager Core Package 5.2 or earlier for API communication:</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_6">HTTP=8080</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_7">HTTPS=8488</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_8">Following is the only supported and default port on the server for OnCommand Unified Manager 6.0 or later for API communication:</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_9">HTTPS=443</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_3_1_2_10">You must invoke this API to set the port, if ONTAP or OnCommand Unified Manager does not have the default port settings.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_7_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_7_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_7_4_1_1_4_1_1">$port</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_7_4_1_1_4_1_2">The port number that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_7_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_7_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_8_1">NaServer::get_port</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_8_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_8_2_1_2">get_port()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_8_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_8_3_1_2">Retrieves the port number used for invoking API commands.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_8_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_8_4_1_2">The port number</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_9_1">NaServer::set_admin_user</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_9_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_9_2_1_2">set_admin_user($user, $passwd)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_9_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_9_3_1_2_1">Sets the administrator user name and password for a server context.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_9_3_1_2_2">This API is used if </a><span class="Italic">style</span>= <span class="codeph">LOGIN</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 32.57328990228013%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_9_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 67.42671009771986%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_9_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_9_4_1_1_4_1_1">$user</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_9_4_1_1_4_1_2">The user name</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_9_4_1_1_4_2_1">$passwd</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_9_4_1_1_4_2_2">The password</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_9_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_9_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_10_1">NaServer::set_server_type</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_10_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_10_2_1_2">set_server_type($type)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_10_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_10_3_1_2">Sets the type of system you are connecting to.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_10_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_10_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_10_4_1_1_4_1_1">$type</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_1">The server-type to be set</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_2">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_3_1">FILER</a></span> — to connect to a NetApp storage system.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_3_2">DFM</a></span> — to connect to an OnCommand Unified Manager 5.2 or earlier server.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_3_3">OCUM</a></span> - to connect to an OnCommand Unified Manager 6.0 or later server.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_10_4_1_1_4_1_2_4">The default server type is </a><span class="codeph">FILER</span>.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_10_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_10_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_10_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_11_1">NaServer::get_server_type</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_11_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_11_2_1_2">get_server_type()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_11_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_11_3_1_2">Retrieves the value of the server-type.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_11_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_11_4_1_2">The type of the given server.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_11_4_1_3">Following are the possible return values:</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_10_8_3_11_4_1_4_1_1">FILER</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_10_8_3_11_4_1_4_1_2">DFM</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><span class="codeph"><a name="3_6_6_10_8_3_11_4_1_4_1_3">OCUM</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_12_1">NaServer::set_transport_type</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_12_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_12_2_1_2">set_transport_type($type)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_12_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_12_3_1_2">Set the connection transport type.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.50537634408602%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_12_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 78.49462365591397%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_12_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_12_4_1_1_4_1_1">$type</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_1">The connection transport type</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_2">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_2_2_1">HTTP</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_2_2_2">HTTPS</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_3">The default transport type is HTTP. For secure transport, use </a><span class="codeph">HTTPS</span> as the transport type.</div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_12_4_1_1_4_1_2_4">For server type </a><span class="codeph">OCUM</span>, only <span class="codeph">HTTPS</span> is supported and is set as default.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_12_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_12_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_12_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_13_1">NaServer::get_transport_type</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_13_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_13_2_1_2">get_transport_type()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_13_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_13_3_1_2">Retrieves the connection transport type.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_13_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_13_4_1_2_1">The connection transport type</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_13_4_1_2_2">Following are the supported values:</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_13_4_1_2_2_2_1">HTTP</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_13_4_1_2_2_2_2">HTTPS</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_14_1">NaServer::set_sslv3</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_14_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_14_2_1_2">set_sslv3($enable)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_14_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_14_3_1_2_1">Enables or disables SSLv3 protocol for use over HTTPS transport. SSLv3 protocol is disabled by default.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.201856148491874%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_14_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 76.79814385150811%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_14_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_14_4_1_1_4_1_1">$enable</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_14_4_1_1_4_1_2_1">Status of SSLv3</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_14_4_1_1_4_1_2_2">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_14_4_1_1_4_1_2_3_1_1">1 if the SSLv3 is to be enabled.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_14_4_1_1_4_1_2_3_1_2">0 if the SSLv3 is to be disabled.</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_14_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_14_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_15_1">NaServer::set_debug_style</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_15_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_15_2_1_2">set_debug_style($debug_style)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_15_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_15_3_1_2">Sets the debug style for the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 34.48275862068966%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_15_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 65.51724137931035%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_15_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_15_4_1_1_4_1_1">$debug_style</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_15_4_1_1_4_1_2_1">The debug style that is to be set</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_15_4_1_1_4_1_2_2">It takes the value NA_PRINT_DONT_PARSE. If set to NA_PRINT_DONT_PARSE, then the raw XML input and output of the API are printed.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_15_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_15_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_15_5_1_2_1_2">The NaServer object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_16_1">NaServer::set_vfiler</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_16_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_16_2_1_2">set_vfiler($vfiler)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_16_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_16_3_1_2_1">Sets the name of the vFiler unit on which the ONTAP API commands need to be invoked.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_16_3_1_2_2">After you set the command, all the API commands are executed on the vFiler unit through the actual storage system.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_16_3_1_2_3">This API supports the </a><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-C45F42F7-405E-4F08-A196-7D51809451FE.html#3_8_8_3_5_6_2', '');" title="Frequently Asked Questions">vFiler tunneling</a></span> feature.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.69135802469136%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_16_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 75.30864197530864%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_16_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_16_4_1_1_4_1_1">$vfiler</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_16_4_1_1_4_1_2">The name of the vFiler unit that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_16_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_16_5_1_2_1_1">1 on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_16_5_1_2_1_2">0 on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_17_1">NaServer::set_vserver</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_17_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_17_2_1_2">set_vserver($ vsrv)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_17_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_17_3_1_2_1">Sets the name of the Storage Virtual Machine (SVM, formerly known as Vserver) to which a Cluster API need to be tunneled from a Cluster Management Interface.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.69135802469136%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_17_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 75.30864197530864%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_17_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_17_4_1_1_4_1_1">$vsrv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_17_4_1_1_4_1_2">The name of the SVM that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_17_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_17_5_1_2_1_1">1 on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_17_5_1_2_1_2">0 on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_18_1">NaServer::get_vserver</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_18_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_18_2_1_2">get_vserver()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_18_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_18_3_1_2_1">Gets the name of the Storage Virtual Machine (SVM, formerly known as Vserver) to which a Cluster API need to be tunneled from a Cluster Management Interface.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_18_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_18_4_1_2">Name of the SVM</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_19_1">NaServer::get_http_version()</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_19_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_19_2_1_2">get_http_version()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_19_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_19_3_1_2_1">Retrieves the HTTP version.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_19_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_19_4_1_2_1_1">1.0</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_19_4_1_2_1_2">1.1</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_20_1">NaServer::set_http_version()</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_20_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_20_2_1_2">set_http_version($$)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_20_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_20_3_1_2">Sets the HTTP version for API communication.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 29.761904761904762%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_20_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 70.23809523809522%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_20_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_20_4_1_1_4_1_1">$http_version</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_20_4_1_1_4_1_2_1">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_20_4_1_1_4_1_2_2_1_1">1.0</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_20_4_1_1_4_1_2_2_1_2">1.1</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_20_4_1_1_4_1_2_3">The default HTTP version is 1.1.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_21_1">NaServer::use_https</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_21_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_21_2_1_2">use_https()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_21_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_21_3_1_2">Determines whether HTTPS is enabled.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_21_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_21_4_1_2_1_1">1 if HTTPS is enabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_21_4_1_2_1_2">0 if HTTPS is not enabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_22_1">NaServer::invoke</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_22_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_22_2_1_2">invoke($api, [$argname, $argval], ...)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_22_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_22_3_1_2_1">Invokes any API on the given server.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_22_3_1_2_2">This function takes the API name as the first argument. If the API has any input element, type it as input argument name-value pairs. This function takes only an odd number of arguments.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_22_3_1_2_3">All the input elements are assembled and sent to the server.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.371364653243844%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_22_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 77.62863534675614%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_22_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_22_4_1_1_4_1_1">$api</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_22_4_1_1_4_1_2">The name of the API to be invoked</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_22_4_1_1_4_2_1">$argname</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_22_4_1_1_4_2_2">The input element name</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_22_4_1_1_4_3_1">$argval</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_22_4_1_1_4_3_2">The input element value</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_22_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_22_5_1_2">The NaElement object</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_23_1">NaServer::invoke_elem</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_23_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_23_2_1_2">invoke_elem($elt)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_23_3_1_1">Description</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_23_3_1_2_1_1">Invokes any API on the given server.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_23_3_1_2_1_2_2">Creates an input output element for the API to be invoked. All the input elements of the API should be added to this input output element using </a><span class="codeph">NaElement:: child_add*</span>.</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 17.543859649122804%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_23_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 82.45614035087719%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_23_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_23_4_1_1_4_1_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_23_4_1_1_4_1_2_1">An object of NaElement</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_23_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_23_5_1_2">The NaElement object</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_24_1">NaServer::set_timeout</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_24_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_24_2_1_2">set_timeout($timeout)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_24_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_24_3_1_2">Sets the connection timeout value, in seconds, for the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.36659877800407%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_24_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 79.63340122199592%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_24_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_24_4_1_1_4_1_1">$timeout</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_24_4_1_1_4_1_2_1">The timeout value that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_24_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_24_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_25_1">NaServer::get_timeout</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_25_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_25_2_1_2">get_timeout()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_25_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_25_3_1_2">Retrieves the connection timeout value for the given server context.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_25_4_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_25_4_1_2">The connection timeout value in seconds</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_26_1">NaServer::set_client_cert_and_key</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_26_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_26_2_1_2">set_client_cert_and_key($cert, $key, $passwd)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_26_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_26_3_1_2_1">Sets the client's certificate and private key files that are required during the Secure Sockets Layer (SSL) session.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_26_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: Nanpt">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_26_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_26_4_1_1_4_1_1">$cert</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_1_2_1">The name of the file in Privacy Enhanced Mail (PEM) format that contains the client certificate</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_1_2_3">To set intermediate certificates and root certificate, you can use the </a><span class="codeph">NaServer::set_ca_certs()</span> API.</div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_26_4_1_1_4_2_1">$key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_2_2_1">The name of the file in PEM format that contains the private key</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_2_2_2">If </a><span class="Italic">key</span>=<span class="codeph">NULL</span>, the certificate file is used in place of the key.</div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_26_4_1_1_4_3_1">$passwd</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_3_2_1">The password to access the private key file</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_26_4_1_1_4_3_2_2">The value is </a><span class="codeph">undef</span> if the private key file is not password-protected.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_26_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_26_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_26_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_27_1">NaServer::set_server_cert_verification</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_27_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_27_2_1_2">set_server_cert_verification($enable)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_27_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_27_3_1_2_1">Enables or disables the server certificate verification by the client.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_27_3_1_2_2">When the authentication style is set to CERTIFICATE, server certificate verification is enabled by default. Otherwise, you have to set the transport type to HTTPS, and then provide the trusted CA certificates by using the NaServer::set_ca_certs() API to verify the server certificate.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_27_3_1_2_3">Hostname verification is enabled by default during server certificate verification.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.172949002217297%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_27_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 77.82705099778269%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_27_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_27_4_1_1_4_1_1">enable</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_27_4_1_1_4_1_2_1">The status of the server certificate validation</a></div>
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_27_4_1_1_4_1_2_2">Following are the supported values:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_27_4_1_1_4_1_2_3_1_1">undef on success</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><a name="3_6_6_10_8_3_27_4_1_1_4_1_2_3_1_2">The NaElement object that contains the reason for failure</a></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_28_1">NaServer::is_server_cert_verification_enabled</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_28_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_28_2_1_2">is_server_cert_verification_enabled()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_28_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_28_3_1_2">Determines whether server certificate verification is enabled.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_28_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_28_4_1_2_1_1">1 if server certificate verification is enabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_28_4_1_2_1_2">0 if server certificate verification is disabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_29_1">NaServer::set_ca_certs</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_29_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_29_2_1_2">set_ca_certs($CAfile)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_29_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_29_3_1_2_1">Sets the location of trusted certificates that is used for server certificate verification during SSL session.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_29_3_1_2_2">You can use the APIs </a><span class="codeph">NaServer::set_ca_certs()</span> and <span class="codeph">NaServer::set_client_cert_and_key() </span>to build the client certificate chain that is sent to the server.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.36752136752137%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_29_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 78.63247863247864%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_29_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_29_4_1_1_4_1_1">$CAfile</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_29_4_1_1_4_1_2_1">The name of the file that contains the certificate of the trusted Certificate Authorities in PEM format</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_29_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_29_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_29_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_30_1">NaServer::set_hostname_verification</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_30_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_30_2_1_2">set_hostname_verification($enable)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_30_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_30_3_1_2">Enables or disables hostname verification during server certificate verification.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.866348448687354%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_30_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 76.13365155131265%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_30_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_30_4_1_1_4_1_1">$enable</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_30_4_1_1_4_1_2_1">The status of the hostname certificate validation</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_30_4_1_1_4_1_2_2_1_1_2">TRUE</a></span> if the hostname verification is to be enabled.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_10_8_3_30_4_1_1_4_1_2_2_1_2_2">FALSE</a></span> if the hostname verification is to be disabled.</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_30_5_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_30_5_1_2_1_1">undef on success</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_30_5_1_2_1_2">The NaElement object that contains the reason for failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_31_1">NaServer::is_hostname_verification_enabled</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_31_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_31_2_1_2">is_hostname_verification_enabled()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_31_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_31_3_1_2">Determines whether hostname verification is enabled.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_31_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_31_4_1_2_1_1">1 if hostname verification is enabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_31_4_1_2_1_2">0 if hostname verification is disabled</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_32_1">NaServer::set_application_name</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_32_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_32_2_1_2">set_application_name($app_name)</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_32_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_32_3_1_2_1">Sets the name of the client application that initiates an operation using ONTAP APIs, and requires a response from the ONTAP server.</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_32_3_1_2_2">The name of the client application helps you track the actions performed by the application on the server. This information is logged in the server audit log file.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.173913043478258%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_32_4_1_1_3_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 72.82608695652173%">
+            <div class="Table_Cell_Head"><a name="3_6_6_10_8_3_32_4_1_1_3_1_2">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_10_8_3_32_4_1_1_4_1_1">$app_name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_10_8_3_32_4_1_1_4_1_2_1">The name of the client application that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_32_5_1_1">Return value</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_32_5_1_2">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_10_8_3_33_1">NaServer::get_application_name</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_33_2_1_1">Prototype</a></div>
+      <div class="Definition_Description"><span class="codeph"><a name="3_6_6_10_8_3_33_2_1_2">get_application_name()</a></span></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_33_3_1_1">Description</a></div>
+      <div class="Definition_Description"><a name="3_6_6_10_8_3_33_3_1_2">Gets the name of the client application.</a></div>
+      <div class="Definition_Term"><a name="3_6_6_10_8_3_33_4_1_1">Return value</a></div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_33_4_1_2_1_1_2">Name of the client application if set using </a><span class="codeph">NaServer::set_application_name()</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_2_outer" style="margin-left: 18pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_2_inner" style="width: 18pt; white-space: nowrap">◦ </div>
+            </td>
+            <td width="100%">
+              <div class="List_2_inner"><a name="3_6_6_10_8_3_33_4_1_2_1_2">Empty string if not set</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-7EECB0FC-EED2-455E-897E-ACDBFC33C60A.html', '');" title="Perl Core APIs" name="3_6_6_10_8_4_1_1">Perl Core APIs</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>

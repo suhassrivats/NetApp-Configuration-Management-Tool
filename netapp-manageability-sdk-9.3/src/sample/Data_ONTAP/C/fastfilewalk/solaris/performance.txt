@@ -1,0 +1,128 @@
+Performance analysis for fastfilewalk.
+
+Test runs :
+	equipment :
+	       filer : F840 (intel)
+	       solaris host : Sun Ultra 10 running Solaris 8
+	       LAN : 100Mbs, with filer and host on same subnet
+	parameters :
+	       # of threads : 10
+	test sample : 
+	       size : 2.78 GB
+	       # of files : 907,369
+	       # of dir : 85,409
+	       # of symlink : 7,944
+	results :
+	       initial run : 
+		       time : 913 seconds (~15.22 minutes)
+		       host cpu usage : 25 - 30 %
+		       filer cpu usage : 5 - 10 %
+	       subsequent run : 
+		       time : 362 seconds (~6.03 minutes)
+		       host cpu usage : 70 - 80 %
+		       filer cpu usage : 5 - 10 % with spikes to 20% once
+						  in a while
+
+This a just one run.  Because it is not done in an isolated environment,
+many factors may effect the results, like network, filer, and host load.
+However the effects are not serious, as multiple test show consistent
+results.  The difference between the inital run and subsequent runs is due
+to NFS and filer caching.  NFS caching reduces the disk (or network) blocking 
+calls, resulting in a faster processing time and higher cpu usage on host.
+Filer caching results in inodes being in memory instead of on disk.
+Results will vary depending on environment.
+
+
+Here is an extract from a gprof output of an initial run which indicates
+that lstat(), readdir(), and opendir() takes up most of the processing time
+(more than 95%)
+
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 64.41     16.52    16.52      366    45.14    45.14  lstat
+ 25.61     23.09     6.57       41   160.24   160.24  getdents64
+  5.19     24.42     1.33       22    60.45    60.45  __open64
+  0.97     24.67     0.25                             internal_mcount
+  0.78     24.87     0.20      372     0.54     0.79  _doprnt
+  0.27     24.94     0.07      432     0.16    15.49  readdir64_r
+  0.27     25.01     0.07       12     5.83     5.83  _close
+  0.23     25.07     0.06     1245     0.05     0.05  strlen
+  0.23     25.13     0.06     1098     0.05     0.05  memcpy
+  0.19     25.18     0.05     1312     0.04     0.05  ___errno
+  0.19     25.23     0.05      800     0.06     0.06  strcmp
+  0.16     25.27     0.04      853     0.05     0.05  pthread_mutex_lock
+  0.16     25.31     0.04      604     0.07     0.07  mutex_lock
+  0.16     25.35     0.04      511     0.08     0.08  strcpy
+  0.12     25.38     0.03      252     0.12     0.18  add_count
+  0.12     25.41     0.03       22     1.36     1.36  __fcntl
+  0.12     25.44     0.03                             _mcount
+  0.08     25.46     0.02      432     0.05    15.66  readdir_r
+  0.08     25.48     0.02      377     0.05     0.05  ferror_unlocked
+  0.08     25.50     0.02      366     0.05     0.11  inc_count
+  0.08     25.52     0.02      127     0.16     0.40  _malloc_unlocked
+  0.04     25.53     0.01     1312     0.01     0.01  thr_errnop
+  0.04     25.54     0.01     1312     0.01     0.01  thr_main
+  0.04     25.55     0.01      853     0.01     0.01  pthread_mutex_unlock
+  0.04     25.56     0.01      432     0.02    15.84  __posix_readdir_r
+  0.04     25.57     0.01      367     0.03     0.81  sprintf
+  0.04     25.58     0.01      126     0.08     0.08  cleanfree
+  0.04     25.59     0.01       74     0.14     0.26  t_delete
+  0.04     25.60     0.01       52     0.19     0.19  t_splay
+  0.04     25.61     0.01       24     0.42     0.48  free
+  0.04     25.62     0.01       22     0.45  1151.39  recursive_walk
+  0.04     25.63     0.01                             .mul
+  0.04     25.64     0.01                             .umul
+  0.04     25.65     0.01                             mmap
+  0.00     25.65     0.00      597     0.00     0.00  mutex_unlock
+  0.00     25.65     0.00      432     0.00    15.84  readdir_r
+...
+...
+...
+
+
+
+
+Here is an extract from a gprof output of a subsequent run which shows the
+effect of caching.  readdir() is dramatically decreased.
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 89.50     41.10    41.10       14  2935.71  2935.71  lstat
+  3.48     42.70     1.60        3   533.33   533.33  getdents64
+  3.22     44.18     1.48        4   370.00   370.00  __open64
+  0.72     44.51     0.33                             internal_mcount
+  0.65     44.81     0.30       18    16.67    25.15  _doprnt
+  0.26     44.93     0.12       51     2.35     2.35  memcpy
+  0.26     45.05     0.12       50     2.40     2.40  strlen
+  0.20     45.14     0.09       19     4.74    91.68  readdir64_r
+  0.17     45.22     0.08       61     1.31     1.64  ___errno
+  0.13     45.28     0.06       36     1.67     1.67  strcmp
+  0.13     45.34     0.06                             _mcount
+  0.11     45.39     0.05       24     2.08     2.08  strcpy
+  0.11     45.44     0.05       21     2.38    95.72  __posix_readdir_r
+  0.11     45.49     0.05                             _close
+  0.09     45.53     0.04       12     3.33     4.17  inc_count
+  0.09     45.57     0.04        4    10.00    10.00  fstat64
+  0.09     45.61     0.04                             .mul
+  0.07     45.64     0.03       21     1.43    97.14  readdir_r
+  0.07     45.67     0.03       19     1.58    97.98  readdir_r
+  0.07     45.70     0.03        4     7.50 11342.78  recursive_walk
+  0.07     45.73     0.03                             _free_unlocked
+  0.04     45.75     0.02       61     0.33     0.33  thr_main
+  0.04     45.77     0.02       52     0.38     0.38  mutex_lock
+  0.04     45.79     0.02       34     0.59     0.59  pthread_mutex_unlock
+  0.04     45.81     0.02       24     0.83     0.83  ferror_unlocked
+  0.04     45.83     0.02        8     2.50     3.34  add_count
+  0.04     45.85     0.02        4     5.00     5.00  __fcntl
+  0.02     45.86     0.01       40     0.25     0.25  pthread_mutex_lock
+  0.02     45.87     0.01       14     0.71     1.57  _malloc_unlocked
+  0.02     45.88     0.01       13     0.77    25.92  sprintf
+  0.02     45.89     0.01       10     1.00     1.00  realfree
+  0.02     45.90     0.01        4     2.50   372.50  _open64
+  0.02     45.91     0.01                             t_delete
+  0.02     45.92     0.01                             t_splay
+  0.00     45.92     0.00       61     0.00     0.00  thr_errnop
+  0.00     45.92     0.00       51     0.00     0.00  mutex_unlock

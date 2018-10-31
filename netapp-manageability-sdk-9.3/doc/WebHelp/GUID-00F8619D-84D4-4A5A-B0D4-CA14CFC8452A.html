@@ -1,0 +1,1825 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="ContextID" />
+    <title>Session Management APIs for C and C++</title>
+    <link rel="StyleSheet" href="css/GUID-331E91D6-2273-4822-B29F-AC08069CD061.css" type="text/css" media="all" />
+    <link rel="StyleSheet" href="css/webworks.css" type="text/css" media="all" />
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/context.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/towwhdir.js"></script>
+    <script type="text/javascript" language="JavaScript1.2" src="wwhdata/common/wwhpagef.js"></script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        var  WebWorksRootPath = "";
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        // Set reference to top level help frame
+        //
+        var  WWHFrame = WWHGetWWHFrame("", true);
+      // -->
+    </script>
+    <script type="text/javascript" language="JavaScript1.2" src="scripts/expand.js"></script>
+  </head>
+  <body onload="WWHUpdate();" onunload="WWHUnload();" onkeydown="WWHHandleKeyDown((document.all||document.getElementById||document.layers)?event:null);" onkeypress="WWHHandleKeyPress((document.all||document.getElementById||document.layers)?event:null);" onkeyup="WWHHandleKeyUp((document.all||document.getElementById||document.layers)?event:null);">
+    <table align="left" role="presentation">
+      <tr>
+        <td class="WebWorks_Company_Logo_Top">
+          <img src="WizardInteriorIcon.png" />
+        </td>
+        <td>
+          <!-- NetApp Valee - Added the below lines - start -->
+          <br />
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;">
+            <a class="WebWorks_Breadcrumb_Link" href="GUID-331E91D6-2273-4822-B29F-AC08069CD061.1.01.html">NetApp Manageability SDK OLH - master</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5B26409-727E-4DFE-B7D6-EDB1F5255EF3.html">Programming Guide</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-F5C34429-E1F8-447D-8ACB-6112AE506BF6.html">SDK Core APIs</a> : <a class="WebWorks_Breadcrumb_Link" href="GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html">C and C++ Core APIs</a> : Session Management APIs for C and C++</div>
+          <!-- NetApp Valee - Added the above lines - end -->
+        </td>
+      </tr>
+    </table>
+    <br clear="all" />
+    <!-- NetApp Valee - commented the above lines - end -->
+    <hr align="left" />
+    <!-- NetApp valee - Added the below lines - start -->
+    <div align="left">
+      <div class="Heading_3"><a name="3_6_6_6_8_1">Session Management APIs for C and C++</a></div>
+      <div class="Short_Description"><a name="3_6_6_6_8_2">The Session Management APIs are used to open or close the server connection, and to set and retrieve the server session parameters, such as transport type and authentication style. This page contains information about the Session Management APIs for C and C++, including the description and syntax, and the input, input types, input description, and input return values.</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_2_1">na_server_open</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_2_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_2_3">na_server_t* na_server_open(const char* server, int major, int minor);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_2_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_2_5">Sets the server context and assigns default values to the session parameters.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_2_6">Following are the default values:</a></div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_7">username</a></span>= ""</div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_8">password</a></span> = ""</div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_9">style</a></span> = <span class="codeph">NA_STYLE_LOGIN_PASSWORD</span></div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_10">port</a></span> = <span class="codeph">80</span></div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_11">transport</a></span> = <span class="codeph">NA_SERVER_TRANSPORT_HTTP</span></div>
+      <div class="Body"><span class="Italic"><a name="3_6_6_6_8_3_2_12">servertype </a></span>= <span class="codeph">NA_SERVER_TYPE_FILER</span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_2_13">You can overwrite the default values by using the </a><span class="codeph">na_server*</span> Core APIs.</div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_2_14">Return value</a></span></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 14.727540500736378%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_2_15_1_1_5_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.494845360824744%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_2_15_1_1_5_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 68.77761413843888%" colspan="2">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_2_15_1_1_5_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 14.727540500736378%">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_2_15_1_1_6_1_1">server</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 16.494845360824744%">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_2_15_1_1_6_1_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 68.77761413843888%" colspan="2">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_2_15_1_1_6_1_3_1">The name or the IP address of the server in IPv4 or IPv6 format</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 14.727540500736378%" rowspan="2">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_2_15_1_1_6_2_1">major</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 16.494845360824744%" rowspan="2">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_2_15_1_1_6_2_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 68.77761413843888%" colspan="2">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_2_15_1_1_6_2_3">The major version of the ONTAP API</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 14.727540500736378%"></td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 16.494845360824744%">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_2_15_1_1_6_3_2_1">For OnCommand Unified Manager server, use 1 as the major version.</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 14.727540500736378%" rowspan="2">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_2_15_1_1_6_4_1">minor</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 16.494845360824744%" rowspan="2">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_2_15_1_1_6_4_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 68.77761413843888%" colspan="2">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_2_15_1_1_6_4_3">The minor version of the ONTAP API</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 14.727540500736378%"></td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; width: 16.494845360824744%">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_2_15_1_1_6_5_2_1">For OnCommand Unified Manager server, use 0 as the major version.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_2_16_1_1">The address of the server context</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_2_16_2_1">NULL on failure</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_3_1">na_server_style</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_3_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_3_3">void na_server_style(na_server_t* srv, na_style_t style);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_3_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_3_5">Sets the authentication mechanism to be used for communicating with the given server.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.551724137931032%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_3_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.801724137931032%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_3_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 50.64655172413792%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_3_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_3_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_1_3">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_3_6_1_1_5_2_1">style</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_2">na_style_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_1">The communication or authentication style that is to be set</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_2">Following are the supported values:</a></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_3">NA_STYLE_LOGIN_PASSWORD</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_4">NA_STYLE_RPC</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_5">NA_STYLE_HOSTSEQUIV</a></span></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_6">NA_STYLE_CERTIFICATE</a></span></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_7">If </a><span class="Italic">style</span>= <span class="codeph">NA_STYLE_LOGIN_PASSWORD</span>, you must provide an administrator user name and password with <span class="codeph">na_server_adminuser()</span>.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_8">If </a><span class="Italic">style</span>= <span class="codeph">NA_STYLE_RPC</span>, your code should run on the Windows system so that a native Windows authentication based on remote procedure call is used. This is applicable for ONTAP APIs only.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_9">If </a><span class="Italic">style</span>= <span class="codeph">NA_STYLE_HOSTSEQUIV</span>, the server context authenticates the against the /etc/hosts.equiv file on the NetApp storage system. In such a case, you do not have to set the administrator user name and password. This is applicable for ONTAP APIs.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_10">If </a><span class="Italic">style</span> =<span class="codeph">NA_STYLE_CERTIFICATE</span>, you can use certificates to authenticate clients who attempt to connect to a server, without using login credentials. This style automatically sets HTTPS as the transport mechanism. You can use this authentication mechanism for clustered Data ONTAP 8.2 and OnCommand Unified Manager 5.0.2, 5.1, and 5.2.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_11">To authenticate the server, server certificate verification and hostname verification is required.</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_12">For more information, see the APIs</a></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_13">na_server_set_client_cert_and_key()</a></span>,</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_14">na_server_set_ca_certs()</a></span>,</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_15">na_server_set_server_cert_verification</a></span>(),</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_3_6_1_1_5_2_3_16">and </a><span class="codeph">na_server_set_hostname_verification()</span>.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_3_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_3_8">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_4_1">na_server_adminuser</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_4_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_4_3">int na_server_adminuser(na_server_t* srv, const char* login, const char* pwd);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_4_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_4_5">Sets the user name and password for a server context, where authentication style is </a><span class="codeph">NA_STYLE_LOGIN_PASSWORD</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.722408026755854%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_4_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 29.4314381270903%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_4_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 53.84615384615385%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_4_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_4_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_4_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_4_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_4_6_1_1_5_2_1">login</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_4_6_1_1_5_2_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_4_6_1_1_5_2_3_1">The login name</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_4_6_1_1_5_3_1">pwd</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_4_6_1_1_5_3_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_4_6_1_1_5_3_3_1">The password</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_4_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_4_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_4_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_5_1">na_server_set_server_type</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_5_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_5_3">int na_server_set_server_type(na_server_t *srv, na_server_type_t type);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_5_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_5_5">Sets the type of system you are connecting to.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.233766233766232%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_5_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 25.649350649350648%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_5_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.11688311688311%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_5_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_5_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_5_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_5_6_1_1_5_1_3">Pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_5_6_1_1_5_2_1">type</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_5_6_1_1_5_2_2">na_server_type_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_1">The server type to be set</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_2">Following are the supported values:</a></div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_3">NA_SERVER_TYPE_FILER</a></span> — to connect to a NetApp storage system.</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_4">NA_SERVER_TYPE_DFM</a></span> — to connect to a OnCommand Unified Manager server 5.2 or earlier.</div>
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_5">NA_SERVER_TYPE_OCUM</a></span> — to connect to a OnCommand Unified Manager server 6.0 or later.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_5_6_1_1_5_2_3_6">The default server type is </a><span class="codeph">NA_SERVER_TYPE_FILER</span>.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_5_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_5_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_5_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_6_1">na_server_set_transport_type</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_6_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_6_3">int na_server_set_transport_type(na_server_t* srv, na_server_transport_t transport, const union zfd_setopt* transportarg);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_6_4">Description</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_6_5_1_1">Overrides the default transport type.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_6_5_2_1_2">After setting the transport type, invoke the na_set_port() to set the port number used for that transport type.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.159663865546218%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_6_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.008403361344538%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_6_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 54.83193277310925%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_6_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_6_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_6_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_6_6_1_1_5_2_1">transport</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_6_6_1_1_5_2_2">na_server_transport_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_1">The transport type</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_2">Following are the supported transport types for </a><span class="codeph">NA_SERVER_TYPE_FILER</span> and <span class="codeph">NA_SERVER_TYPE_DFM</span>:</div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_3_1_1">NA_SERVER_TRANSPORT_HTT</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_3_2_1">NA_SERVER_TRANSPORT_HTTPS</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_4">The default transport type is </a><span class="codeph">NA_SERVER_TRANSPORT_HTTP</span>. For secure transport, use <span class="codeph">NA_SERVER_TRANSPORT_HTTPS</span> as the transport type.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_2_3_5">For </a><span class="codeph">NA_SERVER_TYPE_OCUM</span>, only <span class="codeph">NA_SERVER_TRANSPORT_ HTTPS</span> is supported and is set by default.</div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_6_6_1_1_5_3_1">transportarg</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_6_6_1_1_5_3_2">const union zfd_setopt*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_3_3_1">The transport argument</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_6_6_1_1_5_3_3_2">You should set transportarg to zero for both the HTTP and HTTPS transport protocols.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_6_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_6_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_6_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_7_1">na_server_set_sslv3</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_7_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_7_3">int na_server_set_sslv3(na_server_t *srv, int enable);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_7_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_7_5">Enables or disables SSLv3 protocol for use over HTTPS transport. SSLlv3 is disabled by default.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.55287569573284%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_7_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.89239332096475%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_7_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 59.55473098330242%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_7_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_7_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_7_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_7_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_7_6_1_1_5_2_1">enable</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_7_6_1_1_5_2_2">int*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_7_6_1_1_5_2_3_1">State of SSLv3</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_7_6_1_1_5_2_3_2">Set enable = 1 to enable SSLv3, and set 0 to disable.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_7_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_7_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_7_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_8_1">na_server_is_sslv3_enabled</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_8_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_8_3">int na_server_is_sslv3_enabled(na_server_t *srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_8_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_8_5">Determines whether SSLv3 is enabled.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.55287569573284%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_8_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.272727272727277%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_8_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 54.17439703153989%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_8_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_8_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_8_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_8_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_8_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_8_8_1_1">1</a></span> (TRUE) if SSLv3 is enabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_8_8_2_1">0</a></span> (FALSE) if SSLV3 is disabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_9_1">na_server_set_vfiler</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_9_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_9_3">int na_server_set_vfiler(na_server_t* srv, const char * vfilerserver);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_9_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_9_5">Sets the name of the vFiler unit on which the ONTAP API commands need to be invoked for the given server context.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_9_6">After the command is set, all the API commands are executed on the vFiler unit through the actual server.</a></div>
+      <div class="Section"><a name="3_6_6_6_8_3_9-6">The API supports the </a><span class="xref"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-C45F42F7-405E-4F08-A196-7D51809451FE.html#3_8_8_3_5_6_2', '');" title="Frequently Asked Questions">vFiler tunneling</a></span> feature.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.533880903490757%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_9_10_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.944558521560573%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_9_10_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.52156057494866%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_9_10_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_9_10_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_9_10_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_9_10_1_1_5_1_3">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_9_10_1_1_5_2_1">vfilerserver</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_9_10_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_9_10_1_1_5_2_3">The name of the vFiler unit that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_9_11">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_9_12_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_9_12_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_10_1">na_server_set_port</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_10_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_10_3">int na_server_set_port(na_server_t* srv, int port);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_10_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_5">Sets the port on which the API commands need to be invoked for the given server context.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_6">Following is the default port on the storage system for ONTAP API communication:</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_7">HTTP=80</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_8">HTTPS=443</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_9">Following is the default port on the server for OnCommand Unified Manager Core Package 5.2 or earlier for API communication:</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_10">HTTP=8080</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_11">HTTPS=8488</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_12">Following is the only supported and default port on the server for OnCommand Unified Manager 6.0 or later for API communication:</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_13">HTTPS=443</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_10_14">You must invoke this API to set the port, if ONTAP or OnCommand Unified Manager does not have the default port settings.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.552099533437013%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_10_15_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.993779160186626%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_10_15_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 56.45412130637636%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_10_15_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_10_15_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_10_15_1_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_10_15_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_10_15_1_1_5_2_1">port</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_10_15_1_1_5_2_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_10_15_1_1_5_2_3_1">The port number that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_10_16">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_10_17_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_10_17_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_11_1">na_server_set_timeout</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_11_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_11_3">int na_server_set_timeout(na_server_t* srv, int timeout);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_11_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_11_5">Sets a connection timeout for the following actions:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_11_6_1_1">Establishing a connection with the server.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_11_6_2_1">Reading and writing data to and from the server socket used for API communication.</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.552099533437013%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_11_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.993779160186626%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_11_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 56.45412130637636%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_11_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_11_7_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_11_7_1_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_11_7_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_11_7_1_1_5_2_1">timeout</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_11_7_1_1_5_2_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_11_7_1_1_5_2_3_1">The timeout value</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_11_7_1_1_5_2_3_2">This value is in seconds and should be zero or a positive number.</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_11_7_1_1_5_2_3_3">If it is non-zero, the server uses non-blocking socket connection. If it is zero, the server uses blocking connection, which is the default behavior.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_11_8">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_11_9_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_11_9_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_12_1">na_server_set_vserver</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_12_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_12_3">int na_server_set_vserver(na_server_t* srv, const char* vsrv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_12_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_12_5">Sets the name of the Storage Virtual Machine (SVM, formerly known as Vserver) to which a Cluster API need to be tunneled from a Cluster Management Interface.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 15.552099533437013%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_12_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 27.993779160186626%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_12_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 56.45412130637636%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_12_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_12_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_12_6_1_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_12_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_12_6_1_1_5_2_1">vsrv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_12_6_1_1_5_2_2">const char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_12_6_1_1_5_2_3_1">The name of the SVM that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_12_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_12_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_12_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_13_1">na_server_invoke</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_13_3">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_13_4">na_elem_t* na_server_invoke(na_server_t* srv, const char* api, ...);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_13_5">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_13_6">Invokes any API on the given server.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_13_7">Enter the name-value pairs and terminate the list with NULL. You can enter only an even number of arguments to this function. The name-value pairs take only strings. All these contexts are then assembled and sent to the server.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 14.749262536873155%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_13_8_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.483775811209437%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_13_8_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 60.766961651917406%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_13_8_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_13_8_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_13_8_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_13_8_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_13_8_1_1_5_2_1">api</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_13_8_1_1_5_2_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_13_8_1_1_5_2_3_1">The name of the API that is to be invoked</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_13_8_1_1_5_3_1">...</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_13_8_1_1_5_3_2">char *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_13_8_1_1_5_3_3_1">The input arguments as a name-value pair</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_13_9">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_13_10">The pointer to the input output context that contains the server response</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_14_1">na_server_invoke_elem</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_14_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_14_3">na_elem_t* na_server_invoke_elem(na_server_t* srv, na_elem_t* elt);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_14_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_14_5">Sends the API request in the form of input output context, in which the API command and its input arguments are embedded.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_14_6">After the API call ends, you must free the context elt by invoking </a><span class="codeph">na_elem_free()</span>.</div>
+      <div class="Body"><a name="3_6_6_6_8_3_14_7">While processing optional inputs from a dialog box, it is recommended that you construct a context chain instead of using </a><span class="codeph">na_server_invoke()</span>.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 14.727540500736378%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_14_8_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.85861561119293%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_14_8_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 61.413843888070694%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_14_8_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_14_8_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_14_8_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_14_8_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_14_8_1_1_5_2_1">elt</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_14_8_1_1_5_2_2">na_elem_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_14_8_1_1_5_2_3_1">The pointer to the context chain</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_14_9">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_14_10">The pointer to the context that contains the server's reply</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_15_1">na_server_close</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_15_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_15_3">int na_server_close(na_server_t* srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_15_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_15_5">Clears the server context opened by </a><span class="codeph">na_server_open()</span>. This is done by freeing all the allocated resources for that server context.</div>
+      <div class="Body"><a name="3_6_6_6_8_3_15_6">You can have multiple server contexts opened at the same time and each opened server context has to be closed individually.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 13.586956521739132%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_15_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.51630434782609%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_15_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 65.89673913043478%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_15_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_15_7_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_15_7_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_15_7_1_1_5_1_3">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_15_8">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_15_9_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_15_9_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_16_1">na_server_set_debugstyle</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_16_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_16_3">void na_server_set_debugstyle(na_server_t * srv, na_debug_style_t style);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_16_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_16_5">Sets the debug style for the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 16.207455429497567%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_16_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 21.88006482982172%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_16_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 61.912479740680716%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_16_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_16_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_16_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_16_6_1_1_5_1_3">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_16_6_1_1_5_2_1">style</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_16_6_1_1_5_2_2">na_debug_style_t</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_1">The debug style that is to be set</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_2">The default value is </a><span class="codeph">NA_PRINT_DONT_PARSE</span>, which prints the raw XML output derived from the server by using <span class="codeph">na_server_get_raw_xml_output</span>.</div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_3">Following are the supported values for style:</a></div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_4_1_1">NA_NO_DEBUG</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_4_2_1">NA_PRINT_DONT_PARSE</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="List_1_outer" style="margin-left: 0pt">
+              <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+                <tr style="vertical-align: baseline">
+                  <td>
+                    <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+                  </td>
+                  <td width="100%">
+                    <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_16_6_1_1_5_2_3_4_3_1">NA_DONT_PRINT_DONT_PARSE</a></span></div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_16_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_16_8">None</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_17_1">na_server_set_client_cert_and_key</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_17_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_17_3">int na_server_set_client_cert_and_key (na_server_t* srv, const char* cert, const char* key, const char* passwd);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_17_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_17_5">Sets the client's certificate for authentication by the server in a Secure Sockets Layer (SSL) session.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_17_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.952380952380952%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_17_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.99999999999999%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_17_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_17_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_17_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_17_6_1_1_5_1_3_1">The pointer to the server context.</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_17_6_1_1_5_2_1">cert</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_17_6_1_1_5_2_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_17_6_1_1_5_2_3_1">The name of the file in Privacy Enhanced Mail (PEM) format that contains the certificate.</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_17_6_1_1_5_3_1">key</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_17_6_1_1_5_3_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_17_6_1_1_5_3_3_1">The name of the file in PEM format that contains the private key.</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_17_6_1_1_5_3_3_2">If key = </a><span class="codeph">NULL</span>, then the certificate file is used as the key file.</div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_17_6_1_1_5_4_1">passwd</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_17_6_1_1_5_4_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_17_6_1_1_5_4_3_1">The password to access the private key file passwd = </a><span class="codeph">NULL</span> if the private key file is not password-protected.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_17_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_17_8_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_17_8_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_18_1">na_server_set_server_cert_verification</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_18_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_18_3">int na_server_is_server_cert_verification_enabled (na_server_t* srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_18_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_18_5">Determines whether server certificate verification is enabled.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_18_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 24.952380952380952%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_18_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 55.99999999999999%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_18_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_18_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_18_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_18_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_18_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_18_8_1_1">1</a></span> (TRUE) if server certificate verification enabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_18_8_2_1">0</a></span> (FALSE) if server certificate verification disabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_19_1">na_server_set_ca_certs</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_19_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_19_3">int na_server_set_ca_certs (na_server_t* srv, const char* CAfile);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_19_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_19_5">Sets the location of trusted certificates that is used for server certificate verification during an SSL session.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_19_6">The APIs </a><span class="codeph">na_server_set_ca_certs()</span> and <span class="codeph">na_server_set_client_cert_and_key()</span> can be used to build a client certificate chain that is sent to the server during an SSL session.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_19_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.61904761904762%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_19_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.33333333333333%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_19_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_19_7_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_19_7_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_19_7_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_19_7_1_1_5_2_1">CAfile</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_19_7_1_1_5_2_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_19_7_1_1_5_2_3_1">The name of the file in Privacy Enhanced Mail (PEM) format that contains the trusted certificate</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_19_7_1_1_5_2_3_2">The file can contain several certificates from the trusted Certificate Authority.</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_19_8">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_19_9_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_19_9_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_20_1">na_server_set_hostname_verification</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_20_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_20_3">int na_server_set_hostname_verification (na_server_t *srv, int enable);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_20_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_20_5">Enables or disables hostname verification during server certificate verification.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_20_6">You must use the na_server_open() API to specify the hostname it is connecting to.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_20_7">Hostname verification ensures that the hostname to which the client connects, matches that with the hostname in the certificate (CN name) that the server sends during an SSL session.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_20_8">Hostname verification is enabled by default during server certificate verification.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_20_9_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.61904761904762%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_20_9_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.33333333333333%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_20_9_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_20_9_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_20_9_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_20_9_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_20_9_1_1_5_2_1">enable</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_20_9_1_1_5_2_2">int</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_20_9_1_1_5_2_3_1">The state of the server certificate verification</a></div>
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_20_9_1_1_5_2_3_2">Set </a><span class="Italic">enable</span> = 1 to enable hostname certificate verification, and set 0 to disable.</div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_20_10">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_20_11_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_20_11_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_21_1">na_server_is_hostname_verification_enabled</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_21_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_21_3">int na_server_is_hostname_verification_enabled (na_server_t* srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_21_4">Description</a></span></div>
+      <div class="Section"><a name="3_6_6_6_8_3_21-4">Determines whether hostname verification is enabled.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_21_6_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 23.61904761904762%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_21_6_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 57.33333333333333%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_21_6_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_21_6_1_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_21_6_1_1_5_1_2">na_server_t*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_21_6_1_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_21_7">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_21_8_1_1">1</a></span> (TRUE) if hostname verification is enabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_21_8_2_1">0</a></span> (FALSE) if hostname verification is disabled</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_22_1">na_server_set_application_name</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_22_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_22_3">int na_server_set_application_name(const char* app_name);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_22_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_22_5">Sets the name of the client application that initiates an operation using ONTAP APIs, and requires a response from the ONTAP server.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_22_6">The name of the client application helps you track the actions performed by the application on the server. This information is logged in the server audit log file.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_22_7_1_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.190476190476193%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_22_7_1_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 60.76190476190476%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_22_7_1_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_22_7_1_1_5_1_1">app_name</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_22_7_1_1_5_1_2">const char*</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_22_7_1_1_5_1_3_1">The name of the client application that is to be set</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_22_8">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_22_9_1_1">1</a></span> (TRUE) on success</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_22_9_2_1">0</a></span> (FALSE) on failure</div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_23_1">na_server_get_application_name</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_23_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_23_3">const char* na_server_get_application_name()</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_23_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_23_5">Gets the name of the client application.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_23_6">Return value</a></span></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_23_7_1_1">Name of the client application if set using </a><span class="codeph">na_server_set_application_name()</span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><a name="3_6_6_6_8_3_23_7_2_1">NULL if not set</a></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_24_1">na_server_get_style</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_24_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_24_3">na_style_t na_server_get_style(na_server_t* srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_24_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_24_5">Gets the authentication style used by the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 19.047619047619047%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_24_6_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 20.190476190476193%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_24_6_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 60.76190476190476%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_24_6_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_24_6_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_24_6_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_24_6_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_24_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_24_8">The server style.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_24_9">Following are the possible return values:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_24_10_1_1">NA_STYLE_LOGIN_PASSWORD</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_24_10_1_2">NA_STYLE_RPC</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_24_10_1_3">NA_STYLE_HOSTSEQUIV</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_24_10_1_4">NA_STYLE_CERTIFICATE</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_25_1">na_server_get_transport_type</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_25_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_25_3">na_server_transport_t na_server_get_transport_type(na_server_t* srv)</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_25_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_25_5">Gets the transport type used by the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.832391713747647%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_25_6_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.222222222222225%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_25_6_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.94538606403014%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_25_6_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_25_6_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_25_6_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_25_6_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_25_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_25_8">The current transport type used for the given server context.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_25_9">Following are the possible return values:</a></div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_25_10_1_1">NA_SERVER_TRANSPORT_HTTP</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="List_1_outer" style="margin-left: 0pt">
+        <table border="0" cellspacing="0" cellpadding="0" summary="" role="presentation">
+          <tr style="vertical-align: baseline">
+            <td>
+              <div class="List_1_inner" style="width: 18pt; white-space: nowrap">• </div>
+            </td>
+            <td width="100%">
+              <div class="List_1_inner"><span class="codeph"><a name="3_6_6_6_8_3_25_10_1_2">NA_SERVER_TRANSPORT_HTTPS</a></span></div>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_26_1">na_server_get_port</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_26_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_26_3">int na_server_get_port (na_server_t * srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_26_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_26_5">Gets the port number for the given server context used for invoking API commands.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.832391713747647%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_26_6_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.222222222222225%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_26_6_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.94538606403014%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_26_6_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_26_6_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_26_6_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_26_6_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_26_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_26_8">The port number</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_27_1">na_server_get_timeout</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_27_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_27_3">const char* na_server_get_timeout(na_server_t *srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_27_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_27_5">Gets the connection timeout value of the given server context.</a></div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.832391713747647%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_27_6_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.222222222222225%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_27_6_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.94538606403014%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_27_6_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_27_6_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_27_6_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_27_6_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_27_7">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_27_8">The connection timeout value (in seconds)</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_28_1">na_server_get_vserver</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_28_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_28_3">const char* na_server_get_vserver();</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_28_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_28_5">Gets the name of the Storage Virtual Machine (SVM, formerly known as Vserver) to which a Cluster API need to be tunneled from a Cluster Management Interface.</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_28_6">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_28_7">Name of the SVM</a></div>
+      <div class="Section_Title"><a name="3_6_6_6_8_3_29_1">na_server_get_raw_xml_output</a></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_29_2">Prototype</a></span></div>
+      <div class="Body"><span class="codeph"><a name="3_6_6_6_8_3_29_3">char * na_server_get_raw_xml_output(na_server_t * srv);</a></span></div>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_29_4">Description</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_29_5">Gets the output of the API invoked in raw XML format.</a></div>
+      <div class="Body"><a name="3_6_6_6_8_3_29_6">The debug style of the server should be set to </a><span class="codeph">NA_PRINT_DONT_PARSE</span> before using this API.</div>
+      <table class="Default" cellpadding="1" summary="">
+        <tr style="vertical-align: top">
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 18.832391713747647%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_29_7_1_4_1_1">Input</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 22.222222222222225%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_29_7_1_4_1_2">Type</a></div>
+          </td>
+          <td class="Table_Cell_Head" style="background-color: Gainsboro; border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin; padding-left: 0px; padding-top: 2pt; width: 58.94538606403014%">
+            <div class="Table_Cell_Head"><a name="3_6_6_6_8_3_29_7_1_4_1_3">Description</a></div>
+          </td>
+        </tr>
+        <tr style="vertical-align: top">
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="Italic"><a name="3_6_6_6_8_3_29_7_1_5_1_1">srv</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><span class="codeph"><a name="3_6_6_6_8_3_29_7_1_5_1_2">na_server_t *</a></span></div>
+          </td>
+          <td class="Table_Cell" style="border-bottom-color: #E0E0E0; border-bottom-style: solid; border-bottom-width: thin; border-left-color: #E0E0E0; border-left-style: solid; border-left-width: thin; border-right-color: #E0E0E0; border-right-style: solid; border-right-width: thin; border-top-color: #E0E0E0; border-top-style: solid; border-top-width: thin">
+            <div class="Table_Cell"><a name="3_6_6_6_8_3_29_7_1_5_1_3_1">The pointer to the server context</a></div>
+          </td>
+        </tr>
+      </table>
+      <div class="Body"><span class="Bold"><a name="3_6_6_6_8_3_29_8">Return value</a></span></div>
+      <div class="Body"><a name="3_6_6_6_8_3_29_9">The raw XML output</a></div>
+      <div class="Parent_Topic">
+        <span style="font-size: 13.5px; font-weight: bold;">Parent topic: </span>
+        <span style="font-weight: bold"></span><span class="Link_Text"><a href="javascript:WWHClickedPopup('GUID-331E91D6-2273-4822-B29F-AC08069CD061', 'GUID-E787B38E-1497-49C0-81AF-9EBFB95F4442.html', '');" title="C and C++ Core APIs" name="3_6_6_6_8_4_1_1">C and C++ Core APIs</a></span></div>
+      <script type="text/javascript" language="JavaScript1.2">
+        <!--
+          // Clear related topics
+          //
+          WWHClearRelatedTopics();
+
+          document.writeln(WWHRelatedTopicsInlineHTML());
+        // -->
+      </script>
+    </div>
+    <!-- NetApp valee - Added the above lines - end -->
+    <hr align="left" />
+    <table>
+      <colgroup>
+        <col id="1"></col>
+      </colgroup>
+      <tr>
+        <td>
+          <div class="WebWorks_Breadcrumbs" style="text-align: left;" align="left">Was this topic helpful? Send <a href="#" onclick="sendFeedback('en');">comments</a> to NetApp.</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    			Copyright © 2017 NetApp, Inc. All rights reserved.</div>
+          <!--
+    			Copyright &#169; <span wwpage:replace="wwvars:currentYear">2015</span> NetApp, Inc. All rights reserved.</div>
+
+    			<div class="copyright_info" style="font-family: sans-serif; font-size: 10px; color: gray;margin-top:2px">
+    				Last updated: <span wwpage:replace="wwvars:currentDateTime">Jan 01, 2010</span>
+    			</div>
+-->
+        </td>
+      </tr>
+    </table>
+    <!-- NetApp Valee: end change -->
+    <script type="text/javascript" language="JavaScript1.2">
+      <!--
+        document.write(WWHRelatedTopicsDivTag() + WWHPopupDivTag() + WWHALinksDivTag());
+      // -->
+    </script>
+  </body>
+</html>
